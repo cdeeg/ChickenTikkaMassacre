@@ -1,6 +1,6 @@
 fileFormatVersion: 2
 guid: b98d5ff60082749548615f11b6163ed4
-timeCreated: 1446035585
+timeCreated: 1446393029
 licenseType: Free
 ModelImporter:
   serializedVersion: 18
@@ -118,7 +118,13 @@ ModelImporter:
     bakeSimulation: 0
     optimizeGameObjects: 0
     motionNodeName: 
-    animationImportErrors: 
+    animationImportErrors: '
+
+      Imported file ''export_rig'' conversion failed: Required human bone ''LeftFoot''
+      not found
+
+
+'
     animationImportWarnings: 
     animationRetargetingWarnings: 
     animationDoRetargetingWarnings: 0
