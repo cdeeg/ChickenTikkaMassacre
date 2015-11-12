@@ -11,7 +11,7 @@ public static class plrUtility {
 
 		Vector3 	startingPoint 	= plrBody.position;
 		Vector3 	vDirection		= Vector3.down;							//Change this if player needs to react to the curve of the world.
-		float 		checkRange		= 1.5f;									//dependet on plr: height/2;
+		float 		checkRange		= 1.45f;									//dependet on plr: height/2;
 
 		if( Physics.Raycast(startingPoint, vDirection, checkRange, lM_Ground  ) )
 		{

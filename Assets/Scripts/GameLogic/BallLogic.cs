@@ -10,7 +10,7 @@ public class BallLogic : MonoBehaviour {
 	float jiggleTime = 0;
 	float jiggleCD = Random.value * 3 + 2;
 	float asSleep = 0;
-	float asSleeCD = Random.value * 3 + 2;
+	float asSleeCD = Random.value * 3 + 8;
 	// Use this for initialization
 	void Start () {
 	
@@ -59,7 +59,7 @@ public class BallLogic : MonoBehaviour {
 		jiggleTime = 0;
 		jiggleCD = Random.value * 3 + 2;
 		asSleep = 0;
-		asSleeCD = Random.value * 3 + 2;
+		asSleeCD = Random.value * 3 + 8;
 
 		transform.parent.parent = null;
 		transform.parent.position = GameStatics.dodo_spawn;
@@ -73,7 +73,7 @@ public class BallLogic : MonoBehaviour {
 		if(!isBeingHold)
 		{
 			isAsleep = true;
-			asSleeCD = Random.value * 3 + 2;
+			asSleeCD = Random.value * 3 + 8;
 			asSleep = 0;
 
 			if(!isStartingToGetJiggly)

@@ -16,7 +16,7 @@ public static class KeyLayout {
 	public static KeyCode	start_Key		= KeyCode.Escape;
 	public static string 	start_btnName	= "Start";
 
-	public static KeyCode	select_Key		= KeyCode.Return;
+	public static KeyCode	select_Key		= KeyCode.Joystick1Button6;
 	public static string 	select_btnName	= "Select";
 
 	public static KeyCode	attack_Key		= KeyCode.Mouse0;

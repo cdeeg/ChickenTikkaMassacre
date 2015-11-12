@@ -91,7 +91,7 @@ public class GAME : MonoBehaviour {
 		//drawing the button info from the keyLayout file to map the buttons for the actions
 		
 		Button start_Btn	= new Button(KeyLayout.start_btnName, KeyLayout.start_Key);
-		Button select_Btn	= new Button(KeyLayout.select_btnName, KeyLayout.select_Key);
+		Button select_Btn	= new Button("Select_Two", KeyCode.Joystick2Button6);
 		
 		Button attack_Btn	= new Button("X_Two", KeyCode.Joystick2Button2);
 		Button jump_Btn		= new Button("A_Two", KeyCode.Joystick2Button0);
@@ -228,4 +228,10 @@ public class GAME : MonoBehaviour {
 		plr.item_Holding = null;
 		
 	}
+
+    public void RespawnPlayer()
+    {
+        Players[0].body.position = GameStatics.playerSpawn_one;
+        Players[1].body.position = GameStatics.playerSpawn_two;
+    }
 }

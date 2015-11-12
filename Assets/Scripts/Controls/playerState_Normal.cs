@@ -21,12 +21,14 @@ public class PlayerState
 			{
 				if(DEBUG) Debug.Log("OnGround");
 				Move(plr.body, plr.action.Move);
-			}
-			//If feet are in the air
-			else
+                if (plr.action.Jump_Btn.just_pressed) plr.body.GetComponent<Rigidbody>().AddForce(Vector3.up * 3000.0f);
+
+            }
+            //If feet are in the air
+            else
 			{
 				if(DEBUG) Debug.Log("InAir");
-				Move(plr.body, plr.action.Move);
+                Move_InAir(plr.body, plr.action.Move);
 			}
 		}//
 
@@ -42,7 +44,7 @@ public class PlayerState
 					rB.AddForceAtPosition(plr.item_Holding.transform.forward * 500.0f, plr.item_Holding.transform.position + plr.item_Holding.transform.up * 0.1f);
 					
 					plr.item_Holding = null;
-
+                    
 
 				}
 			}
@@ -53,8 +55,10 @@ public class PlayerState
 
 		}
 
-		if(plr.action.Jump_Btn.just_pressed) plr.body.GetComponent<Rigidbody>().AddForce(Vector3.up * 4500.0f);
-
+        if (plr.action.Select_Btn.isPressed)
+        {
+            GameObject.Find("GAME").GetComponent<GAME>().RespawnPlayer();
+        }
 	}
 
 	//shared 
@@ -78,11 +82,38 @@ public class PlayerState
 		
 		//transform.Translate(moveVector * 0.25f);
 		my_rigidbody.velocity = moveVector;
-		
+
+       // DropFromWall(plrBody);
 	
 	}
 
-	void LookForPickUp(Player plr)
+    void Move_InAir(Transform plrBody, Input_Plug.Analog_Stick move)
+    {
+        if (move.inputIntensity == 0.0f) return;
+
+        Vector3 plrPos_mapped = new Vector3(plrBody.position.x, 0, plrBody.position.z).normalized;
+        Vector3 dir = Vector3.Cross(plrPos_mapped, Vector3.down);
+        dir = dir.normalized;
+
+        Rigidbody my_rigidbody = plrBody.GetComponent<Rigidbody>();
+        Vector3 moveVector = (move.x == 0 && move.y == 0) ? Vector3.zero : new Vector3(move.x, 0, move.y);
+        moveVector *= 2.5f;
+        moveVector = dir * moveVector.x + plrPos_mapped * moveVector.z;// new Vector3( moveVector.x * dir.x, 0, moveVector.z * plrBody.position.normalized.z );
+
+        plrBody.forward = Vector3.RotateTowards(plrBody.forward, moveVector, 25.0f, 1);
+
+
+
+        moveVector += Vector3.up * Mathf.Clamp(my_rigidbody.velocity.y + Physics.gravity.y * Time.deltaTime,
+                                                Physics.gravity.y, 15);
+
+        //transform.Translate(moveVector * 0.25f);
+        my_rigidbody.velocity = moveVector;
+        DropFromWall(plrBody);
+
+    }
+
+    void LookForPickUp(Player plr)
 	{
 		Collider c = plrUtility.CheckForPickUp(plr.body);
 		if(c != null)
@@ -113,4 +144,14 @@ public class PlayerState
 			GameObject.Destroy(plr.buttonDisplay_Y);	//destroy prev. object holder (button)
 		}
 	}
+
+    void DropFromWall(Transform t)
+    {
+        Ray ray = new Ray(t.position + Vector3.up * -0.25f, t.forward * 0.5f);
+        LayerMask lM = 1 << 15;
+        if (Physics.Raycast(ray, 1.5f, lM))
+        {
+            t.GetComponent<Rigidbody>().velocity = new Vector3(0, t.GetComponent<Rigidbody>().velocity.y ,0); 
+        }
+    }
 }
