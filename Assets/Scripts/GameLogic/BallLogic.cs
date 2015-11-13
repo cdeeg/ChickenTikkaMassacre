@@ -33,7 +33,7 @@ public class BallLogic : MonoBehaviour {
 			case "Basket":
 			{
 				//calculate team -> point
-				GAME.ScorePoint( other.GetComponent<TeamBasket>().GetTeam() );
+				GameCommand.ScorePoint( other.GetComponent<TeamBasket>().GetTeam() );
 				break;
 			}
 			case"Weapon":
@@ -116,7 +116,8 @@ public class BallLogic : MonoBehaviour {
 	{
 		if(transform.parent == null) return;
 
-		GameObject.Find("GAME").GetComponent<GAME>().DropDodo(transform.parent.name);
+		//GameObject.Find("GAME").GetComponent<GAME>().DropDodo(transform.parent.name);
+		GameCommand.Dodo.DropDodo(transform.parent.name);
 	}
 
 	void Jiggle()

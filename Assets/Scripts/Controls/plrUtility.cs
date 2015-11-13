@@ -10,8 +10,10 @@ public static class plrUtility {
 	{
 
 		Vector3 	startingPoint 	= plrBody.position;
-		Vector3 	vDirection		= Vector3.down;							//Change this if player needs to react to the curve of the world.
-		float 		checkRange		= 1.45f;									//dependet on plr: height/2;
+		Vector3 	vDirection		= Vector3.down;													//Change this if player needs to react to the curve of the world.
+		float 		checkRange		= plrBody.GetComponent<CapsuleCollider>().height * 0.5f * plrBody.localScale.y + 0.1f;	//dependet on plr: height/2;
+
+		Debug.DrawRay(startingPoint, vDirection * checkRange, Color.cyan);
 
 		if( Physics.Raycast(startingPoint, vDirection, checkRange, lM_Ground  ) )
 		{

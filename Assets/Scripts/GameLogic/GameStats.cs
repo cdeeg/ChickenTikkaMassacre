@@ -39,4 +39,9 @@ namespace GameStats {
 			this.basket = b;
 		}
 	}
+
+	public struct GameStart_Info
+	{
+
+	}
 }

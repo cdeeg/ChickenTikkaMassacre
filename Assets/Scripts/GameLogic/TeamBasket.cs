@@ -10,20 +10,24 @@ public class TeamBasket : MonoBehaviour {
 	// Use this for initialization
 	void Start () {
 	
+
 	}
 	
 	// Update is called once per frame
 	void Update () {
-	
+
+
 	}
 
 	public void SetTeam(Team team)
 	{
+
 		myTeam = team;
 	}
 
 	public Team GetTeam()
 	{
+
 		return myTeam;
 	}
 }

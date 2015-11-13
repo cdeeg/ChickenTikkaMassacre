@@ -21,7 +21,7 @@ public class PlayerState
 			{
 				if(DEBUG) Debug.Log("OnGround");
 				Move(plr.body, plr.action.Move);
-                if (plr.action.Jump_Btn.just_pressed) plr.body.GetComponent<Rigidbody>().AddForce(Vector3.up * 3000.0f);
+                if (plr.action.Jump_Btn.just_pressed) plr.body.GetComponent<Rigidbody>().AddForce(Vector3.up * 5000.0f);
 
             }
             //If feet are in the air
@@ -57,7 +57,7 @@ public class PlayerState
 
         if (plr.action.Select_Btn.isPressed)
         {
-            GameObject.Find("GAME").GetComponent<GAME>().RespawnPlayer();
+			GameCommand.RespawnPlayer(plr.id);
         }
 	}
 
@@ -70,8 +70,6 @@ public class PlayerState
 		Vector3 dir = Vector3.Cross(plrPos_mapped, Vector3.down );
 		dir = dir.normalized;
 
-		Debug.DrawRay(plrBody.position, dir, Color.blue);
-
 		Rigidbody my_rigidbody	=	plrBody.GetComponent<Rigidbody>();
 		Vector3 moveVector		=	(move.x == 0 && move.y == 0) ? Vector3.zero : new Vector3(move.x, 0, move.y);
 		moveVector 			   *=	4.5f;
@@ -79,8 +77,11 @@ public class PlayerState
 		plrBody.forward			=	Vector3.RotateTowards(plrBody.forward, moveVector, 25.0f, 1);
 		moveVector			   +=	Vector3.up * Mathf.Clamp(	my_rigidbody.velocity.y + Physics.gravity.y * Time.deltaTime,
 		                                            			Physics.gravity.y, 15);
-		
+		Debug.DrawRay(plrBody.position, moveVector, Color.magenta,2.0f);  
+
+
 		//transform.Translate(moveVector * 0.25f);
+
 		my_rigidbody.velocity = moveVector;
 
        // DropFromWall(plrBody);
@@ -89,7 +90,7 @@ public class PlayerState
 
     void Move_InAir(Transform plrBody, Input_Plug.Analog_Stick move)
     {
-        if (move.inputIntensity == 0.0f) return;
+        //if (move.inputIntensity == 0.0f) return;
 
         Vector3 plrPos_mapped = new Vector3(plrBody.position.x, 0, plrBody.position.z).normalized;
         Vector3 dir = Vector3.Cross(plrPos_mapped, Vector3.down);
@@ -108,20 +109,27 @@ public class PlayerState
                                                 Physics.gravity.y, 15);
 
         //transform.Translate(moveVector * 0.25f);
-        my_rigidbody.velocity = moveVector;
-        DropFromWall(plrBody);
+		moveVector = DropFromWall(moveVector, plrBody);
+		my_rigidbody.velocity = moveVector;
+       
 
     }
 
     void LookForPickUp(Player plr)
 	{
 		Collider c = plrUtility.CheckForPickUp(plr.body);
+
 		if(c != null)
 		{
 			//if(DEBUG) Debug.Log("FOUND SOMETHING");
-			
+
+			//Display pick Up symbol
 			if(plr.buttonDisplay_Y == null)	{plr.buttonDisplay_Y = plrUtility.Create_UI_Button(c);}	//if no button yet exists, create one,
 			else 							{plrUtility.UpdateButton(plr.buttonDisplay_Y, c);}		//else update the current one.
+		
+			//PickUp
+			if(plr.action.Grab_Btn.just_pressed) plr.PickUpItem(c.gameObject);
+		
 		}
 		else //No Object in range
 		{
@@ -129,29 +137,29 @@ public class PlayerState
 			else 							{GameObject.Destroy(plr.buttonDisplay_Y);}	//destroy prev. object holder (button)
 		}
 
-		if(plr.action.Grab_Btn.just_pressed)
-		{
-			plr.item_Holding = c.gameObject;
 
-			plr.item_Holding.transform.position = plr.body.position + Vector3.up * 1.25f;
-			plr.item_Holding.transform.rotation = plr.body.rotation;
-			plr.item_Holding.transform.parent = plr.body;
-			//plr.item_Holding.layer = 1 << 21;
-				;
-			Rigidbody rB = plr.item_Holding.GetComponent<Rigidbody>();
-			rB.isKinematic = true;
-
-			GameObject.Destroy(plr.buttonDisplay_Y);	//destroy prev. object holder (button)
-		}
 	}
 
-    void DropFromWall(Transform t)
+	Vector3 DropFromWall(Vector3 moveVector, Transform t)
     {
-        Ray ray = new Ray(t.position + Vector3.up * -0.25f, t.forward * 0.5f);
-        LayerMask lM = 1 << 15;
-        if (Physics.Raycast(ray, 1.5f, lM))
+		CapsuleCollider c		 		= t.GetComponent<CapsuleCollider>();
+		Vector3 		start_offset	= Vector3.down * (c.height * 0.5f * t.localScale.y - 0.01f);
+		Vector3			start			= t.position + start_offset;
+		//Vector3			horizontalVelo	= t.GetComponent<Rigidbody>().velocity.normalized;
+		//				horizontalVelo -= Vector3.up * horizontalVelo.y;
+		Vector3			rayVector 		= t.forward * (c.radius * t.localScale.z + 0.05f);
+
+		Debug.DrawRay(start, rayVector, Color.red,2.0f);  
+
+		Ray				ray				= new Ray(start, rayVector);
+        LayerMask		lM				= 1 << 15;
+		RaycastHit		hit;
+		if (Physics.Raycast(ray, out hit, rayVector.magnitude, lM))
         {
-            t.GetComponent<Rigidbody>().velocity = new Vector3(0, t.GetComponent<Rigidbody>().velocity.y ,0); 
+			t.position -=  rayVector.normalized * ( ( (rayVector.magnitude) - hit.distance )  + 0.01f);
+            return new Vector3(0, moveVector.y ,0); 
         }
+
+		return moveVector;
     }
 }
