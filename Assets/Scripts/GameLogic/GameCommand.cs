@@ -64,4 +64,9 @@ public static class GameCommand {
 		GameStatics.dodo.ResetBall();
 	}
 
+	public static void HitPlayer(Vector3 contactPoint, int plr_ID)
+	{
+		gameInstance.GetPlayers()[plr_ID].GetSlapped(contactPoint);
+	}
+
 }

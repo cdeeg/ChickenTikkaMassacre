@@ -31,7 +31,7 @@ public static class KeyLayout {
 	public static KeyCode	Aim_Key			= KeyCode.Mouse1;
 	public static string 	Aim_btnName 	= "LT";
 
-	public static KeyCode	Shoot_Key		= KeyCode.Mouse3;
+	public static KeyCode	Shoot_Key		= KeyCode.Joystick1Button5;
 	public static string 	Shoot_btnName	= "RT";
 
 	//Move Axis//

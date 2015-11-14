@@ -10,6 +10,9 @@ public class Player {
 	public Actions		action;
 	public int			id;
 
+	//GameObject componets
+	public Animation	myAnimation;
+	public BoxCollider			hitBox;
 	//Changable
 	public GameObject 	buttonDisplay_Y;
 	public GameObject	item_Holding;
@@ -18,13 +21,19 @@ public class Player {
 	// base stats - may be moved
 	public readonly float base_movementspeed	= 5;
 	public readonly float base_AirSpeed			= 0.5f;
-	
+
+	//constants
+	float ItemThrowForce = 400.0f;	//When droping items -> force multiplicator aplied on object
+
 	GameObject grabbedItem = null;
 	public Player(Transform body, Actions action, int id)
 	{
 		this.id		= id;
 		this.body	= body;
 		this.action	= action;
+
+		myAnimation 	= body.FindChild("playerModel").GetComponent<Animation>();
+		hitBox			= body.FindChild("hitBox").GetComponent<BoxCollider>();
 	}
 
 	public void PickUpItem(GameObject toPickUp)
@@ -42,5 +51,26 @@ public class Player {
 		
 		GameObject.Destroy(buttonDisplay_Y);	//destroy prev. object holder (button)
 	
+	}
+
+	public void DropItem()
+	{
+		Rigidbody rB = item_Holding.GetComponent<Rigidbody>();
+		item_Holding.transform.parent = null;
+		rB.isKinematic = false;
+		rB.AddForceAtPosition(item_Holding.transform.forward * ItemThrowForce, item_Holding.transform.position + item_Holding.transform.up * 0.1f);
+		
+		item_Holding = null;
+	}
+
+	public void GetSlapped (Vector3 contactPoint)
+	{
+		Vector3 force_direction = (body.position - contactPoint).normalized;
+
+		body.GetComponent<Rigidbody>().AddForce( force_direction* 2500 + Vector3.up * 2000);
+
+		if(item_Holding != null) DropItem();
+
+		myAnimation.Play("Flap");
 	}
 }

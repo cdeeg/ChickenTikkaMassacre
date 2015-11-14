@@ -8,8 +8,8 @@ using GameStats;
 
 public class GAME : MonoBehaviour {
 
-	PlayerState pState_one = new PlayerState();
-	PlayerState pState_two = new PlayerState();
+	PlayerState pState_one = new Normal();
+	PlayerState pState_two = new Normal();
 	Player[] Players;
 
 	//Splitscreen
@@ -43,10 +43,10 @@ public class GAME : MonoBehaviour {
 	void Update () {
 
 		//player update
-		pState_one.playerState_Normal(Players[0], true);
-		pState_two.playerState_Normal(Players[1], false);
+		pState_one = pState_one.Update(Players[0], true);
+		pState_two = pState_two.Update(Players[1], false);
 
-	
+		
 		// simple Splitscreen solution
 		plr_one_cam.LookAt(Players[0].body);
 		plr_two_cam.LookAt(Players[1].body);
@@ -119,7 +119,7 @@ public class GAME : MonoBehaviour {
 		Button grab_Btn		= new Button("Y_Two", KeyCode.Joystick2Button3);
 		
 		Button aim_Btn		= new Button("LT_Two", KeyLayout.Aim_Key);
-		Button shoot_Btn	= new Button("RT_Two", KeyLayout.Shoot_Key);
+		Button shoot_Btn	= new Button("RT_Two", KeyCode.Joystick2Button5);
 		
 		ButtonAxis buttonAxis	= new ButtonAxis(	KeyLayout.Move_Axis_Xn, KeyLayout.Move_Axis_Xp,
 		                                       KeyLayout.Move_Axis_Yn, KeyLayout.Move_Axis_Yp);
