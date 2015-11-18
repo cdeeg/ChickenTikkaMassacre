@@ -73,7 +73,7 @@ public class Normal : PlayerState
 
 			if(c != null) 
 			{
-				Debug.Log("Player hit!");
+				//Debug.Log("Player hit!");
 				int enemyID = (plr.id == 0) ? 1 : 0;
 				GameCommand.HitPlayer( c[0].transform.position, enemyID);
 			}
@@ -86,6 +86,33 @@ public class Normal : PlayerState
 			plr.body.GetComponent<Rigidbody>().AddForce(Vector3.up * 5000.0f);
 			plr.myAnimation.clip = plr.myAnimation.GetClip("Flap");
 			plr.myAnimation.Play("Flap");
+		}
+
+
+		//look for ladder
+		RaycastHit hit = plrUtility.CheckForLadder(plr);
+		if( hit.collider != null )
+		{
+			//Draw help/interaction button
+			Debug.Log("Test");
+			if(plr.action.Grab_Btn.isPressed)
+			{
+				plrUtility.PlaceOnLadder(plr, hit);
+
+				plr.body.forward	=	-(hit.normal - Vector3.up * hit.normal.y);
+
+				Rigidbody r = plr.body.GetComponent<Rigidbody>();
+				r.useGravity = false;
+				r.velocity = Vector3.zero;
+
+				return new OnLadder();
+			}
+			//if (button pressed) -> climb on ladder
+
+		}
+		else
+		{
+			Debug.Log("no test");
 		}
 
 		return this;

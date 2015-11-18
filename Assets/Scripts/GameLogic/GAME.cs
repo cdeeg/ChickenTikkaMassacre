@@ -36,7 +36,7 @@ public class GAME : MonoBehaviour {
 
 
 		//single player cam/oculus
-		cam = GameObject.Find("OVRCameraRig").transform;
+		//cam = GameObject.Find("OVRCameraRig").transform;
 	}
 	
 	// Update is called once per frame
@@ -51,11 +51,21 @@ public class GAME : MonoBehaviour {
 		plr_one_cam.LookAt(Players[0].body);
 		plr_two_cam.LookAt(Players[1].body);
 
+		//PositionCamera();
+
 		//DEBUG
-		if(Input.GetKey(KeyCode.LeftArrow)) MoveCam_Hor(Vector3.up);
-		if(Input.GetKey(KeyCode.RightArrow))MoveCam_Hor(Vector3.down);
-		if(Input.GetKey(KeyCode.UpArrow))	MoveCam_Ver(-1);
-		if(Input.GetKey(KeyCode.DownArrow))	MoveCam_Ver( 1);
+		//if(Input.GetKey(KeyCode.LeftArrow)) MoveCam_Hor(Vector3.up);
+		//if(Input.GetKey(KeyCode.RightArrow))MoveCam_Hor(Vector3.down);
+		//if(Input.GetKey(KeyCode.UpArrow))	MoveCam_Ver(-1);
+		//if(Input.GetKey(KeyCode.DownArrow))	MoveCam_Ver( 1);
+	}
+
+	void PositionCamera()
+	{
+		Vector3 newCamPos = cam.transform.forward * 6.0f;
+		newCamPos += Vector3.up * 10;
+		cam.position = newCamPos;
+
 	}
 
 	void OnGUI()

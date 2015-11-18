@@ -39,13 +39,15 @@ public class DodoControls {
 		plr.item_Holding.transform.parent = null;
 		rB.isKinematic = false;
 		
-		Vector3 escape_dir = plr.item_Holding.transform.forward * Random.Range(-1.0f, 1) * 500.0f;
-		escape_dir += plr.item_Holding.transform.right * Random.Range(-1.0f, 1) * 500.0f;
-		escape_dir += Vector3.up * Random.Range( 250, 350);
+		Vector3 escape_dir = plr.item_Holding.transform.forward * Random.Range(-1.0f, 1) * 250.0f;
+		escape_dir += plr.item_Holding.transform.right * Random.Range(-1.0f, 1) * 300.0f;
+		escape_dir += Vector3.up * Random.Range( 450, 600);
 		
 		rB.AddForceAtPosition(escape_dir, plr.item_Holding.transform.position + plr.item_Holding.transform.up * 0.1f);
 		
 		plr.item_Holding = null;
+
+		GameStatics.dodo.EndAwakening();
 		
 	}
 }

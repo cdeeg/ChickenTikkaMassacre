@@ -58,6 +58,16 @@ public static class GameCommand {
 			if( ts.team == t )
 			{
 				GameStatics.teams[i].addPoints = 1;
+
+				if(ts.team == Team.Orange)
+				{
+					GameObject.FindGameObjectWithTag("Team 2").GetComponent<ParticleSystem>().Play();
+				}
+				else
+				{
+					GameObject.FindGameObjectWithTag("Team 1").GetComponent<ParticleSystem>().Play();
+				}
+
 			}
 			
 		}

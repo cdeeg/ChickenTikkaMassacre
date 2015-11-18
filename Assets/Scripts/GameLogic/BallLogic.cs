@@ -11,6 +11,8 @@ public class BallLogic : MonoBehaviour {
 	float jiggleCD = Random.value * 3 + 2;
 	float asSleep = 0;
 	float asSleeCD = Random.value * 3 + 8;
+
+	bool InBreakFreeIteration = false;
 	// Use this for initialization
 	void Start () {
 	
@@ -60,6 +62,7 @@ public class BallLogic : MonoBehaviour {
 		jiggleCD = Random.value * 3 + 2;
 		asSleep = 0;
 		asSleeCD = Random.value * 3 + 8;
+		InBreakFreeIteration = false;
 
 		transform.parent.parent = null;
 		transform.parent.position = GameStatics.dodo_spawn;
@@ -72,6 +75,7 @@ public class BallLogic : MonoBehaviour {
 		bool isBeingHold = (gameObject.transform.parent.parent != null) ? true : false;
 		if(!isBeingHold)
 		{
+			InBreakFreeIteration = false;
 			isAsleep = true;
 			asSleeCD = Random.value * 3 + 8;
 			asSleep = 0;
@@ -107,7 +111,11 @@ public class BallLogic : MonoBehaviour {
 			}
 			else
 			{
-				BreakFree();
+				if(!InBreakFreeIteration)
+				{
+					InBreakFreeIteration = true;
+					StartCoroutine("AwakeAndJump");
+				}
 			}
 		}
 	}
@@ -132,5 +140,33 @@ public class BallLogic : MonoBehaviour {
 		sum += Vector3.up * Random.Range(200, 350);
 
 		transform.parent.GetComponent<Rigidbody>().AddForce( sum );
+	}
+
+	IEnumerator AwakeAndJump()
+	{
+
+		float duration = 1.5f;
+		float current = 0.0f;
+
+		//bool didMakeIt = false;
+
+		while(current < duration)
+		{
+			if(transform.parent.parent != null)
+			{
+				transform.parent.position = transform.parent.parent.position + Vector3.up * 1.25f + Vector3.one * Random.Range(-0.35f, 0.455f) * current / duration;
+			}
+
+			yield return false;
+			current += Time.deltaTime;
+		}
+
+		BreakFree();
+	}
+
+	public void EndAwakening()
+	{
+		StopAllCoroutines();
+		InBreakFreeIteration = false;
 	}
 }
