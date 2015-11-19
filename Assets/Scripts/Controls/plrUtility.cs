@@ -146,7 +146,7 @@ public static class plrUtility {
 
 		if (Physics.Raycast(ray, out hit, rayVector.magnitude, lM))
 		{
-			if(Mathf.Abs( Vector3.Dot(hit.normal, hit.collider.transform.forward) ) == 1) hit = new RaycastHit();
+			if(Mathf.Abs( Vector3.Dot(hit.normal, hit.collider.transform.forward) ) == 1 || hit.normal == hit.collider.transform.right) hit = new RaycastHit();
 
 			else
 			{
@@ -200,8 +200,8 @@ public static class plrUtility {
 	public static Collider[] CheckForHit(Player plr)
 	{
 
-		float		radius = 1.5f;
-		Vector3		center = plr.body.position + plr.body.forward *( plr.hitBox.bounds.extents.z * 0.5f * plr.body.localScale.z + radius + 0.01f); 
+		float		radius = 1.1f;
+		Vector3		center = plr.body.position + plr.body.forward *( plr.hitBox.bounds.extents.z * 0.5f * plr.body.localScale.z + radius + 0.25f); 
 		LayerMask		lM = 1 << 17;
 
 		Debug.DrawLine(center + Vector3.left * radius * 0.5f, center + Vector3.right * radius * 0.5f, Color.yellow, 2.0f);

@@ -13,7 +13,7 @@ public static class KeyLayout {
 
 	*/
 
-	public static KeyCode	start_Key		= KeyCode.Escape;
+	public static KeyCode	start_Key		= KeyCode.Joystick1Button1;
 	public static string 	start_btnName	= "Start";
 
 	public static KeyCode	select_Key		= KeyCode.Joystick1Button6;
@@ -25,7 +25,7 @@ public static class KeyLayout {
 	public static KeyCode	jump_Key		= KeyCode.Joystick1Button0;
 	public static string 	jump_btnName	= "A";
 
-	public static KeyCode	grab_Key		= KeyCode.Joystick1Button1;
+	public static KeyCode	grab_Key		= KeyCode.Joystick1Button3;
 	public static string 	grab_btnName	= "Y";
 
 	public static KeyCode	Aim_Key			= KeyCode.Mouse1;

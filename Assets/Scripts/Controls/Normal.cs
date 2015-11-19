@@ -64,8 +64,8 @@ public class Normal : PlayerState
 		if(plr.action.Attack_Btn.just_pressed) 
 		{
 
-			plr.myAnimation.clip = plr.myAnimation.GetClip("Clap");
-			plr.myAnimation.Play("Clap");
+			plr.myAnimation.clip = plr.myAnimation.GetClip("slap");
+			plr.myAnimation.Play("slap");
 
 			Collider[] c = plrUtility.CheckForHit(plr);
 
@@ -84,8 +84,8 @@ public class Normal : PlayerState
 		if (plr.action.Shoot_Btn.just_pressed)
 		{
 			plr.body.GetComponent<Rigidbody>().AddForce(Vector3.up * 5000.0f);
-			plr.myAnimation.clip = plr.myAnimation.GetClip("Flap");
-			plr.myAnimation.Play("Flap");
+			//plr.myAnimation.clip = plr.myAnimation.GetClip("slap");
+			//plr.myAnimation.Play("slap");
 		}
 
 
@@ -95,7 +95,7 @@ public class Normal : PlayerState
 		{
 			//Draw help/interaction button
 			Debug.Log("Test");
-			if(plr.action.Grab_Btn.isPressed)
+			if(plr.action.Start_Btn.isPressed)
 			{
 				plrUtility.PlaceOnLadder(plr, hit);
 

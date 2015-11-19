@@ -50,6 +50,11 @@ public class Player {
 		rB.isKinematic = true;
 		
 		GameObject.Destroy(buttonDisplay_Y);	//destroy prev. object holder (button)
+
+		if(toPickUp.tag == "Ball")
+		{
+			GameStatics.dodo.PlaySound_Catch();
+		}
 	
 	}
 
@@ -71,6 +76,14 @@ public class Player {
 
 		if(item_Holding != null) DropItem();
 
-		myAnimation.Play("Flap");
+		//myAnimation.Play("Flap");
+
+		if(Random.value > 0.5f)
+		{
+			AudioClip[] c = Resources.LoadAll<AudioClip>("Sounds/Player/Punsh");
+			body.GetComponent<AudioSource>().PlayOneShot(c[Random.Range(0, c.Length - 1)]);
+		}
+
+		Debug.Log("Gotslapped: " + body.name);
 	}
 }

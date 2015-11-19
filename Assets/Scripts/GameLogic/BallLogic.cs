@@ -126,6 +126,9 @@ public class BallLogic : MonoBehaviour {
 
 		//GameObject.Find("GAME").GetComponent<GAME>().DropDodo(transform.parent.name);
 		GameCommand.Dodo.DropDodo(transform.parent.name);
+
+		AudioClip[] c = Resources.LoadAll<AudioClip>("Sounds/Dodo/Freed");
+		GetComponent<AudioSource>().PlayOneShot(c[Random.Range(0, c.Length - 1)]);
 	}
 
 	void Jiggle()
@@ -140,6 +143,9 @@ public class BallLogic : MonoBehaviour {
 		sum += Vector3.up * Random.Range(200, 350);
 
 		transform.parent.GetComponent<Rigidbody>().AddForce( sum );
+
+		AudioClip[] c = Resources.LoadAll<AudioClip>("Sounds/Dodo/Freed");
+		GetComponent<AudioSource>().PlayOneShot(c[Random.Range(0, c.Length - 1)]);
 	}
 
 	IEnumerator AwakeAndJump()
@@ -168,5 +174,11 @@ public class BallLogic : MonoBehaviour {
 	{
 		StopAllCoroutines();
 		InBreakFreeIteration = false;
+	}
+
+	public void PlaySound_Catch()
+	{
+		AudioClip[] c = Resources.LoadAll<AudioClip>("Sounds/Dodo/Catch");
+		GetComponent<AudioSource>().PlayOneShot(c[Random.Range(0, c.Length - 1)]);
 	}
 }

@@ -32,11 +32,11 @@ public class GAME : MonoBehaviour {
 
 
 		// simple Splitscreen solution
-		CreatePlayerCams();
+		//CreatePlayerCams();
 
 
 		//single player cam/oculus
-		//cam = GameObject.Find("OVRCameraRig").transform;
+		cam = GameObject.Find("OVRCameraRig").transform;
 	}
 	
 	// Update is called once per frame
@@ -48,8 +48,8 @@ public class GAME : MonoBehaviour {
 
 		
 		// simple Splitscreen solution
-		plr_one_cam.LookAt(Players[0].body);
-		plr_two_cam.LookAt(Players[1].body);
+		//plr_one_cam.LookAt(Players[0].body);
+		//plr_two_cam.LookAt(Players[1].body);
 
 		//PositionCamera();
 
@@ -121,7 +121,7 @@ public class GAME : MonoBehaviour {
 		//Creation of the virtual controler for the player actions
 		//drawing the button info from the keyLayout file to map the buttons for the actions
 		
-		Button start_Btn	= new Button(KeyLayout.start_btnName, KeyLayout.start_Key);
+		Button start_Btn	= new Button("Start_Two", KeyCode.Joystick2Button1);
 		Button select_Btn	= new Button("Select_Two", KeyCode.Joystick2Button6);
 		
 		Button attack_Btn	= new Button("X_Two", KeyCode.Joystick2Button2);
@@ -165,6 +165,31 @@ public class GAME : MonoBehaviour {
 		plr_two_cam = d.transform;
 		plr_two_cam.GetComponent<Camera>().rect = new Rect(0f,0.5f, 1, 0.5f);
 		plr_two_cam.GetComponent<Camera>().fieldOfView = 35.0f;
+	}
+
+	public IEnumerator GrillMeat(GameObject meat)
+	{
+		if(meat == null) Debug.Log("no meat");
+
+		meat.transform.parent.FindChild("Fire").GetComponent<ParticleSystem>().Play();
+		
+		meat.transform.FindChild("Dodo/Dodo 1").gameObject.SetActive(true);
+
+		meat.GetComponent<AudioSource>().PlayOneShot( Resources.Load<AudioClip>("Sounds/ScorePoint/fire_temp") );
+
+		float duration = 5.0f;
+		float current = 0;
+		float startTime = Time.time;
+		
+		while(Time.time - startTime < duration)
+		{
+			meat.transform.Rotate(meat.transform.forward, 20 * Time.deltaTime);
+			yield return false;	
+		}
+		
+		meat.transform.FindChild("Dodo/Dodo 1").gameObject.SetActive(false);
+		
+		yield return false;
 	}
 	
 }

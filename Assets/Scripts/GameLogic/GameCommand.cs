@@ -61,11 +61,12 @@ public static class GameCommand {
 
 				if(ts.team == Team.Orange)
 				{
-					GameObject.FindGameObjectWithTag("Team 2").GetComponent<ParticleSystem>().Play();
+					gameInstance.StartCoroutine("GrillMeat", GameObject.FindGameObjectWithTag("Team 2 Meat"));
+					
 				}
 				else
 				{
-					GameObject.FindGameObjectWithTag("Team 1").GetComponent<ParticleSystem>().Play();
+					gameInstance.StartCoroutine("GrillMeat", GameObject.FindGameObjectWithTag("Team 1 Meat"));
 				}
 
 			}
@@ -78,5 +79,6 @@ public static class GameCommand {
 	{
 		gameInstance.GetPlayers()[plr_ID].GetSlapped(contactPoint);
 	}
+
 
 }
