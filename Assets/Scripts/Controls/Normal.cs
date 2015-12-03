@@ -105,7 +105,7 @@ public class Normal : PlayerState
 				r.useGravity = false;
 				r.velocity = Vector3.zero;
 
-				return new OnLadder();
+//				return new OnLadder();
 			}
 			//if (button pressed) -> climb on ladder
 
