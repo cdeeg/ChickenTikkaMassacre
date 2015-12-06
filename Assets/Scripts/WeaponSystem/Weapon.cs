@@ -1,5 +1,6 @@
 ﻿using UnityEngine;
 using System.Collections;
+using UnityEngine.Networking;
 
 public class Weapon : MonoBehaviour {
 
@@ -20,6 +21,9 @@ public class Weapon : MonoBehaviour {
 
 	[Header("Cheats")]
 	public bool infiniteAmmo = false;
+
+	/** Set by the server dynamically */
+	public int WeaponID { get; set; }
 
 	/** Returns true if the weapon still has ammo, false otherwise. */
 	public bool UseAmmo() { if( infiniteAmmo ) return true; currentAmmo--; return currentAmmo > 0; }

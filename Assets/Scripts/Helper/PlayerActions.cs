@@ -31,15 +31,6 @@ public class PlayerActions : PlayerActionSet
 	{
 		PlayerActions playerActions = new PlayerActions();
 		
-//		playerActions.Fire.AddDefaultBinding( Key.Shift, Key.A );
-//		playerActions.Fire.AddDefaultBinding( InputControlType.Action1 );
-//		playerActions.Fire.AddDefaultBinding( Mouse.LeftButton );
-//		
-//		playerActions.Jump.AddDefaultBinding( Key.Space );
-//		playerActions.Jump.AddDefaultBinding( InputControlType.Action3 );
-//		playerActions.Jump.AddDefaultBinding( InputControlType.Back );
-//		playerActions.Jump.AddDefaultBinding( InputControlType.System );
-		
 		playerActions.Up.AddDefaultBinding( Key.UpArrow );
 		playerActions.Down.AddDefaultBinding( Key.DownArrow );
 		playerActions.Left.AddDefaultBinding( Key.LeftArrow );
@@ -74,9 +65,6 @@ public class PlayerActions : PlayerActionSet
 		
 		playerActions.ListenOptions.IncludeUnknownControllers = true;
 		playerActions.ListenOptions.MaxAllowedBindings = 3;
-		// playerActions.ListenOptions.MaxAllowedBindingsPerType = 1;
-		// playerActions.ListenOptions.UnsetDuplicateBindingsOnSet = true;
-		// playerActions.ListenOptions.IncludeMouseButtons = true;
 		
 		playerActions.ListenOptions.OnBindingFound = ( action, binding ) =>
 		{

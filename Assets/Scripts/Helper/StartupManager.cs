@@ -6,11 +6,7 @@ using UnityEngine.Networking;
 [RequireComponent(typeof(NetworkManager))]
 public class StartupManager : MonoBehaviour {
 
-	public bool UseOverride = false;
 	public bool useOculus = false;
-	public bool useNetwork = false;
-	public GameObject playerPrefab;
-	public GameObject overridePrefab;
 	public string nextScene;
 
 	[Header("General Settings")]
@@ -20,7 +16,6 @@ public class StartupManager : MonoBehaviour {
 
 	[Header("Player Settings")]
 	public Color32[] playerColors;
-	public Mesh[] playerCharacters;
 	public PlayerCharacterSettings settings;
 
 	void Start()
@@ -33,11 +28,6 @@ public class StartupManager : MonoBehaviour {
 
 		// keep this game object, regardless of which scene is loading
 		DontDestroyOnLoad(transform.gameObject);
-
-		// tell network manager which prefab to use for the players
-		NetworkManager mng = GetComponent<NetworkManager>();
-		mng.playerPrefab = UseOverride ? overridePrefab : playerPrefab;
-		mng.enabled = false;
 
 		// load real level/menu
 		Application.LoadLevel( nextScene );

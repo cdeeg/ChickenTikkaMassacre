@@ -33,6 +33,15 @@ public class PlayerCharacterSettings
 	}
 }
 
+public enum PlayerNetworkAction
+{
+	NONE,
+	USE_WEAPON,
+	TOGGLE_RANGED,
+	MOVE,
+	DODO_INTERACTION
+}
+
 public enum WeaponType
 {
 	Melee,

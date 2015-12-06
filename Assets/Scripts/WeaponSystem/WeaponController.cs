@@ -1,12 +1,16 @@
 ﻿using UnityEngine;
 using System.Collections;
+using UnityEngine.Networking;
 
-public class WeaponController : MonoBehaviour {
+public class WeaponController : NetworkBehaviour {
 
 	public Weapon standardMelee;
 	public Weapon standardRange;
 
-	public Weapon[] weapons;
+	public Transform weaponAnchor;
+
+	Weapon standardRangeInstance;
+	Weapon standardMeleeInstance;
 	
 	Weapon currentMeleeWeapon;
 	Weapon currentRangeWeapon;
@@ -54,7 +58,7 @@ public class WeaponController : MonoBehaviour {
 	}
 
 	/** Equip melee weapon. Returns true if the current weapon changed, false if nothing changed. */
-	public bool EquipMelee()
+	public bool EquipMelee( bool alwaysReturnTrue = false )
 	{
 		bool change = currentWeapon.type != WeaponType.Melee;
 		currentWeapon = currentMeleeWeapon;
@@ -63,22 +67,29 @@ public class WeaponController : MonoBehaviour {
 	}
 
 	/** Shoot current range weapon. Returns true if the weapon still has ammo left, false if it's empty (the melee weapon will be
-	 * equipped automatically).
-	  */
-	public bool ShootRangedWeapon()
+	 *  equipped automatically).
+	 */
+	public bool UseWeapon()
 	{
 		bool hasAmmo = currentRangeWeapon.UseAmmo();
 
 		if( !hasAmmo )
 		{
-			currentRangeWeapon = standardRange;
-			EquipMelee();
+			if( currentWeapon.type != WeaponType.Melee )
+			{
+				currentRangeWeapon = standardRange;
+				EquipMelee();
+			}
+			else
+			{
+				currentMeleeWeapon = standardMelee;
+			}
 		}
 
 		return hasAmmo;
 	}
 
-	void Start ()
+	public void Initialize ()
 	{
 		if( standardMelee == null && standardRange == null )
 		{
@@ -86,10 +97,24 @@ public class WeaponController : MonoBehaviour {
 			return;
 		}
 
-		currentRangeWeapon = standardRange;
-		currentMeleeWeapon = standardMelee;
+		CmdCreateStandardWeapons();
+		
+		currentRangeWeapon = standardRangeInstance;
+		currentMeleeWeapon = standardMeleeInstance;
 
 		currentWeapon = standardMelee;
-		Debug.Log("current weapon"+currentWeapon);
+	}
+
+	[Command]void CmdCreateStandardWeapons()
+	{
+		GameObject insta = (GameObject)Instantiate(standardRange.gameObject, weaponAnchor.localPosition, Quaternion.identity);
+		NetworkServer.Spawn( insta );
+		insta.transform.SetParent( weaponAnchor );
+		standardRangeInstance = insta.GetComponent<Weapon>();
+		
+		insta = (GameObject)Instantiate(standardMelee.gameObject, Vector3.zero, Quaternion.identity);
+		NetworkServer.Spawn( insta );
+		insta.transform.SetParent( weaponAnchor );
+		standardMeleeInstance = insta.GetComponent<Weapon>();
 	}
 }
