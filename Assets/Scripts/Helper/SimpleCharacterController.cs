@@ -7,29 +7,46 @@ using System.Collections.Generic;
 struct PlayerMove
 {
 	public int moveNum;
+	public int playerId;
+
 	public Vector3 moveDire;
+	public bool toggleRange;
+	public bool useWeapon;
+}
+
+struct PlayerNetworkActionContainer
+{
+	// the player's current action
+	public PlayerNetworkAction action;
+
+	// additional values for two-axis sticks
+	public float moveX;
+	public float moveY;
 }
 
 [RequireComponent(typeof(WeaponController))]
-public class SimpleCharacterController : NetworkBehaviour
+[NetworkSettings(channel=2)]public class SimpleCharacterController : NetworkBehaviour
 {
-	// important objects
+	public Transform weaponAnchor;
+	// local variables
 	PlayerActions actions;				// controls
 	PlayerCharacterSettings settings;	// character settings (from Startup Manager)
 	WeaponController weaponController;	// weapon controller
 
-	[SyncVar(hook="OnServerStateChanged")] PlayerMove serverMove;	// current position
-	[SyncVar]Color playerColor = Color.black;						// chosen color (sync once)
+	// network variables
+	[SyncVar(hook="OnServerStateChanged")] PlayerMove serverMove;	// current position (sync a if necessary)
+//	[SyncVar]Color playerColor = Color.black;						// chosen color (sync once) // TODO
 	[SyncVar]int currentHealth;										// current health
-	List<PlayerActions> pendingMoves;								// pending actions made by the player
+	List<PlayerNetworkActionContainer> pendingMoves;				// pending actions made by the player
 	PlayerMove predictedState;										// state of the player deduced from their previous action
 
 	int initialHealth; // TODO remove?
 
-	public void SetColor( Color col ) { playerColor = col; } // set player color
+//	public void SetColor( Color col ) { playerColor = col; } // set player color // TODO
 
 	#region Network
-	[Server] void Initialize()
+	// called when client is started, aka the player is spawned -> initialize stuff
+	public override void OnStartClient()
 	{
 		// get the settings (since the StartupManager object also contains the NetworkManager,
 		// we can be sure it's there
@@ -40,24 +57,58 @@ public class SimpleCharacterController : NetworkBehaviour
 
 		// get WeaponController
 		weaponController = GetComponent<WeaponController>();
+		weaponController.Initialize();
 
 		// initialize controls
 		actions = PlayerActions.CreateWithDefaultBindings();
+
 		// TODO check what PlayerPrefs do exactly
 	}
 
 	void OnServerStateChanged ( PlayerMove newMove )
 	{
 		serverMove = newMove;
+		if (pendingMoves != null)
+		{
+			// remove moves until the move count of local and server match
+			while (pendingMoves.Count > (predictedState.moveNum - serverMove.moveNum))
+			{
+				pendingMoves.RemoveAt( 0 );
+			}
+			// update state
+			UpdatePredictedState();
+		}
 	}
 
 	void UpdatePredictedState ()
 	{
 		predictedState = serverMove;
-//		foreach (PlayerMove action in pendingMoves)
-//		{
-//			predictedState = DoAction(predictedState, action);
-//		}
+		foreach (PlayerNetworkActionContainer action in pendingMoves)
+		{
+			predictedState = DoAction(predictedState, action);
+		}
+	}
+
+	void SyncState ( bool init )
+	{
+		Quaternion lookAt = Quaternion.identity;
+
+		PlayerMove currentState = isLocalPlayer ? predictedState : serverMove;
+
+		if( currentState.toggleRange ) weaponController.ToggleRanged();
+		else if( currentState.useWeapon ) weaponController.UseWeapon();
+
+//		if( currentState.toggleRange ) weaponController.HasRangeWeaponEquipped();
+
+		if( !weaponController.HasRangeWeaponEquipped() )
+		{
+			transform.position += currentState.moveDire;
+
+			lookAt = Quaternion.LookRotation( Vector3.forward, Vector3.up );
+			
+			if( currentState.moveDire != Vector3.zero )
+				transform.rotation = Quaternion.Slerp( transform.rotation, lookAt, Time.deltaTime * settings.rotationSpeed );
+		}
 	}
 
 	#endregion
@@ -90,68 +141,76 @@ public class SimpleCharacterController : NetworkBehaviour
 	#endregion
 
 	#region Unity
-	void Awake()
-	{
-		Initialize();
-	}
-
 	void Start()
 	{
-		if (isLocalPlayer) {
-			pendingMoves = new List<PlayerActions>();
+		if ( isLocalPlayer )
+		{
+			pendingMoves = new List<PlayerNetworkActionContainer>();
 			UpdatePredictedState();
 		}
-	}
-
-	void DoAction(PlayerMove previous, PlayerAction action)
-	{
-
+		SyncState( true );
+		//SyncColor(); // TODO
+		GetComponent<Renderer>().material.color = isLocalPlayer ? Color.white : Color.blue;
 	}
 
 	void Update ()
-//	PlayerMove DoAction( PlayerMove prev, PlayerAction action )
 	{
+		if (isLocalPlayer)
+		{
+			PlayerNetworkActionContainer pressedKey = new PlayerNetworkActionContainer();
+			pressedKey.action = PlayerNetworkAction.NONE;
+
+			// use WasPressed here to avoid mass toggling range/mass using weapon
+			if( actions.UseWeapon.WasPressed )
+			{
+				pressedKey.action = PlayerNetworkAction.USE_WEAPON;
+			}
+			else if( actions.ToggleRanged.WasPressed )
+			{
+				pressedKey.action = PlayerNetworkAction.TOGGLE_RANGED;
+			}
+			else
+			{
+				pressedKey.action = PlayerNetworkAction.MOVE;
+				pressedKey.moveX = actions.Move.X;
+				pressedKey.moveY = actions.Move.Y;
+			}
+
+			pendingMoves.Add(pressedKey);
+			UpdatePredictedState();
+			CmdExecute( pressedKey );
+		}
+
+		// synchronize state with the server
+		SyncState( false );
+	}
+
+	[Command(channel=0)] void CmdExecute(PlayerNetworkActionContainer action)
+	{
+		serverMove = DoAction(serverMove, action);
+	}
+
+	// create PlayerMove by using the info from the PlayerNetworkActionContainer
+	PlayerMove DoAction( PlayerMove prev, PlayerNetworkActionContainer action )
+	{
+		// default: move nowhere
 		Vector3 dire = Vector3.zero;
-		Quaternion lookAt = Quaternion.identity;
-//		action.Name == "Use Weapon"
 
-		// only update for the local player, NOT for everyone on the server
-		if( !isLocalPlayer || actions == null ) return;
-
-		if( actions.UseWeapon.WasReleased )
+		if( action.action == PlayerNetworkAction.MOVE )
 		{
-			if( weaponController.HasRangeWeaponEquipped() )
-				weaponController.ShootRangedWeapon();
-		}
-		else if( actions.ToggleRanged.WasReleased )
-		{
-			weaponController.ToggleRanged();
+			// calculate move vector
+			dire.x = Time.deltaTime * settings.moveSpeed * action.moveX;
+			dire.z = Time.deltaTime * settings.moveSpeed * action.moveY;
 		}
 
-		// no walking while aiming
-		if( weaponController.HasRangeWeaponEquipped() )
-		{
-			// TODO set lookAt to transform.position - $(cameraRaycastTarget)
-			return;
-		}
-		else
-		{
-			// move (don't move while holding range weapons)
-			dire.x = Time.deltaTime * settings.moveSpeed * actions.Move.X;
-			dire.z = Time.deltaTime * settings.moveSpeed * actions.Move.Y;
-			lookAt = Quaternion.LookRotation( Vector3.forward, Vector3.up );
-		}
-
-//		return new PlayerMove { dire, }
-
-		transform.position += dire;
-		transform.LookAt( transform.position + dire );
-
-		if( dire != Vector3.zero )
-			transform.rotation = Quaternion.Slerp( transform.rotation, lookAt, Time.deltaTime * settings.rotationSpeed );
-
-		// TODO synch with server
-
+		// this thing will go to the server!
+		return new PlayerMove
+				{
+					moveNum = prev.moveNum + 1,
+					moveDire = dire,
+					toggleRange = action.action == PlayerNetworkAction.TOGGLE_RANGED,
+					useWeapon = action.action == PlayerNetworkAction.USE_WEAPON
+				};
 	}
 	#endregion
 }
