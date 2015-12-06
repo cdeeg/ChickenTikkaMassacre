@@ -1,0 +1,186 @@
+fileFormatVersion: 2
+guid: 6b7167d91211fbe4c93028943065244e
+timeCreated: 1447894388
+licenseType: Free
+ModelImporter:
+  serializedVersion: 18
+  fileIDToRecycleName:
+    100000: bn_r_clavicle_02
+    100002: bn_r_clavicle_03
+    100004: bn_r_clavicle_04
+    100006: bn_root_01
+    100008: BodyToRemesh:polySurface7
+    100010: Eyebrow:eyebrows
+    100012: grey1
+    100014: group2
+    100016: group3
+    100018: joint1
+    100020: joint1 1
+    100022: joint2
+    100024: joint2 1
+    100026: joint3
+    100028: joint3 1
+    100030: //RootNode
+    100032: yellow
+    100034: yellow1
+    400000: bn_r_clavicle_02
+    400002: bn_r_clavicle_03
+    400004: bn_r_clavicle_04
+    400006: bn_root_01
+    400008: BodyToRemesh:polySurface7
+    400010: Eyebrow:eyebrows
+    400012: grey1
+    400014: group2
+    400016: group3
+    400018: joint1
+    400020: joint1 1
+    400022: joint2
+    400024: joint2 1
+    400026: joint3
+    400028: joint3 1
+    400030: //RootNode
+    400032: yellow
+    400034: yellow1
+    2300000: Eyebrow:eyebrows
+    2300002: grey1
+    2300004: yellow
+    2300006: yellow1
+    3300000: Eyebrow:eyebrows
+    3300002: grey1
+    3300004: yellow
+    3300006: yellow1
+    4300000: grey1
+    4300002: yellow
+    4300004: yellow1
+    4300006: Eyebrow:eyebrows
+    4300008: BodyToRemesh:polySurface7
+    7400000: slap
+    9500000: //RootNode
+    11100000: //RootNode
+    13700000: BodyToRemesh:polySurface7
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    optimizeGameObjects: 0
+    motionNodeName: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    animationCompression: 1
+    animationRotationError: .5
+    animationPositionError: .5
+    animationScaleError: .5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    clipAnimations:
+    - serializedVersion: 16
+      name: slap
+      takeName: Take 001
+      firstFrame: 0
+      lastFrame: 18
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: bn_root_01
+        weight: 1
+      - path: bn_root_01/bn_r_clavicle_02
+        weight: 1
+      - path: bn_root_01/bn_r_clavicle_03
+        weight: 1
+      - path: bn_root_01/bn_r_clavicle_03/joint1
+        weight: 1
+      - path: bn_root_01/bn_r_clavicle_03/joint1/joint2
+        weight: 1
+      - path: bn_root_01/bn_r_clavicle_03/joint1/joint2/joint3
+        weight: 1
+      - path: bn_root_01/bn_r_clavicle_04
+        weight: 1
+      - path: bn_root_01/bn_r_clavicle_04/joint1 1
+        weight: 1
+      - path: bn_root_01/bn_r_clavicle_04/joint1 1/joint2 1
+        weight: 1
+      - path: bn_root_01/bn_r_clavicle_04/joint1 1/joint2 1/joint3 1
+        weight: 1
+      - path: bn_root_01/group2
+        weight: 1
+      - path: bn_root_01/group2/grey1
+        weight: 1
+      - path: bn_root_01/group2/group3
+        weight: 1
+      - path: bn_root_01/group2/group3/Eyebrow:eyebrows
+        weight: 1
+      - path: bn_root_01/group2/group3/yellow
+        weight: 1
+      - path: bn_root_01/group2/group3/yellow1
+        weight: 1
+      - path: BodyToRemesh:polySurface7
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 30
+    meshCompression: 0
+    addColliders: 0
+    importBlendShapes: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    splitTangentsAcrossUV: 1
+    normalImportMode: 0
+    tangentImportMode: 1
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    human: []
+    skeleton: []
+    armTwist: .5
+    foreArmTwist: .5
+    upperLegTwist: .5
+    legTwist: .5
+    armStretch: .0500000007
+    legStretch: .0500000007
+    feetSpacing: 0
+    rootMotionBoneName: 
+    hasTranslationDoF: 0
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 1
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

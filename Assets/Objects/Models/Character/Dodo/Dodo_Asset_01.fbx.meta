@@ -1,0 +1,122 @@
+fileFormatVersion: 2
+guid: 892d84a1b771fce4ca0b9771d91cc021
+timeCreated: 1447876220
+licenseType: Free
+ModelImporter:
+  serializedVersion: 18
+  fileIDToRecycleName:
+    100000: back
+    100002: Dodo_08_body:Mesh
+    100004: Dodo_08_head:polySurface1
+    100006: Dodo_08_wings_feet2:polySurface1
+    100008: //RootNode
+    100010: foot_left
+    100012: foot_right
+    100014: head
+    100016: jaw
+    100018: leg_left
+    100020: leg_right
+    100022: lip_down
+    100024: lip_up
+    100026: neck_01
+    100028: neck_02
+    100030: root
+    100032: tail
+    100034: tail_tip
+    100036: wing_left
+    100038: wing_right
+    100040: wing_tip_left
+    100042: wing_tip_right
+    400000: back
+    400002: Dodo_08_body:Mesh
+    400004: Dodo_08_head:polySurface1
+    400006: Dodo_08_wings_feet2:polySurface1
+    400008: //RootNode
+    400010: foot_left
+    400012: foot_right
+    400014: head
+    400016: jaw
+    400018: leg_left
+    400020: leg_right
+    400022: lip_down
+    400024: lip_up
+    400026: neck_01
+    400028: neck_02
+    400030: root
+    400032: tail
+    400034: tail_tip
+    400036: wing_left
+    400038: wing_right
+    400040: wing_tip_left
+    400042: wing_tip_right
+    4300000: Dodo_08_body:Mesh
+    4300002: Dodo_08_head:polySurface1
+    4300004: Dodo_08_wings_feet2:polySurface1
+    9500000: //RootNode
+    13700000: Dodo_08_body:Mesh
+    13700002: Dodo_08_head:polySurface1
+    13700004: Dodo_08_wings_feet2:polySurface1
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    optimizeGameObjects: 0
+    motionNodeName: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    animationCompression: 1
+    animationRotationError: .5
+    animationPositionError: .5
+    animationScaleError: .5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 30
+    meshCompression: 0
+    addColliders: 0
+    importBlendShapes: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    splitTangentsAcrossUV: 1
+    normalImportMode: 0
+    tangentImportMode: 1
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    human: []
+    skeleton: []
+    armTwist: .5
+    foreArmTwist: .5
+    upperLegTwist: .5
+    legTwist: .5
+    armStretch: .0500000007
+    legStretch: .0500000007
+    feetSpacing: 0
+    rootMotionBoneName: 
+    hasTranslationDoF: 0
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
