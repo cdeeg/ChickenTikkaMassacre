@@ -13,6 +13,9 @@ public class CarryItem : Normal
 		}
 		//Move Around
 		{
+			//look for ladder first
+			if( plrUtility.bello.WhereIsThe_(Bello.ObjectLayer.Ladder, plr.body) ) return ChangeStateTo(stateChange.to_OnLadder, plr);
+
 			//If feet are touching the grounded
 			Move(plr.body, plr.action.Move);
 			

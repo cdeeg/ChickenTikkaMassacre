@@ -13,6 +13,9 @@ public class Normal : PlayerState
 
 		//Move Around
 		{
+			//look for ladder first
+			if( plrUtility.bello.WhereIsThe_(Bello.ObjectLayer.Ladder, plr.body) ) return ChangeStateTo(stateChange.to_OnLadder, plr);
+			//move on ground
 			Move(plr.body, plr.action.Move);
 		}//
 		//Object Interaction
@@ -56,7 +59,7 @@ public class Normal : PlayerState
 
 	override public stateChange Move(Transform plrBody, Input_Plug.Analog_Stick move)
 	{
-		if( move.inputIntensity == 0.0f ) return stateChange.NoChange; 
+		if( move.inputIntensity == 0.0f ) return stateChange.NoChange;
 
 		Vector3 plrPos_mapped = new Vector3(plrBody.position.x,0,plrBody.position.z).normalized;
 		Vector3 dir = Vector3.Cross(plrPos_mapped, Vector3.down);

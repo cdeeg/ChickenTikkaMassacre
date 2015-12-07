@@ -10,12 +10,12 @@ public class OnLadder : PlayerState {
 	public override PlayerState Update(Player plr, bool DEBUG = false) 
 	{
 
-		if(plr.action.Grab_Btn.just_pressed) ChangeStateTo(stateChange.to_Normal, plr);
+		//if(plr.action.Grab_Btn.just_pressed) ChangeStateTo(stateChange.to_Normal, plr);
 
 		if (plr.action.Jump_Btn.just_pressed)
 		{
 			plrUtility.Movement.Perform_Jump(plr);
-			return ChangeStateTo( stateChange.to_Normal, plr );
+			return NormalOrCarryItem(plr);
 		}
 
 		Collider n_ladder = plrUtility.bello.WhereIsThe_(Bello.ObjectLayer.Ladder, plr.body);
@@ -24,13 +24,16 @@ public class OnLadder : PlayerState {
 		{
 			//Top End of ladder reached
 			plr.body.position += plr.body.forward * 0.45f;
-			return ChangeStateTo(stateChange.to_Normal, plr);
+			return NormalOrCarryItem(plr);
 		}
 		ladderUp = n_ladder.transform.up;
 
 		stateChange command = Move(plr.body, plr.action.Move);
-		if(command != stateChange.NoChange) return ChangeStateTo(command, plr);
-
+		if(command != stateChange.NoChange)
+		{
+			if(command == stateChange.to_Normal) return NormalOrCarryItem(plr);
+			return ChangeStateTo(command, plr);
+		}
 		plrUtility.Movement.PlacePlayerOnLadder(n_ladder, plr);
 
 		return this;
@@ -63,5 +66,9 @@ public class OnLadder : PlayerState {
 		return stateChange.NoChange;		
 	}
 
-	
+	PlayerState NormalOrCarryItem(Player plr)
+	{
+		if(plr.item_Holding == null) return ChangeStateTo(stateChange.to_Normal, plr);
+		return ChangeStateTo(stateChange.to_CarryItem, plr);
+	}
 }

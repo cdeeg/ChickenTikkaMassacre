@@ -55,7 +55,10 @@ public class Bello {
 
 			if(whereToLook.lM == lM_Ladder)
 			{
-				if(c != null && hit.normal != -c.transform.right) c = null;
+				if(c != null)
+				{
+					if(hit.normal != -c.transform.right || Vector3.Angle(-hit.normal, whereToLook.ray.direction) > 15.0f) c = null;
+				}
 			}
 		}
 		else
@@ -101,7 +104,7 @@ public class Bello {
 			
 			Vector3 ori = plrBody.position + Vector3.down * (c.height * 0.5f * plrBody.localScale.y - 0.05f);;
 			Vector3 dir = plrBody.forward;
-			float	mag = (c.radius * plrBody.localScale.z + 1.05f);
+			float	mag = (c.radius * plrBody.localScale.z + 0.25f);
 			ray = new Ray(ori, dir * mag);
 			break;
 		}

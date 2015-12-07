@@ -200,7 +200,7 @@ public class BallLogic : MonoBehaviour {
 					lM = plrUtility.bello.GetLayer(Bello.ObjectLayer.Water);
 					if(!Physics.Raycast(nHit.position + (nHit.position - transform.position).normalized * 0.2f , Vector3.down, 2f, lM)) return;
 					Vector3 sum = Vector3.zero;
-					sum = (transform.position - nHit.position).normalized * Random.Range(40, 80);
+					sum = (transform.position - nHit.position).normalized * Random.Range(60, 120);
 					sum -= Vector3.up * sum.y;
 					sum += Vector3.up * Random.Range(50,150);
 

@@ -27,6 +27,8 @@ public static class plrUtility {
 				}
 			}
 		}
+
+		/*
 		if(can_GrabLadder)//Lock for ladder
 		{
 			c = bello.WhereIsThe_(Bello.ObjectLayer.Ladder, plr.body);
@@ -40,7 +42,7 @@ public static class plrUtility {
 			}
 		}
 		//else
-
+		*/
 		UI.Create_UI_Button(c, plr);
 		return PlayerState.stateChange.NoChange;
 	}
