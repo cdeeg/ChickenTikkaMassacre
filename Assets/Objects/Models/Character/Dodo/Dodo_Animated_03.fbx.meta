@@ -1,0 +1,948 @@
+fileFormatVersion: 2
+guid: 589f0e559f738d4479aee4df1de2c03e
+timeCreated: 1449433067
+licenseType: Free
+ModelImporter:
+  serializedVersion: 18
+  fileIDToRecycleName:
+    100000: back
+    100002: Body
+    100004: //RootNode
+    100006: Dodo_Rigged_08_export:be_lid_down_left
+    100008: Dodo_Rigged_08_export:be_lid_down_right
+    100010: Dodo_Rigged_08_export:be_lid_up_left
+    100012: Dodo_Rigged_08_export:be_lid_up_right
+    100014: Dodo_Rigged_08_export:cnt_lid_left
+    100016: Dodo_Rigged_08_export:cnt_lid_right
+    100018: Dodo_Rigged_08_export:grp_cnt_lid_left
+    100020: Dodo_Rigged_08_export:grp_cnt_lid_right
+    100022: Dodo_Rigged_08_export:Lid_down_left
+    100024: Dodo_Rigged_08_export:Lid_down_right
+    100026: Dodo_Rigged_08_export:Lid_up_left
+    100028: Dodo_Rigged_08_export:Lid_up_right
+    100030: Dodo_Rigged_08_export:Lids
+    100032: foot_left
+    100034: foot_right
+    100036: Geometry
+    100038: Head
+    100040: head
+    100042: jaw_down
+    100044: jaw_up
+    100046: Joints
+    100048: leg_left
+    100050: leg_right
+    100052: lid_down_left
+    100054: lid_down_right
+    100056: lid_up_left
+    100058: lid_up_right
+    100060: lip_down
+    100062: lip_up
+    100064: neck_01
+    100066: neck_02
+    100068: root
+    100070: tail
+    100072: tail_tip
+    100074: wing_left
+    100076: wing_right
+    100078: wing_tip_left
+    100080: wing_tip_right
+    100082: Wings_Feet
+    400000: back
+    400002: Body
+    400004: //RootNode
+    400006: Dodo_Rigged_08_export:be_lid_down_left
+    400008: Dodo_Rigged_08_export:be_lid_down_right
+    400010: Dodo_Rigged_08_export:be_lid_up_left
+    400012: Dodo_Rigged_08_export:be_lid_up_right
+    400014: Dodo_Rigged_08_export:cnt_lid_left
+    400016: Dodo_Rigged_08_export:cnt_lid_right
+    400018: Dodo_Rigged_08_export:grp_cnt_lid_left
+    400020: Dodo_Rigged_08_export:grp_cnt_lid_right
+    400022: Dodo_Rigged_08_export:Lid_down_left
+    400024: Dodo_Rigged_08_export:Lid_down_right
+    400026: Dodo_Rigged_08_export:Lid_up_left
+    400028: Dodo_Rigged_08_export:Lid_up_right
+    400030: Dodo_Rigged_08_export:Lids
+    400032: foot_left
+    400034: foot_right
+    400036: Geometry
+    400038: Head
+    400040: head
+    400042: jaw_down
+    400044: jaw_up
+    400046: Joints
+    400048: leg_left
+    400050: leg_right
+    400052: lid_down_left
+    400054: lid_down_right
+    400056: lid_up_left
+    400058: lid_up_right
+    400060: lip_down
+    400062: lip_up
+    400064: neck_01
+    400066: neck_02
+    400068: root
+    400070: tail
+    400072: tail_tip
+    400074: wing_left
+    400076: wing_right
+    400078: wing_tip_left
+    400080: wing_tip_right
+    400082: Wings_Feet
+    4300000: Body
+    4300002: Head
+    4300004: Wings_Feet
+    4300006: Dodo_Rigged_08_export:Lid_up_left
+    4300008: Dodo_Rigged_08_export:Lid_down_left
+    4300010: Dodo_Rigged_08_export:Lid_up_right
+    4300012: Dodo_Rigged_08_export:Lid_down_right
+    7400000: head_normal
+    7400002: head_mouthopen_once
+    7400004: head_mouthopen_once
+    7400006: blink_once
+    7400008: head_mouthopen_twice
+    7400010: blink_twice
+    7400012: tail
+    7400014: limbs
+    9500000: //RootNode
+    13700000: Body
+    13700002: Dodo_Rigged_08_export:Lid_down_left
+    13700004: Dodo_Rigged_08_export:Lid_down_right
+    13700006: Dodo_Rigged_08_export:Lid_up_left
+    13700008: Dodo_Rigged_08_export:Lid_up_right
+    13700010: Head
+    13700012: Wings_Feet
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    optimizeGameObjects: 1
+    motionNodeName: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    animationCompression: 1
+    animationRotationError: .5
+    animationPositionError: .5
+    animationScaleError: .5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    clipAnimations:
+    - serializedVersion: 16
+      name: head_normal
+      takeName: Take 001
+      firstFrame: 10
+      lastFrame: 75
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      loopTime: 0
+      loopBlend: 1
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: Joints
+        weight: 1
+      - path: Joints/root
+        weight: 1
+      - path: Joints/root/neck_01
+        weight: 1
+      - path: Joints/root/neck_01/neck_02
+        weight: 1
+      - path: Joints/root/neck_01/neck_02/head
+        weight: 1
+      - path: Joints/root/neck_01/neck_02/head/jaw_up
+        weight: 1
+      - path: Joints/root/neck_01/neck_02/head/jaw_up/lip_up
+        weight: 1
+      - path: Joints/root/neck_01/neck_02/head/jaw_down
+        weight: 1
+      - path: Joints/root/neck_01/neck_02/head/jaw_down/lip_down
+        weight: 1
+      - path: Joints/root/neck_01/neck_02/head/lid_up_left
+        weight: 1
+      - path: Joints/root/neck_01/neck_02/head/lid_up_left/Dodo_Rigged_08_export:be_lid_up_left
+        weight: 1
+      - path: Joints/root/neck_01/neck_02/head/lid_down_left
+        weight: 1
+      - path: Joints/root/neck_01/neck_02/head/lid_down_left/Dodo_Rigged_08_export:be_lid_down_left
+        weight: 1
+      - path: Joints/root/neck_01/neck_02/head/lid_up_right
+        weight: 1
+      - path: Joints/root/neck_01/neck_02/head/lid_up_right/Dodo_Rigged_08_export:be_lid_up_right
+        weight: 1
+      - path: Joints/root/neck_01/neck_02/head/lid_down_right
+        weight: 1
+      - path: Joints/root/neck_01/neck_02/head/lid_down_right/Dodo_Rigged_08_export:be_lid_down_right
+        weight: 1
+      - path: Joints/root/back
+        weight: 1
+      - path: Joints/root/back/tail
+        weight: 1
+      - path: Joints/root/back/tail/tail_tip
+        weight: 1
+      - path: Joints/root/back/wing_left
+        weight: 1
+      - path: Joints/root/back/wing_left/wing_tip_left
+        weight: 1
+      - path: Joints/root/back/wing_right
+        weight: 1
+      - path: Joints/root/back/wing_right/wing_tip_right
+        weight: 1
+      - path: Joints/root/leg_left
+        weight: 1
+      - path: Joints/root/leg_left/foot_left
+        weight: 1
+      - path: Joints/root/leg_right
+        weight: 1
+      - path: Joints/root/leg_right/foot_right
+        weight: 1
+      - path: Geometry
+        weight: 1
+      - path: Geometry/Body
+        weight: 1
+      - path: Geometry/Head
+        weight: 1
+      - path: Geometry/Wings_Feet
+        weight: 1
+      - path: Geometry/Dodo_Rigged_08_export:grp_cnt_lid_left
+        weight: 1
+      - path: Geometry/Dodo_Rigged_08_export:grp_cnt_lid_left/Dodo_Rigged_08_export:cnt_lid_left
+        weight: 1
+      - path: Geometry/Dodo_Rigged_08_export:grp_cnt_lid_right
+        weight: 1
+      - path: Geometry/Dodo_Rigged_08_export:grp_cnt_lid_right/Dodo_Rigged_08_export:cnt_lid_right
+        weight: 1
+      - path: Geometry/Dodo_Rigged_08_export:Lids
+        weight: 1
+      - path: Geometry/Dodo_Rigged_08_export:Lids/Dodo_Rigged_08_export:Lid_up_left
+        weight: 1
+      - path: Geometry/Dodo_Rigged_08_export:Lids/Dodo_Rigged_08_export:Lid_down_left
+        weight: 1
+      - path: Geometry/Dodo_Rigged_08_export:Lids/Dodo_Rigged_08_export:Lid_up_right
+        weight: 1
+      - path: Geometry/Dodo_Rigged_08_export:Lids/Dodo_Rigged_08_export:Lid_down_right
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+    - serializedVersion: 16
+      name: head_mouthopen_once
+      takeName: Take 001
+      firstFrame: 75
+      lastFrame: 150
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: Joints
+        weight: 1
+      - path: Joints/root
+        weight: 1
+      - path: Joints/root/neck_01
+        weight: 1
+      - path: Joints/root/neck_01/neck_02
+        weight: 1
+      - path: Joints/root/neck_01/neck_02/head
+        weight: 1
+      - path: Joints/root/neck_01/neck_02/head/jaw_up
+        weight: 1
+      - path: Joints/root/neck_01/neck_02/head/jaw_up/lip_up
+        weight: 1
+      - path: Joints/root/neck_01/neck_02/head/jaw_down
+        weight: 1
+      - path: Joints/root/neck_01/neck_02/head/jaw_down/lip_down
+        weight: 1
+      - path: Joints/root/neck_01/neck_02/head/lid_up_left
+        weight: 1
+      - path: Joints/root/neck_01/neck_02/head/lid_up_left/Dodo_Rigged_08_export:be_lid_up_left
+        weight: 1
+      - path: Joints/root/neck_01/neck_02/head/lid_down_left
+        weight: 1
+      - path: Joints/root/neck_01/neck_02/head/lid_down_left/Dodo_Rigged_08_export:be_lid_down_left
+        weight: 1
+      - path: Joints/root/neck_01/neck_02/head/lid_up_right
+        weight: 1
+      - path: Joints/root/neck_01/neck_02/head/lid_up_right/Dodo_Rigged_08_export:be_lid_up_right
+        weight: 1
+      - path: Joints/root/neck_01/neck_02/head/lid_down_right
+        weight: 1
+      - path: Joints/root/neck_01/neck_02/head/lid_down_right/Dodo_Rigged_08_export:be_lid_down_right
+        weight: 1
+      - path: Joints/root/back
+        weight: 1
+      - path: Joints/root/back/tail
+        weight: 1
+      - path: Joints/root/back/tail/tail_tip
+        weight: 1
+      - path: Joints/root/back/wing_left
+        weight: 1
+      - path: Joints/root/back/wing_left/wing_tip_left
+        weight: 1
+      - path: Joints/root/back/wing_right
+        weight: 1
+      - path: Joints/root/back/wing_right/wing_tip_right
+        weight: 1
+      - path: Joints/root/leg_left
+        weight: 1
+      - path: Joints/root/leg_left/foot_left
+        weight: 1
+      - path: Joints/root/leg_right
+        weight: 1
+      - path: Joints/root/leg_right/foot_right
+        weight: 1
+      - path: Geometry
+        weight: 1
+      - path: Geometry/Body
+        weight: 1
+      - path: Geometry/Head
+        weight: 1
+      - path: Geometry/Wings_Feet
+        weight: 1
+      - path: Geometry/Dodo_Rigged_08_export:grp_cnt_lid_left
+        weight: 1
+      - path: Geometry/Dodo_Rigged_08_export:grp_cnt_lid_left/Dodo_Rigged_08_export:cnt_lid_left
+        weight: 1
+      - path: Geometry/Dodo_Rigged_08_export:grp_cnt_lid_right
+        weight: 1
+      - path: Geometry/Dodo_Rigged_08_export:grp_cnt_lid_right/Dodo_Rigged_08_export:cnt_lid_right
+        weight: 1
+      - path: Geometry/Dodo_Rigged_08_export:Lids
+        weight: 1
+      - path: Geometry/Dodo_Rigged_08_export:Lids/Dodo_Rigged_08_export:Lid_up_left
+        weight: 1
+      - path: Geometry/Dodo_Rigged_08_export:Lids/Dodo_Rigged_08_export:Lid_down_left
+        weight: 1
+      - path: Geometry/Dodo_Rigged_08_export:Lids/Dodo_Rigged_08_export:Lid_up_right
+        weight: 1
+      - path: Geometry/Dodo_Rigged_08_export:Lids/Dodo_Rigged_08_export:Lid_down_right
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+    - serializedVersion: 16
+      name: head_mouthopen_twice
+      takeName: Take 001
+      firstFrame: 160
+      lastFrame: 285
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: Joints
+        weight: 1
+      - path: Joints/root
+        weight: 1
+      - path: Joints/root/neck_01
+        weight: 1
+      - path: Joints/root/neck_01/neck_02
+        weight: 1
+      - path: Joints/root/neck_01/neck_02/head
+        weight: 1
+      - path: Joints/root/neck_01/neck_02/head/jaw_up
+        weight: 1
+      - path: Joints/root/neck_01/neck_02/head/jaw_up/lip_up
+        weight: 1
+      - path: Joints/root/neck_01/neck_02/head/jaw_down
+        weight: 1
+      - path: Joints/root/neck_01/neck_02/head/jaw_down/lip_down
+        weight: 1
+      - path: Joints/root/neck_01/neck_02/head/lid_up_left
+        weight: 1
+      - path: Joints/root/neck_01/neck_02/head/lid_up_left/Dodo_Rigged_08_export:be_lid_up_left
+        weight: 1
+      - path: Joints/root/neck_01/neck_02/head/lid_down_left
+        weight: 1
+      - path: Joints/root/neck_01/neck_02/head/lid_down_left/Dodo_Rigged_08_export:be_lid_down_left
+        weight: 1
+      - path: Joints/root/neck_01/neck_02/head/lid_up_right
+        weight: 1
+      - path: Joints/root/neck_01/neck_02/head/lid_up_right/Dodo_Rigged_08_export:be_lid_up_right
+        weight: 1
+      - path: Joints/root/neck_01/neck_02/head/lid_down_right
+        weight: 1
+      - path: Joints/root/neck_01/neck_02/head/lid_down_right/Dodo_Rigged_08_export:be_lid_down_right
+        weight: 1
+      - path: Joints/root/back
+        weight: 1
+      - path: Joints/root/back/tail
+        weight: 1
+      - path: Joints/root/back/tail/tail_tip
+        weight: 1
+      - path: Joints/root/back/wing_left
+        weight: 1
+      - path: Joints/root/back/wing_left/wing_tip_left
+        weight: 1
+      - path: Joints/root/back/wing_right
+        weight: 1
+      - path: Joints/root/back/wing_right/wing_tip_right
+        weight: 1
+      - path: Joints/root/leg_left
+        weight: 1
+      - path: Joints/root/leg_left/foot_left
+        weight: 1
+      - path: Joints/root/leg_right
+        weight: 1
+      - path: Joints/root/leg_right/foot_right
+        weight: 1
+      - path: Geometry
+        weight: 1
+      - path: Geometry/Body
+        weight: 1
+      - path: Geometry/Head
+        weight: 1
+      - path: Geometry/Wings_Feet
+        weight: 1
+      - path: Geometry/Dodo_Rigged_08_export:grp_cnt_lid_left
+        weight: 1
+      - path: Geometry/Dodo_Rigged_08_export:grp_cnt_lid_left/Dodo_Rigged_08_export:cnt_lid_left
+        weight: 1
+      - path: Geometry/Dodo_Rigged_08_export:grp_cnt_lid_right
+        weight: 1
+      - path: Geometry/Dodo_Rigged_08_export:grp_cnt_lid_right/Dodo_Rigged_08_export:cnt_lid_right
+        weight: 1
+      - path: Geometry/Dodo_Rigged_08_export:Lids
+        weight: 1
+      - path: Geometry/Dodo_Rigged_08_export:Lids/Dodo_Rigged_08_export:Lid_up_left
+        weight: 1
+      - path: Geometry/Dodo_Rigged_08_export:Lids/Dodo_Rigged_08_export:Lid_down_left
+        weight: 1
+      - path: Geometry/Dodo_Rigged_08_export:Lids/Dodo_Rigged_08_export:Lid_up_right
+        weight: 1
+      - path: Geometry/Dodo_Rigged_08_export:Lids/Dodo_Rigged_08_export:Lid_down_right
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+    - serializedVersion: 16
+      name: blink_once
+      takeName: Take 001
+      firstFrame: 300
+      lastFrame: 310
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: Joints
+        weight: 1
+      - path: Joints/root
+        weight: 1
+      - path: Joints/root/neck_01
+        weight: 1
+      - path: Joints/root/neck_01/neck_02
+        weight: 1
+      - path: Joints/root/neck_01/neck_02/head
+        weight: 1
+      - path: Joints/root/neck_01/neck_02/head/jaw_up
+        weight: 1
+      - path: Joints/root/neck_01/neck_02/head/jaw_up/lip_up
+        weight: 1
+      - path: Joints/root/neck_01/neck_02/head/jaw_down
+        weight: 1
+      - path: Joints/root/neck_01/neck_02/head/jaw_down/lip_down
+        weight: 1
+      - path: Joints/root/neck_01/neck_02/head/lid_up_left
+        weight: 1
+      - path: Joints/root/neck_01/neck_02/head/lid_up_left/Dodo_Rigged_08_export:be_lid_up_left
+        weight: 1
+      - path: Joints/root/neck_01/neck_02/head/lid_down_left
+        weight: 1
+      - path: Joints/root/neck_01/neck_02/head/lid_down_left/Dodo_Rigged_08_export:be_lid_down_left
+        weight: 1
+      - path: Joints/root/neck_01/neck_02/head/lid_up_right
+        weight: 1
+      - path: Joints/root/neck_01/neck_02/head/lid_up_right/Dodo_Rigged_08_export:be_lid_up_right
+        weight: 1
+      - path: Joints/root/neck_01/neck_02/head/lid_down_right
+        weight: 1
+      - path: Joints/root/neck_01/neck_02/head/lid_down_right/Dodo_Rigged_08_export:be_lid_down_right
+        weight: 1
+      - path: Joints/root/back
+        weight: 1
+      - path: Joints/root/back/tail
+        weight: 1
+      - path: Joints/root/back/tail/tail_tip
+        weight: 1
+      - path: Joints/root/back/wing_left
+        weight: 1
+      - path: Joints/root/back/wing_left/wing_tip_left
+        weight: 1
+      - path: Joints/root/back/wing_right
+        weight: 1
+      - path: Joints/root/back/wing_right/wing_tip_right
+        weight: 1
+      - path: Joints/root/leg_left
+        weight: 1
+      - path: Joints/root/leg_left/foot_left
+        weight: 1
+      - path: Joints/root/leg_right
+        weight: 1
+      - path: Joints/root/leg_right/foot_right
+        weight: 1
+      - path: Geometry
+        weight: 1
+      - path: Geometry/Body
+        weight: 1
+      - path: Geometry/Head
+        weight: 1
+      - path: Geometry/Wings_Feet
+        weight: 1
+      - path: Geometry/Dodo_Rigged_08_export:grp_cnt_lid_left
+        weight: 1
+      - path: Geometry/Dodo_Rigged_08_export:grp_cnt_lid_left/Dodo_Rigged_08_export:cnt_lid_left
+        weight: 1
+      - path: Geometry/Dodo_Rigged_08_export:grp_cnt_lid_right
+        weight: 1
+      - path: Geometry/Dodo_Rigged_08_export:grp_cnt_lid_right/Dodo_Rigged_08_export:cnt_lid_right
+        weight: 1
+      - path: Geometry/Dodo_Rigged_08_export:Lids
+        weight: 1
+      - path: Geometry/Dodo_Rigged_08_export:Lids/Dodo_Rigged_08_export:Lid_up_left
+        weight: 1
+      - path: Geometry/Dodo_Rigged_08_export:Lids/Dodo_Rigged_08_export:Lid_down_left
+        weight: 1
+      - path: Geometry/Dodo_Rigged_08_export:Lids/Dodo_Rigged_08_export:Lid_up_right
+        weight: 1
+      - path: Geometry/Dodo_Rigged_08_export:Lids/Dodo_Rigged_08_export:Lid_down_right
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+    - serializedVersion: 16
+      name: blink_twice
+      takeName: Take 001
+      firstFrame: 320
+      lastFrame: 360
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: Joints
+        weight: 1
+      - path: Joints/root
+        weight: 1
+      - path: Joints/root/neck_01
+        weight: 1
+      - path: Joints/root/neck_01/neck_02
+        weight: 1
+      - path: Joints/root/neck_01/neck_02/head
+        weight: 1
+      - path: Joints/root/neck_01/neck_02/head/jaw_up
+        weight: 1
+      - path: Joints/root/neck_01/neck_02/head/jaw_up/lip_up
+        weight: 1
+      - path: Joints/root/neck_01/neck_02/head/jaw_down
+        weight: 1
+      - path: Joints/root/neck_01/neck_02/head/jaw_down/lip_down
+        weight: 1
+      - path: Joints/root/neck_01/neck_02/head/lid_up_left
+        weight: 1
+      - path: Joints/root/neck_01/neck_02/head/lid_up_left/Dodo_Rigged_08_export:be_lid_up_left
+        weight: 1
+      - path: Joints/root/neck_01/neck_02/head/lid_down_left
+        weight: 1
+      - path: Joints/root/neck_01/neck_02/head/lid_down_left/Dodo_Rigged_08_export:be_lid_down_left
+        weight: 1
+      - path: Joints/root/neck_01/neck_02/head/lid_up_right
+        weight: 1
+      - path: Joints/root/neck_01/neck_02/head/lid_up_right/Dodo_Rigged_08_export:be_lid_up_right
+        weight: 1
+      - path: Joints/root/neck_01/neck_02/head/lid_down_right
+        weight: 1
+      - path: Joints/root/neck_01/neck_02/head/lid_down_right/Dodo_Rigged_08_export:be_lid_down_right
+        weight: 1
+      - path: Joints/root/back
+        weight: 1
+      - path: Joints/root/back/tail
+        weight: 1
+      - path: Joints/root/back/tail/tail_tip
+        weight: 1
+      - path: Joints/root/back/wing_left
+        weight: 1
+      - path: Joints/root/back/wing_left/wing_tip_left
+        weight: 1
+      - path: Joints/root/back/wing_right
+        weight: 1
+      - path: Joints/root/back/wing_right/wing_tip_right
+        weight: 1
+      - path: Joints/root/leg_left
+        weight: 1
+      - path: Joints/root/leg_left/foot_left
+        weight: 1
+      - path: Joints/root/leg_right
+        weight: 1
+      - path: Joints/root/leg_right/foot_right
+        weight: 1
+      - path: Geometry
+        weight: 1
+      - path: Geometry/Body
+        weight: 1
+      - path: Geometry/Head
+        weight: 1
+      - path: Geometry/Wings_Feet
+        weight: 1
+      - path: Geometry/Dodo_Rigged_08_export:grp_cnt_lid_left
+        weight: 1
+      - path: Geometry/Dodo_Rigged_08_export:grp_cnt_lid_left/Dodo_Rigged_08_export:cnt_lid_left
+        weight: 1
+      - path: Geometry/Dodo_Rigged_08_export:grp_cnt_lid_right
+        weight: 1
+      - path: Geometry/Dodo_Rigged_08_export:grp_cnt_lid_right/Dodo_Rigged_08_export:cnt_lid_right
+        weight: 1
+      - path: Geometry/Dodo_Rigged_08_export:Lids
+        weight: 1
+      - path: Geometry/Dodo_Rigged_08_export:Lids/Dodo_Rigged_08_export:Lid_up_left
+        weight: 1
+      - path: Geometry/Dodo_Rigged_08_export:Lids/Dodo_Rigged_08_export:Lid_down_left
+        weight: 1
+      - path: Geometry/Dodo_Rigged_08_export:Lids/Dodo_Rigged_08_export:Lid_up_right
+        weight: 1
+      - path: Geometry/Dodo_Rigged_08_export:Lids/Dodo_Rigged_08_export:Lid_down_right
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+    - serializedVersion: 16
+      name: tail
+      takeName: Take 001
+      firstFrame: 380
+      lastFrame: 410
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: Joints
+        weight: 1
+      - path: Joints/root
+        weight: 1
+      - path: Joints/root/neck_01
+        weight: 1
+      - path: Joints/root/neck_01/neck_02
+        weight: 1
+      - path: Joints/root/neck_01/neck_02/head
+        weight: 1
+      - path: Joints/root/neck_01/neck_02/head/jaw_up
+        weight: 1
+      - path: Joints/root/neck_01/neck_02/head/jaw_up/lip_up
+        weight: 1
+      - path: Joints/root/neck_01/neck_02/head/jaw_down
+        weight: 1
+      - path: Joints/root/neck_01/neck_02/head/jaw_down/lip_down
+        weight: 1
+      - path: Joints/root/neck_01/neck_02/head/lid_up_left
+        weight: 1
+      - path: Joints/root/neck_01/neck_02/head/lid_up_left/Dodo_Rigged_08_export:be_lid_up_left
+        weight: 1
+      - path: Joints/root/neck_01/neck_02/head/lid_down_left
+        weight: 1
+      - path: Joints/root/neck_01/neck_02/head/lid_down_left/Dodo_Rigged_08_export:be_lid_down_left
+        weight: 1
+      - path: Joints/root/neck_01/neck_02/head/lid_up_right
+        weight: 1
+      - path: Joints/root/neck_01/neck_02/head/lid_up_right/Dodo_Rigged_08_export:be_lid_up_right
+        weight: 1
+      - path: Joints/root/neck_01/neck_02/head/lid_down_right
+        weight: 1
+      - path: Joints/root/neck_01/neck_02/head/lid_down_right/Dodo_Rigged_08_export:be_lid_down_right
+        weight: 1
+      - path: Joints/root/back
+        weight: 1
+      - path: Joints/root/back/tail
+        weight: 1
+      - path: Joints/root/back/tail/tail_tip
+        weight: 1
+      - path: Joints/root/back/wing_left
+        weight: 1
+      - path: Joints/root/back/wing_left/wing_tip_left
+        weight: 1
+      - path: Joints/root/back/wing_right
+        weight: 1
+      - path: Joints/root/back/wing_right/wing_tip_right
+        weight: 1
+      - path: Joints/root/leg_left
+        weight: 1
+      - path: Joints/root/leg_left/foot_left
+        weight: 1
+      - path: Joints/root/leg_right
+        weight: 1
+      - path: Joints/root/leg_right/foot_right
+        weight: 1
+      - path: Geometry
+        weight: 1
+      - path: Geometry/Body
+        weight: 1
+      - path: Geometry/Head
+        weight: 1
+      - path: Geometry/Wings_Feet
+        weight: 1
+      - path: Geometry/Dodo_Rigged_08_export:grp_cnt_lid_left
+        weight: 1
+      - path: Geometry/Dodo_Rigged_08_export:grp_cnt_lid_left/Dodo_Rigged_08_export:cnt_lid_left
+        weight: 1
+      - path: Geometry/Dodo_Rigged_08_export:grp_cnt_lid_right
+        weight: 1
+      - path: Geometry/Dodo_Rigged_08_export:grp_cnt_lid_right/Dodo_Rigged_08_export:cnt_lid_right
+        weight: 1
+      - path: Geometry/Dodo_Rigged_08_export:Lids
+        weight: 1
+      - path: Geometry/Dodo_Rigged_08_export:Lids/Dodo_Rigged_08_export:Lid_up_left
+        weight: 1
+      - path: Geometry/Dodo_Rigged_08_export:Lids/Dodo_Rigged_08_export:Lid_down_left
+        weight: 1
+      - path: Geometry/Dodo_Rigged_08_export:Lids/Dodo_Rigged_08_export:Lid_up_right
+        weight: 1
+      - path: Geometry/Dodo_Rigged_08_export:Lids/Dodo_Rigged_08_export:Lid_down_right
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+    - serializedVersion: 16
+      name: limbs
+      takeName: Take 001
+      firstFrame: 440
+      lastFrame: 497
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: Joints
+        weight: 1
+      - path: Joints/root
+        weight: 1
+      - path: Joints/root/neck_01
+        weight: 1
+      - path: Joints/root/neck_01/neck_02
+        weight: 1
+      - path: Joints/root/neck_01/neck_02/head
+        weight: 1
+      - path: Joints/root/neck_01/neck_02/head/jaw_up
+        weight: 1
+      - path: Joints/root/neck_01/neck_02/head/jaw_up/lip_up
+        weight: 1
+      - path: Joints/root/neck_01/neck_02/head/jaw_down
+        weight: 1
+      - path: Joints/root/neck_01/neck_02/head/jaw_down/lip_down
+        weight: 1
+      - path: Joints/root/neck_01/neck_02/head/lid_up_left
+        weight: 1
+      - path: Joints/root/neck_01/neck_02/head/lid_up_left/Dodo_Rigged_08_export:be_lid_up_left
+        weight: 1
+      - path: Joints/root/neck_01/neck_02/head/lid_down_left
+        weight: 1
+      - path: Joints/root/neck_01/neck_02/head/lid_down_left/Dodo_Rigged_08_export:be_lid_down_left
+        weight: 1
+      - path: Joints/root/neck_01/neck_02/head/lid_up_right
+        weight: 1
+      - path: Joints/root/neck_01/neck_02/head/lid_up_right/Dodo_Rigged_08_export:be_lid_up_right
+        weight: 1
+      - path: Joints/root/neck_01/neck_02/head/lid_down_right
+        weight: 1
+      - path: Joints/root/neck_01/neck_02/head/lid_down_right/Dodo_Rigged_08_export:be_lid_down_right
+        weight: 1
+      - path: Joints/root/back
+        weight: 1
+      - path: Joints/root/back/tail
+        weight: 1
+      - path: Joints/root/back/tail/tail_tip
+        weight: 1
+      - path: Joints/root/back/wing_left
+        weight: 1
+      - path: Joints/root/back/wing_left/wing_tip_left
+        weight: 1
+      - path: Joints/root/back/wing_right
+        weight: 1
+      - path: Joints/root/back/wing_right/wing_tip_right
+        weight: 1
+      - path: Joints/root/leg_left
+        weight: 1
+      - path: Joints/root/leg_left/foot_left
+        weight: 1
+      - path: Joints/root/leg_right
+        weight: 1
+      - path: Joints/root/leg_right/foot_right
+        weight: 1
+      - path: Geometry
+        weight: 1
+      - path: Geometry/Body
+        weight: 1
+      - path: Geometry/Head
+        weight: 1
+      - path: Geometry/Wings_Feet
+        weight: 1
+      - path: Geometry/Dodo_Rigged_08_export:grp_cnt_lid_left
+        weight: 1
+      - path: Geometry/Dodo_Rigged_08_export:grp_cnt_lid_left/Dodo_Rigged_08_export:cnt_lid_left
+        weight: 1
+      - path: Geometry/Dodo_Rigged_08_export:grp_cnt_lid_right
+        weight: 1
+      - path: Geometry/Dodo_Rigged_08_export:grp_cnt_lid_right/Dodo_Rigged_08_export:cnt_lid_right
+        weight: 1
+      - path: Geometry/Dodo_Rigged_08_export:Lids
+        weight: 1
+      - path: Geometry/Dodo_Rigged_08_export:Lids/Dodo_Rigged_08_export:Lid_up_left
+        weight: 1
+      - path: Geometry/Dodo_Rigged_08_export:Lids/Dodo_Rigged_08_export:Lid_down_left
+        weight: 1
+      - path: Geometry/Dodo_Rigged_08_export:Lids/Dodo_Rigged_08_export:Lid_up_right
+        weight: 1
+      - path: Geometry/Dodo_Rigged_08_export:Lids/Dodo_Rigged_08_export:Lid_down_right
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importBlendShapes: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    splitTangentsAcrossUV: 1
+    normalImportMode: 0
+    tangentImportMode: 1
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    human: []
+    skeleton: []
+    armTwist: .5
+    foreArmTwist: .5
+    upperLegTwist: .5
+    legTwist: .5
+    armStretch: .0500000007
+    legStretch: .0500000007
+    feetSpacing: 0
+    rootMotionBoneName: 
+    hasTranslationDoF: 0
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
