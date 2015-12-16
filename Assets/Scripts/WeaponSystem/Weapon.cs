@@ -14,18 +14,19 @@ public class Weapon : MonoBehaviour {
 	public WeaponProjectile projectile;
 	public RangeWeaponBehaviour projectileBehaviour;
 	public int curveMultiplier = 2;
+	public RangeWeaponRefireTime shootAgainAfter;
 	
 	[Header("Passive Only")]
 	public GameObject visualComponent;
 	public bool hasProjectile = false;
 
-	[Header("Cheats")]
+	[Header("Other Settings")]
 	public bool infiniteAmmo = false;
 
 	/** Set by the server dynamically */
 	public int WeaponID { get; set; }
 
-	/** Returns true if the weapon still has ammo, false otherwise. */
+	/** Returns true if the weapon still has ammo after shooting, false otherwise. */
 	public bool UseAmmo() { if( infiniteAmmo ) return true; currentAmmo--; return currentAmmo > 0; }
 
 	int currentAmmo;

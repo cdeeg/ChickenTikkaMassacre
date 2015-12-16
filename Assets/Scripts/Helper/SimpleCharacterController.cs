@@ -50,15 +50,16 @@ struct PlayerNetworkActionContainer
 	{
 		// get the settings (since the StartupManager object also contains the NetworkManager,
 		// we can be sure it's there
-		settings = FindObjectOfType<StartupManager>().settings;
+		StartupManager myManager = FindObjectOfType<StartupManager>();
+		settings = myManager.settings;
 
 		// set initial and current health
 		initialHealth = currentHealth = settings.health;
 
 		// get WeaponController
 		weaponController = GetComponent<WeaponController>();
-		weaponController.Initialize();
-
+		weaponController.Initialize(weaponAnchor, myManager.GetWeaponObjectPool());
+		
 		// initialize controls
 		actions = PlayerActions.CreateWithDefaultBindings();
 
@@ -98,19 +99,13 @@ struct PlayerNetworkActionContainer
 		if( currentState.toggleRange ) weaponController.ToggleRanged();
 		else if( currentState.useWeapon ) weaponController.UseWeapon();
 
-//		if( currentState.toggleRange ) weaponController.HasRangeWeaponEquipped();
+		transform.position += currentState.moveDire;
 
-		if( !weaponController.HasRangeWeaponEquipped() )
-		{
-			transform.position += currentState.moveDire;
-
-			lookAt = Quaternion.LookRotation( Vector3.forward, Vector3.up );
-			
-			if( currentState.moveDire != Vector3.zero )
-				transform.rotation = Quaternion.Slerp( transform.rotation, lookAt, Time.deltaTime * settings.rotationSpeed );
-		}
+		lookAt = Quaternion.LookRotation( Vector3.forward, Vector3.up );
+		
+		if( currentState.moveDire != Vector3.zero )
+			transform.rotation = Quaternion.Slerp( transform.rotation, lookAt, Time.deltaTime * settings.rotationSpeed );
 	}
-
 	#endregion
 
 	#region Combat
@@ -171,9 +166,12 @@ struct PlayerNetworkActionContainer
 			}
 			else
 			{
-				pressedKey.action = PlayerNetworkAction.MOVE;
-				pressedKey.moveX = actions.Move.X;
-				pressedKey.moveY = actions.Move.Y;
+				if( !weaponController.HasRangeWeaponEquipped() )
+				{
+					pressedKey.action = PlayerNetworkAction.MOVE;
+					pressedKey.moveX = actions.Move.X;
+					pressedKey.moveY = actions.Move.Y;
+				}
 			}
 
 			pendingMoves.Add(pressedKey);
