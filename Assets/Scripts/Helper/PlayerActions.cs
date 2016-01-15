@@ -9,17 +9,18 @@ public class PlayerActions : PlayerActionSet
 	public PlayerAction Up;
 	public PlayerAction Down;
 	public PlayerTwoAxisAction Move;
-
+	
 	public PlayerAction CamLeft;
 	public PlayerAction CamRight;
 	public PlayerAction CamUp;
 	public PlayerAction CamDown;
 	public PlayerTwoAxisAction CamMove;
-
+	
 	public PlayerAction DodoInteraction;	// pickup and throw dodd
 	public PlayerAction UseWeapon;			// use equipped weapon (fire ranged weapon, use melee weapon)
 	public PlayerAction ToggleRanged;		// equip/unequip range weapon
-
+	public PlayerAction Jump;				// jump
+	
 	public PlayerActions()
 	{
 		Left = CreatePlayerAction( "Move Left" );
@@ -27,33 +28,34 @@ public class PlayerActions : PlayerActionSet
 		Up = CreatePlayerAction( "Move Up" );
 		Down = CreatePlayerAction( "Move Down" );
 		Move = CreateTwoAxisPlayerAction( Left, Right, Down, Up );
-
+		
 		CamLeft = CreatePlayerAction( "Move Camera Left" );
 		CamRight = CreatePlayerAction( "Move Camera Right" );
 		CamUp = CreatePlayerAction( "Move Camera Up" );
 		CamDown = CreatePlayerAction( "Move Camera Down" );
 		CamMove = CreateTwoAxisPlayerAction( CamLeft, CamRight, CamDown, CamUp );
-
+		
 		DodoInteraction = CreatePlayerAction( "Pick up/Throw Dodo" );
 		UseWeapon = CreatePlayerAction( "Use Equipped Weapon" );
 		ToggleRanged = CreatePlayerAction( "Equip/Unequip Range Weapon" );
+		Jump = CreatePlayerAction( "Jump" );
 	}
-
+	
 	public static PlayerActions CreateWithDefaultBindings()
 	{
 		PlayerActions playerActions = new PlayerActions();
-
+		
 		// camera movement
 		playerActions.CamUp.AddDefaultBinding( Key.I );
 		playerActions.CamDown.AddDefaultBinding( Key.K );
 		playerActions.CamLeft.AddDefaultBinding( Key.J );
 		playerActions.CamRight.AddDefaultBinding( Key.L );
-
+		
 		playerActions.CamUp.AddDefaultBinding( InputControlType.RightStickUp );
 		playerActions.CamDown.AddDefaultBinding( InputControlType.RightStickDown );
 		playerActions.CamLeft.AddDefaultBinding( InputControlType.RightStickLeft );
 		playerActions.CamRight.AddDefaultBinding( InputControlType.RightStickRight );
-
+		
 		// player movement
 		playerActions.Up.AddDefaultBinding( Key.UpArrow );
 		playerActions.Down.AddDefaultBinding( Key.DownArrow );
@@ -74,21 +76,25 @@ public class PlayerActions : PlayerActionSet
 		playerActions.Down.AddDefaultBinding( Key.S );
 		playerActions.Left.AddDefaultBinding( Key.A );
 		playerActions.Right.AddDefaultBinding( Key.D );
-
+		
 		// dodo
-		playerActions.DodoInteraction.AddDefaultBinding( Key.Space );
+		playerActions.DodoInteraction.AddDefaultBinding( Key.N );
 		playerActions.DodoInteraction.AddDefaultBinding( Key.O );
 		playerActions.DodoInteraction.AddDefaultBinding( InputControlType.Action1 );
-
+		
 		// using weapon/punching
 		playerActions.UseWeapon.AddDefaultBinding( Key.P );
 		playerActions.UseWeapon.AddDefaultBinding( Key.M );
-		playerActions.UseWeapon.AddDefaultBinding( InputControlType.Action2 );
-
+		playerActions.UseWeapon.AddDefaultBinding( InputControlType.Action3 );
+		
 		// toggle range weapon/melee weapon
 		playerActions.ToggleRanged.AddDefaultBinding( Key.R );
 		playerActions.ToggleRanged.AddDefaultBinding( Key.U );
 		playerActions.ToggleRanged.AddDefaultBinding( InputControlType.RightBumper );
+		
+		// jump
+		playerActions.Jump.AddDefaultBinding( Key.Space );
+		playerActions.Jump.AddDefaultBinding( InputControlType.Action2 );
 		
 		playerActions.ListenOptions.IncludeUnknownControllers = true;
 		playerActions.ListenOptions.MaxAllowedBindings = 3;

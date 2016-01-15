@@ -7,9 +7,9 @@ public class WeaponController : NetworkBehaviour
 {
 	public Weapon standardMelee;
 	public Weapon standardRange;
-
+	
 	Transform weaponAnchor;
-
+	
 	Weapon standardRangeInstance;
 	Weapon standardMeleeInstance;
 	
@@ -19,12 +19,12 @@ public class WeaponController : NetworkBehaviour
 	Weapon currentMeleeWeapon;
 	Weapon currentRangeWeapon;
 	Weapon currentWeapon;
-
+	
 	WeaponObjectPool pool;
-
+	
 	public int GetDamage() { return currentWeapon.damage; }
 	public bool HasRangeWeaponEquipped() { return currentWeapon.type != WeaponType.Melee; }
-
+	
 	public void SetWeapon( Weapon w )
 	{
 		if( w.type == WeaponType.Melee )
@@ -78,7 +78,7 @@ public class WeaponController : NetworkBehaviour
 			currentRangeWeapon = w;
 		}
 	}
-
+	
 	public bool ToggleRanged()
 	{
 		if( currentWeapon.type != WeaponType.Melee )
@@ -86,72 +86,81 @@ public class WeaponController : NetworkBehaviour
 		else
 			return EquipRange();
 	}
-
+	
 	public void Purge()
 	{
 		currentMeleeWeapon = standardRange;
 		currentRangeWeapon = standardMelee;
-
+		
 		EquipMelee();
 	}
-
+	
 	/** Equip range weapon */
 	public bool EquipRange()
 	{
 		bool change = currentWeapon.type == WeaponType.Melee;
-
+		
 		currentWeapon = currentRangeWeapon;
-
+		
 		if( change )
 		{
-			Debug.Log("ACTIVATE RANGE");
 			currentMeleeInstance.gameObject.SetActive( false );
 			currentRangeInstance.gameObject.SetActive( true );
 		}
-
+		
 		return change;
 	}
-
+	
 	/** Equip melee weapon. Returns true if the current weapon changed, false if nothing changed. */
 	public bool EquipMelee( bool alwaysReturnTrue = false )
 	{
 		bool change = currentWeapon.type != WeaponType.Melee;
 		currentWeapon = currentMeleeWeapon;
-
+		
 		if( change )
 		{
-			Debug.Log("ACTIVATE MELEE");
 			currentRangeInstance.gameObject.SetActive( false );
 			currentMeleeInstance.gameObject.SetActive( true );
 		}
-
+		
 		return change;
 	}
-
+	
 	/** Shoot current range weapon. Returns true if the weapon still has ammo left, false if it's empty (the melee weapon will be
 	 *  equipped automatically).
 	 */
 	public bool UseWeapon()
 	{
-		bool hasAmmo = currentRangeWeapon.UseAmmo();
-
+		if( currentWeapon.type != WeaponType.Melee )
+		{
+			WeaponProjectile proj = pool.GetProjectileInstanceForWeapon( currentWeapon.WeaponID );
+			if( proj == null )
+			{
+				GameObject obj = currentWeapon.GetProjectile();
+				obj = (GameObject)Instantiate( obj, Vector3.zero, Quaternion.identity );
+				proj = obj.GetComponent<WeaponProjectile>();
+			}
+			proj.transform.position = currentWeapon.GetProjectileSpawnPosition().position;
+		}
+		
+		bool hasAmmo = currentWeapon.UseAmmo();
+		
 		if( !hasAmmo )
 		{
 			if( currentWeapon.type != WeaponType.Melee )
 			{
 				currentRangeWeapon = standardRange;
 				currentRangeInstance = standardRangeInstance;
-//				EquipMelee();
 			}
 			else
 			{
 				currentMeleeWeapon = standardMelee;
 			}
 		}
-
+		
 		return hasAmmo;
 	}
-
+	
 	public void Initialize (Transform t, WeaponObjectPool wop)
 	{
 		if( standardMelee == null && standardRange == null )
@@ -159,18 +168,17 @@ public class WeaponController : NetworkBehaviour
 			Debug.LogError("WeaponController: No standard weapons found!");
 			return;
 		}
-
+		
 		pool = wop;
-
+		
 		currentRangeWeapon = standardRange;
 		currentMeleeWeapon = standardMelee;
-
+		
 		currentWeapon = standardMelee;
-		Debug.Log(GetHashCode());
 		CreateStandardWeapons( t );
 		weaponAnchor = t;
 	}
-
+	
 	public void CreateStandardWeapons(Transform t)
 	{
 		GameObject insta = (GameObject)Instantiate(standardRange.gameObject, t.position, Quaternion.identity);

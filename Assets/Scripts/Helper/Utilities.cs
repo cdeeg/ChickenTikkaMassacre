@@ -5,31 +5,31 @@ using UnityEngine;
 public class Utilities
 {
 	static Utilities instance;
-
+	
 	public static Utilities GetInstance()
 	{
 		if(instance == null)
 			instance = new Utilities();
-
+		
 		return instance;
 	}
-
+	
 	private Utilities() {}
-
+	
 	/** Calculate new camera position according to current camera behaviour. **/
 	public static Vector3 GetCameraPositionByBehaviour( Vector3 currentPosition, CameraBehaviour currentBehaviour, Vector2 movement, float speed )
 	{
 		if( currentBehaviour == CameraBehaviour.StraightLine ) return GetLineCameraPosition( currentPosition, movement, speed );
 		if( currentBehaviour == CameraBehaviour.Cone ) return GetConeCameraPosition( currentPosition, movement, speed );
-
+		
 		return Vector3.zero;
 	}
-
+	
 	static Vector3 GetConeCameraPosition( Vector3 currentPosition, Vector2 movement, float speed )
 	{
 		return Vector3.zero;
 	}
-
+	
 	static Vector3 GetLineCameraPosition( Vector3 currentPosition, Vector2 movement, float speed )
 	{
 		return Vector3.zero;
@@ -44,12 +44,14 @@ public class PlayerCharacterSettings
 	public float moveSpeed;
 	public float ladderSpeed;
 	public float respawnDelay;
-	public float rotationSpeed;
-
+	public float jumpHeight;
+	public float jumpMoveSlowdown;
+	
 	public PlayerCharacterSettings()
 	{
 		health = 10;
-		rotationSpeed = 3.0f;
+		jumpHeight = 3.0f;
+		jumpMoveSlowdown = 0.5f;
 	}
 }
 
@@ -65,7 +67,7 @@ public class CameraControlSettings
 	public float coneDiameterLower;
 	public float coneDiameterUpper;
 	public bool invertYAxis;
-
+	
 	public CameraControlSettings()
 	{
 		minHeight = 0f;
@@ -89,6 +91,7 @@ public enum PlayerNetworkAction
 	USE_WEAPON,
 	TOGGLE_RANGED,
 	MOVE,
+	JUMPING,
 	DODO_INTERACTION
 }
 
