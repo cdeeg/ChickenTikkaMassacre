@@ -5,35 +5,16 @@ using UnityEngine;
 public class Utilities
 {
 	static Utilities instance;
-	
+
 	public static Utilities GetInstance()
 	{
 		if(instance == null)
 			instance = new Utilities();
-		
+
 		return instance;
 	}
-	
+
 	private Utilities() {}
-	
-	/** Calculate new camera position according to current camera behaviour. **/
-	public static Vector3 GetCameraPositionByBehaviour( Vector3 currentPosition, CameraBehaviour currentBehaviour, Vector2 movement, float speed )
-	{
-		if( currentBehaviour == CameraBehaviour.StraightLine ) return GetLineCameraPosition( currentPosition, movement, speed );
-		if( currentBehaviour == CameraBehaviour.Cone ) return GetConeCameraPosition( currentPosition, movement, speed );
-		
-		return Vector3.zero;
-	}
-	
-	static Vector3 GetConeCameraPosition( Vector3 currentPosition, Vector2 movement, float speed )
-	{
-		return Vector3.zero;
-	}
-	
-	static Vector3 GetLineCameraPosition( Vector3 currentPosition, Vector2 movement, float speed )
-	{
-		return Vector3.zero;
-	}
 }
 
 
@@ -46,12 +27,14 @@ public class PlayerCharacterSettings
 	public float respawnDelay;
 	public float jumpHeight;
 	public float jumpMoveSlowdown;
-	
+	public bool allowJumpingWithWeapon;
+
 	public PlayerCharacterSettings()
 	{
 		health = 10;
 		jumpHeight = 3.0f;
 		jumpMoveSlowdown = 0.5f;
+		allowJumpingWithWeapon = false;
 	}
 }
 
@@ -62,19 +45,22 @@ public class CameraControlSettings
 	public float minHeight;
 	public float maxHeight;
 	public float cameraMovementSpeed;
-	[Header("Controls/Behaviour")]
-	public CameraBehaviour movementBehaviour;
+	public bool autofollowWhenNecessary;
+	[Header("Controls")]
 	public float coneDiameterLower;
 	public float coneDiameterUpper;
 	public bool invertYAxis;
-	
+	public bool invertXAxis;
+
 	public CameraControlSettings()
 	{
 		minHeight = 0f;
 		maxHeight = 10f;
-		movementBehaviour = CameraBehaviour.StraightLine;
 		coneDiameterLower = 5f;
 		coneDiameterUpper = 10f;
+		invertYAxis = false;
+		invertXAxis = false;
+		autofollowWhenNecessary = true;
 	}
 }
 
