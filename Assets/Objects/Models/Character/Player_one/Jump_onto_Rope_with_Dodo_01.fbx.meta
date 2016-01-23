@@ -1,0 +1,421 @@
+fileFormatVersion: 2
+guid: 0ff201cbd9f83354dadcc18bbdd09564
+timeCreated: 1453214771
+licenseType: Free
+ModelImporter:
+  serializedVersion: 18
+  fileIDToRecycleName:
+    100000: //RootNode
+    100002: actor:body
+    100004: actor:Character_01_Beard
+    100006: actor:Character_01_Clothes
+    100008: actor:Character_01_Eyebrows
+    100010: actor:Character_01_Face
+    100012: actor:eye_ball_l_01
+    100014: actor:eye_ball_r_01
+    100016: actor:foor_hair_l
+    100018: actor:foor_hair_r
+    100020: actor:geo_grp
+    100022: actor:lower_lid
+    100024: actor:lower_lid_r
+    100026: actor:skin_be_ankel_l_01
+    100028: actor:skin_be_anker_r_01
+    100030: actor:skin_be_eyeBrow_01
+    100032: actor:skin_be_hand_l_01
+    100034: actor:skin_be_hand_r_01
+    100036: actor:skin_be_toe_l_01
+    100038: actor:skin_be_toe_r_01
+    100040: actor:skin_bn_ankel_l_01
+    100042: actor:skin_bn_anker_r_01
+    100044: actor:skin_bn_arm_l_01
+    100046: actor:skin_bn_arm_r_01
+    100048: actor:skin_bn_ball_l_01
+    100050: actor:skin_bn_balr_r_01
+    100052: actor:skin_bn_beard_a01
+    100054: actor:skin_bn_beard_b01
+    100056: actor:skin_bn_chest_01
+    100058: actor:skin_bn_clavicle_l_01
+    100060: actor:skin_bn_clavicle_r_01
+    100062: actor:skin_bn_elbow_l_01
+    100064: actor:skin_bn_elbow_r_01
+    100066: actor:skin_bn_eye_l_01
+    100068: actor:skin_bn_eye_r_01
+    100070: actor:skin_bn_head_01
+    100072: actor:skin_bn_index_l_a01
+    100074: actor:skin_bn_index_l_b01
+    100076: actor:skin_bn_index_r_a01
+    100078: actor:skin_bn_index_r_b01
+    100080: actor:skin_bn_jaw_01
+    100082: actor:skin_bn_knee_l_01
+    100084: actor:skin_bn_knee_r_01
+    100086: actor:skin_bn_lower_lid_l_01
+    100088: actor:skin_bn_lower_lid_r_01
+    100090: actor:skin_bn_middle_l_a01
+    100092: actor:skin_bn_middle_l_b01
+    100094: actor:skin_bn_middle_r_a01
+    100096: actor:skin_bn_middle_r_b01
+    100098: actor:skin_bn_neck_01
+    100100: actor:skin_bn_pelvis_01
+    100102: actor:skin_bn_pinky_l_a01
+    100104: actor:skin_bn_pinky_l_b01
+    100106: actor:skin_bn_pinky_r_a01
+    100108: actor:skin_bn_pinky_r_b01
+    100110: actor:skin_bn_ring_l_a01
+    100112: actor:skin_bn_ring_l_b01
+    100114: actor:skin_bn_ring_r_a01
+    100116: actor:skin_bn_ring_r_b01
+    100118: actor:skin_bn_root_01
+    100120: actor:skin_bn_stomach_01
+    100122: actor:skin_bn_thigh_l_01
+    100124: actor:skin_bn_thigh_r_01
+    100126: actor:skin_bn_thumb_l_a01
+    100128: actor:skin_bn_thumb_l_b01
+    100130: actor:skin_bn_thumb_r_a01
+    100132: actor:skin_bn_thumb_r_b01
+    100134: actor:skin_bn_tommy_jiggle_01
+    100136: actor:skin_bn_upper_lid_l_01
+    100138: actor:skin_bn_upper_lid_r_01
+    100140: actor:skin_bn_wrist_l_01
+    100142: actor:skin_bn_wrist_r_01
+    100144: actor:upper_lid
+    100146: actor:upper_lid_r
+    400000: //RootNode
+    400002: actor:body
+    400004: actor:Character_01_Beard
+    400006: actor:Character_01_Clothes
+    400008: actor:Character_01_Eyebrows
+    400010: actor:Character_01_Face
+    400012: actor:eye_ball_l_01
+    400014: actor:eye_ball_r_01
+    400016: actor:foor_hair_l
+    400018: actor:foor_hair_r
+    400020: actor:geo_grp
+    400022: actor:lower_lid
+    400024: actor:lower_lid_r
+    400026: actor:skin_be_ankel_l_01
+    400028: actor:skin_be_anker_r_01
+    400030: actor:skin_be_eyeBrow_01
+    400032: actor:skin_be_hand_l_01
+    400034: actor:skin_be_hand_r_01
+    400036: actor:skin_be_toe_l_01
+    400038: actor:skin_be_toe_r_01
+    400040: actor:skin_bn_ankel_l_01
+    400042: actor:skin_bn_anker_r_01
+    400044: actor:skin_bn_arm_l_01
+    400046: actor:skin_bn_arm_r_01
+    400048: actor:skin_bn_ball_l_01
+    400050: actor:skin_bn_balr_r_01
+    400052: actor:skin_bn_beard_a01
+    400054: actor:skin_bn_beard_b01
+    400056: actor:skin_bn_chest_01
+    400058: actor:skin_bn_clavicle_l_01
+    400060: actor:skin_bn_clavicle_r_01
+    400062: actor:skin_bn_elbow_l_01
+    400064: actor:skin_bn_elbow_r_01
+    400066: actor:skin_bn_eye_l_01
+    400068: actor:skin_bn_eye_r_01
+    400070: actor:skin_bn_head_01
+    400072: actor:skin_bn_index_l_a01
+    400074: actor:skin_bn_index_l_b01
+    400076: actor:skin_bn_index_r_a01
+    400078: actor:skin_bn_index_r_b01
+    400080: actor:skin_bn_jaw_01
+    400082: actor:skin_bn_knee_l_01
+    400084: actor:skin_bn_knee_r_01
+    400086: actor:skin_bn_lower_lid_l_01
+    400088: actor:skin_bn_lower_lid_r_01
+    400090: actor:skin_bn_middle_l_a01
+    400092: actor:skin_bn_middle_l_b01
+    400094: actor:skin_bn_middle_r_a01
+    400096: actor:skin_bn_middle_r_b01
+    400098: actor:skin_bn_neck_01
+    400100: actor:skin_bn_pelvis_01
+    400102: actor:skin_bn_pinky_l_a01
+    400104: actor:skin_bn_pinky_l_b01
+    400106: actor:skin_bn_pinky_r_a01
+    400108: actor:skin_bn_pinky_r_b01
+    400110: actor:skin_bn_ring_l_a01
+    400112: actor:skin_bn_ring_l_b01
+    400114: actor:skin_bn_ring_r_a01
+    400116: actor:skin_bn_ring_r_b01
+    400118: actor:skin_bn_root_01
+    400120: actor:skin_bn_stomach_01
+    400122: actor:skin_bn_thigh_l_01
+    400124: actor:skin_bn_thigh_r_01
+    400126: actor:skin_bn_thumb_l_a01
+    400128: actor:skin_bn_thumb_l_b01
+    400130: actor:skin_bn_thumb_r_a01
+    400132: actor:skin_bn_thumb_r_b01
+    400134: actor:skin_bn_tommy_jiggle_01
+    400136: actor:skin_bn_upper_lid_l_01
+    400138: actor:skin_bn_upper_lid_r_01
+    400140: actor:skin_bn_wrist_l_01
+    400142: actor:skin_bn_wrist_r_01
+    400144: actor:upper_lid
+    400146: actor:upper_lid_r
+    4300000: actor:body
+    4300002: actor:Character_01_Eyebrows
+    4300004: actor:lower_lid_r
+    4300006: actor:foor_hair_r
+    4300008: actor:Character_01_Clothes
+    4300010: actor:Character_01_Beard
+    4300012: actor:upper_lid
+    4300014: actor:lower_lid
+    4300016: actor:Character_01_Face
+    4300018: actor:foor_hair_l
+    4300020: actor:eye_ball_r_01
+    4300022: actor:upper_lid_r
+    4300024: actor:eye_ball_l_01
+    7400000: Jump_onto_Rope_with_Dodo
+    9500000: //RootNode
+    13700000: actor:body
+    13700002: actor:Character_01_Beard
+    13700004: actor:Character_01_Clothes
+    13700006: actor:Character_01_Eyebrows
+    13700008: actor:Character_01_Face
+    13700010: actor:eye_ball_l_01
+    13700012: actor:eye_ball_r_01
+    13700014: actor:foor_hair_l
+    13700016: actor:foor_hair_r
+    13700018: actor:lower_lid
+    13700020: actor:lower_lid_r
+    13700022: actor:upper_lid
+    13700024: actor:upper_lid_r
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    optimizeGameObjects: 0
+    motionNodeName: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    animationCompression: 1
+    animationRotationError: .5
+    animationPositionError: .5
+    animationScaleError: .5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    clipAnimations:
+    - serializedVersion: 16
+      name: Jump_onto_Rope_with_Dodo
+      takeName: Take 001
+      firstFrame: 940
+      lastFrame: 972
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: actor:geo_grp
+        weight: 1
+      - path: actor:geo_grp/actor:body
+        weight: 1
+      - path: actor:geo_grp/actor:Character_01_Beard
+        weight: 1
+      - path: actor:geo_grp/actor:Character_01_Clothes
+        weight: 1
+      - path: actor:geo_grp/actor:Character_01_Eyebrows
+        weight: 1
+      - path: actor:geo_grp/actor:Character_01_Face
+        weight: 1
+      - path: actor:geo_grp/actor:eye_ball_l_01
+        weight: 1
+      - path: actor:geo_grp/actor:eye_ball_r_01
+        weight: 1
+      - path: actor:geo_grp/actor:foor_hair_l
+        weight: 1
+      - path: actor:geo_grp/actor:foor_hair_r
+        weight: 1
+      - path: actor:geo_grp/actor:lower_lid
+        weight: 1
+      - path: actor:geo_grp/actor:lower_lid_r
+        weight: 1
+      - path: actor:geo_grp/actor:upper_lid
+        weight: 1
+      - path: actor:geo_grp/actor:upper_lid_r
+        weight: 1
+      - path: actor:skin_bn_root_01
+        weight: 1
+      - path: actor:skin_bn_root_01/actor:skin_bn_pelvis_01
+        weight: 1
+      - path: actor:skin_bn_root_01/actor:skin_bn_stomach_01
+        weight: 1
+      - path: actor:skin_bn_root_01/actor:skin_bn_stomach_01/actor:skin_bn_chest_01
+        weight: 1
+      - path: actor:skin_bn_root_01/actor:skin_bn_stomach_01/actor:skin_bn_chest_01/actor:skin_bn_clavicle_l_01
+        weight: 1
+      - path: actor:skin_bn_root_01/actor:skin_bn_stomach_01/actor:skin_bn_chest_01/actor:skin_bn_clavicle_l_01/actor:skin_bn_arm_l_01
+        weight: 1
+      - path: actor:skin_bn_root_01/actor:skin_bn_stomach_01/actor:skin_bn_chest_01/actor:skin_bn_clavicle_l_01/actor:skin_bn_arm_l_01/actor:skin_bn_elbow_l_01
+        weight: 1
+      - path: actor:skin_bn_root_01/actor:skin_bn_stomach_01/actor:skin_bn_chest_01/actor:skin_bn_clavicle_l_01/actor:skin_bn_arm_l_01/actor:skin_bn_elbow_l_01/actor:skin_bn_wrist_l_01
+        weight: 1
+      - path: actor:skin_bn_root_01/actor:skin_bn_stomach_01/actor:skin_bn_chest_01/actor:skin_bn_clavicle_l_01/actor:skin_bn_arm_l_01/actor:skin_bn_elbow_l_01/actor:skin_bn_wrist_l_01/actor:skin_be_hand_l_01
+        weight: 1
+      - path: actor:skin_bn_root_01/actor:skin_bn_stomach_01/actor:skin_bn_chest_01/actor:skin_bn_clavicle_l_01/actor:skin_bn_arm_l_01/actor:skin_bn_elbow_l_01/actor:skin_bn_wrist_l_01/actor:skin_bn_index_l_a01
+        weight: 1
+      - path: actor:skin_bn_root_01/actor:skin_bn_stomach_01/actor:skin_bn_chest_01/actor:skin_bn_clavicle_l_01/actor:skin_bn_arm_l_01/actor:skin_bn_elbow_l_01/actor:skin_bn_wrist_l_01/actor:skin_bn_index_l_a01/actor:skin_bn_index_l_b01
+        weight: 1
+      - path: actor:skin_bn_root_01/actor:skin_bn_stomach_01/actor:skin_bn_chest_01/actor:skin_bn_clavicle_l_01/actor:skin_bn_arm_l_01/actor:skin_bn_elbow_l_01/actor:skin_bn_wrist_l_01/actor:skin_bn_middle_l_a01
+        weight: 1
+      - path: actor:skin_bn_root_01/actor:skin_bn_stomach_01/actor:skin_bn_chest_01/actor:skin_bn_clavicle_l_01/actor:skin_bn_arm_l_01/actor:skin_bn_elbow_l_01/actor:skin_bn_wrist_l_01/actor:skin_bn_middle_l_a01/actor:skin_bn_middle_l_b01
+        weight: 1
+      - path: actor:skin_bn_root_01/actor:skin_bn_stomach_01/actor:skin_bn_chest_01/actor:skin_bn_clavicle_l_01/actor:skin_bn_arm_l_01/actor:skin_bn_elbow_l_01/actor:skin_bn_wrist_l_01/actor:skin_bn_pinky_l_a01
+        weight: 1
+      - path: actor:skin_bn_root_01/actor:skin_bn_stomach_01/actor:skin_bn_chest_01/actor:skin_bn_clavicle_l_01/actor:skin_bn_arm_l_01/actor:skin_bn_elbow_l_01/actor:skin_bn_wrist_l_01/actor:skin_bn_pinky_l_a01/actor:skin_bn_pinky_l_b01
+        weight: 1
+      - path: actor:skin_bn_root_01/actor:skin_bn_stomach_01/actor:skin_bn_chest_01/actor:skin_bn_clavicle_l_01/actor:skin_bn_arm_l_01/actor:skin_bn_elbow_l_01/actor:skin_bn_wrist_l_01/actor:skin_bn_ring_l_a01
+        weight: 1
+      - path: actor:skin_bn_root_01/actor:skin_bn_stomach_01/actor:skin_bn_chest_01/actor:skin_bn_clavicle_l_01/actor:skin_bn_arm_l_01/actor:skin_bn_elbow_l_01/actor:skin_bn_wrist_l_01/actor:skin_bn_ring_l_a01/actor:skin_bn_ring_l_b01
+        weight: 1
+      - path: actor:skin_bn_root_01/actor:skin_bn_stomach_01/actor:skin_bn_chest_01/actor:skin_bn_clavicle_l_01/actor:skin_bn_arm_l_01/actor:skin_bn_elbow_l_01/actor:skin_bn_wrist_l_01/actor:skin_bn_thumb_l_a01
+        weight: 1
+      - path: actor:skin_bn_root_01/actor:skin_bn_stomach_01/actor:skin_bn_chest_01/actor:skin_bn_clavicle_l_01/actor:skin_bn_arm_l_01/actor:skin_bn_elbow_l_01/actor:skin_bn_wrist_l_01/actor:skin_bn_thumb_l_a01/actor:skin_bn_thumb_l_b01
+        weight: 1
+      - path: actor:skin_bn_root_01/actor:skin_bn_stomach_01/actor:skin_bn_chest_01/actor:skin_bn_clavicle_r_01
+        weight: 1
+      - path: actor:skin_bn_root_01/actor:skin_bn_stomach_01/actor:skin_bn_chest_01/actor:skin_bn_clavicle_r_01/actor:skin_bn_arm_r_01
+        weight: 1
+      - path: actor:skin_bn_root_01/actor:skin_bn_stomach_01/actor:skin_bn_chest_01/actor:skin_bn_clavicle_r_01/actor:skin_bn_arm_r_01/actor:skin_bn_elbow_r_01
+        weight: 1
+      - path: actor:skin_bn_root_01/actor:skin_bn_stomach_01/actor:skin_bn_chest_01/actor:skin_bn_clavicle_r_01/actor:skin_bn_arm_r_01/actor:skin_bn_elbow_r_01/actor:skin_bn_wrist_r_01
+        weight: 1
+      - path: actor:skin_bn_root_01/actor:skin_bn_stomach_01/actor:skin_bn_chest_01/actor:skin_bn_clavicle_r_01/actor:skin_bn_arm_r_01/actor:skin_bn_elbow_r_01/actor:skin_bn_wrist_r_01/actor:skin_be_hand_r_01
+        weight: 1
+      - path: actor:skin_bn_root_01/actor:skin_bn_stomach_01/actor:skin_bn_chest_01/actor:skin_bn_clavicle_r_01/actor:skin_bn_arm_r_01/actor:skin_bn_elbow_r_01/actor:skin_bn_wrist_r_01/actor:skin_bn_index_r_a01
+        weight: 1
+      - path: actor:skin_bn_root_01/actor:skin_bn_stomach_01/actor:skin_bn_chest_01/actor:skin_bn_clavicle_r_01/actor:skin_bn_arm_r_01/actor:skin_bn_elbow_r_01/actor:skin_bn_wrist_r_01/actor:skin_bn_index_r_a01/actor:skin_bn_index_r_b01
+        weight: 1
+      - path: actor:skin_bn_root_01/actor:skin_bn_stomach_01/actor:skin_bn_chest_01/actor:skin_bn_clavicle_r_01/actor:skin_bn_arm_r_01/actor:skin_bn_elbow_r_01/actor:skin_bn_wrist_r_01/actor:skin_bn_middle_r_a01
+        weight: 1
+      - path: actor:skin_bn_root_01/actor:skin_bn_stomach_01/actor:skin_bn_chest_01/actor:skin_bn_clavicle_r_01/actor:skin_bn_arm_r_01/actor:skin_bn_elbow_r_01/actor:skin_bn_wrist_r_01/actor:skin_bn_middle_r_a01/actor:skin_bn_middle_r_b01
+        weight: 1
+      - path: actor:skin_bn_root_01/actor:skin_bn_stomach_01/actor:skin_bn_chest_01/actor:skin_bn_clavicle_r_01/actor:skin_bn_arm_r_01/actor:skin_bn_elbow_r_01/actor:skin_bn_wrist_r_01/actor:skin_bn_pinky_r_a01
+        weight: 1
+      - path: actor:skin_bn_root_01/actor:skin_bn_stomach_01/actor:skin_bn_chest_01/actor:skin_bn_clavicle_r_01/actor:skin_bn_arm_r_01/actor:skin_bn_elbow_r_01/actor:skin_bn_wrist_r_01/actor:skin_bn_pinky_r_a01/actor:skin_bn_pinky_r_b01
+        weight: 1
+      - path: actor:skin_bn_root_01/actor:skin_bn_stomach_01/actor:skin_bn_chest_01/actor:skin_bn_clavicle_r_01/actor:skin_bn_arm_r_01/actor:skin_bn_elbow_r_01/actor:skin_bn_wrist_r_01/actor:skin_bn_ring_r_a01
+        weight: 1
+      - path: actor:skin_bn_root_01/actor:skin_bn_stomach_01/actor:skin_bn_chest_01/actor:skin_bn_clavicle_r_01/actor:skin_bn_arm_r_01/actor:skin_bn_elbow_r_01/actor:skin_bn_wrist_r_01/actor:skin_bn_ring_r_a01/actor:skin_bn_ring_r_b01
+        weight: 1
+      - path: actor:skin_bn_root_01/actor:skin_bn_stomach_01/actor:skin_bn_chest_01/actor:skin_bn_clavicle_r_01/actor:skin_bn_arm_r_01/actor:skin_bn_elbow_r_01/actor:skin_bn_wrist_r_01/actor:skin_bn_thumb_r_a01
+        weight: 1
+      - path: actor:skin_bn_root_01/actor:skin_bn_stomach_01/actor:skin_bn_chest_01/actor:skin_bn_clavicle_r_01/actor:skin_bn_arm_r_01/actor:skin_bn_elbow_r_01/actor:skin_bn_wrist_r_01/actor:skin_bn_thumb_r_a01/actor:skin_bn_thumb_r_b01
+        weight: 1
+      - path: actor:skin_bn_root_01/actor:skin_bn_stomach_01/actor:skin_bn_chest_01/actor:skin_bn_neck_01
+        weight: 1
+      - path: actor:skin_bn_root_01/actor:skin_bn_stomach_01/actor:skin_bn_chest_01/actor:skin_bn_neck_01/actor:skin_bn_head_01
+        weight: 1
+      - path: actor:skin_bn_root_01/actor:skin_bn_stomach_01/actor:skin_bn_chest_01/actor:skin_bn_neck_01/actor:skin_bn_head_01/actor:skin_be_eyeBrow_01
+        weight: 1
+      - path: actor:skin_bn_root_01/actor:skin_bn_stomach_01/actor:skin_bn_chest_01/actor:skin_bn_neck_01/actor:skin_bn_head_01/actor:skin_bn_beard_a01
+        weight: 1
+      - path: actor:skin_bn_root_01/actor:skin_bn_stomach_01/actor:skin_bn_chest_01/actor:skin_bn_neck_01/actor:skin_bn_head_01/actor:skin_bn_beard_a01/actor:skin_bn_beard_b01
+        weight: 1
+      - path: actor:skin_bn_root_01/actor:skin_bn_stomach_01/actor:skin_bn_chest_01/actor:skin_bn_neck_01/actor:skin_bn_head_01/actor:skin_bn_eye_l_01
+        weight: 1
+      - path: actor:skin_bn_root_01/actor:skin_bn_stomach_01/actor:skin_bn_chest_01/actor:skin_bn_neck_01/actor:skin_bn_head_01/actor:skin_bn_eye_r_01
+        weight: 1
+      - path: actor:skin_bn_root_01/actor:skin_bn_stomach_01/actor:skin_bn_chest_01/actor:skin_bn_neck_01/actor:skin_bn_head_01/actor:skin_bn_jaw_01
+        weight: 1
+      - path: actor:skin_bn_root_01/actor:skin_bn_stomach_01/actor:skin_bn_chest_01/actor:skin_bn_neck_01/actor:skin_bn_head_01/actor:skin_bn_lower_lid_l_01
+        weight: 1
+      - path: actor:skin_bn_root_01/actor:skin_bn_stomach_01/actor:skin_bn_chest_01/actor:skin_bn_neck_01/actor:skin_bn_head_01/actor:skin_bn_lower_lid_r_01
+        weight: 1
+      - path: actor:skin_bn_root_01/actor:skin_bn_stomach_01/actor:skin_bn_chest_01/actor:skin_bn_neck_01/actor:skin_bn_head_01/actor:skin_bn_upper_lid_l_01
+        weight: 1
+      - path: actor:skin_bn_root_01/actor:skin_bn_stomach_01/actor:skin_bn_chest_01/actor:skin_bn_neck_01/actor:skin_bn_head_01/actor:skin_bn_upper_lid_r_01
+        weight: 1
+      - path: actor:skin_bn_root_01/actor:skin_bn_thigh_l_01
+        weight: 1
+      - path: actor:skin_bn_root_01/actor:skin_bn_thigh_l_01/actor:skin_bn_knee_l_01
+        weight: 1
+      - path: actor:skin_bn_root_01/actor:skin_bn_thigh_l_01/actor:skin_bn_knee_l_01/actor:skin_be_ankel_l_01
+        weight: 1
+      - path: actor:skin_bn_root_01/actor:skin_bn_thigh_l_01/actor:skin_bn_knee_l_01/actor:skin_be_ankel_l_01/actor:skin_bn_ankel_l_01
+        weight: 1
+      - path: actor:skin_bn_root_01/actor:skin_bn_thigh_l_01/actor:skin_bn_knee_l_01/actor:skin_be_ankel_l_01/actor:skin_bn_ankel_l_01/actor:skin_bn_ball_l_01
+        weight: 1
+      - path: actor:skin_bn_root_01/actor:skin_bn_thigh_l_01/actor:skin_bn_knee_l_01/actor:skin_be_ankel_l_01/actor:skin_bn_ankel_l_01/actor:skin_bn_ball_l_01/actor:skin_be_toe_l_01
+        weight: 1
+      - path: actor:skin_bn_root_01/actor:skin_bn_thigh_r_01
+        weight: 1
+      - path: actor:skin_bn_root_01/actor:skin_bn_thigh_r_01/actor:skin_bn_knee_r_01
+        weight: 1
+      - path: actor:skin_bn_root_01/actor:skin_bn_thigh_r_01/actor:skin_bn_knee_r_01/actor:skin_be_anker_r_01
+        weight: 1
+      - path: actor:skin_bn_root_01/actor:skin_bn_thigh_r_01/actor:skin_bn_knee_r_01/actor:skin_be_anker_r_01/actor:skin_bn_anker_r_01
+        weight: 1
+      - path: actor:skin_bn_root_01/actor:skin_bn_thigh_r_01/actor:skin_bn_knee_r_01/actor:skin_be_anker_r_01/actor:skin_bn_anker_r_01/actor:skin_bn_balr_r_01
+        weight: 1
+      - path: actor:skin_bn_root_01/actor:skin_bn_thigh_r_01/actor:skin_bn_knee_r_01/actor:skin_be_anker_r_01/actor:skin_bn_anker_r_01/actor:skin_bn_balr_r_01/actor:skin_be_toe_r_01
+        weight: 1
+      - path: actor:skin_bn_root_01/actor:skin_bn_tommy_jiggle_01
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importBlendShapes: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    splitTangentsAcrossUV: 1
+    normalImportMode: 0
+    tangentImportMode: 1
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    human: []
+    skeleton: []
+    armTwist: .5
+    foreArmTwist: .5
+    upperLegTwist: .5
+    legTwist: .5
+    armStretch: .0500000007
+    legStretch: .0500000007
+    feetSpacing: 0
+    rootMotionBoneName: 
+    hasTranslationDoF: 0
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
