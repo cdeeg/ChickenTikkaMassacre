@@ -4,11 +4,6 @@ using UnityEngine.Networking;
 using InControl;
 using System.Collections.Generic;
 
-#if UNITY_5_2
-#elif
-using UnityEngine.SceneManagement;
-#endif
-
 struct PlayerMove
 {
 	public int moveNum;				// server sync
@@ -130,15 +125,6 @@ struct PlayerNetworkActionContainer
 	{
 		// remove this player from their team (team gets unassigned if player count is 0)
 		if( home != null ) home.RemoveTeamMember();
-<<<<<<< HEAD
-		// load start scene
-		#if UNITY_5_2
-		Application.LoadLevel("StartGame");
-		#elif
-		SceneManager.LoadScene("StartGame");
-		#endif
-=======
->>>>>>> 8366b062d686676ca8dc8593cd53dfab10b64836
 	}
 
 	void FindFreeSpawnPoint()
