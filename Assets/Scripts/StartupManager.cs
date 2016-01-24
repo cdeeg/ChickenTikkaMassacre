@@ -2,7 +2,11 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine.Networking;
+#if UNITY_5_2
+
+#elif
 using UnityEngine.SceneManagement;
+#endif
 
 public class StartupManager : MonoBehaviour
 {
@@ -37,6 +41,10 @@ public class StartupManager : MonoBehaviour
 		DontDestroyOnLoad(transform.gameObject);
 
 		// load real level/menu
+		#if UNITY_5_2
+		Application.LoadLevel( nextScene );
+		#elif
 		SceneManager.LoadScene( nextScene );
+		#endif
 	}
 }
