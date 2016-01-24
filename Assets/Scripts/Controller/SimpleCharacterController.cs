@@ -62,6 +62,7 @@ struct PlayerNetworkActionContainer
 	List<PlayerNetworkActionContainer> pendingMoves;				// pending actions made by the player
 	PlayerMove predictedState;										// state of the player deduced from their previous action
 	SpawnPoint home;
+	CameraControl myCam;
 
 	int initialHealth; // TODO remove?
 	bool hasRangeWeapon;
@@ -284,6 +285,8 @@ struct PlayerNetworkActionContainer
 			pendingMoves = new List<PlayerNetworkActionContainer>();
 			FindFreeSpawnPoint();
 			transform.position = home.GetSpawnPosition();
+			myCam = Camera.main.GetComponent<CameraControl>();
+			if( myCam != null ) myCam.SetFollowTarget( gameObject );
 			lastLookDirection = new Vector3(-2,0,-2);
 			rb = GetComponent<Rigidbody>();
 			serverMove = new PlayerMove
@@ -331,22 +334,31 @@ struct PlayerNetworkActionContainer
 			else if( actions.ToggleRanged.WasPressed )
 			{
 				hasRangeWeapon = !hasRangeWeapon;
+				if( myCam != null ) myCam.FreeMove = hasRangeWeapon;
 			}
 			else if( actions.Move.IsPressed && !hasRangeWeapon )
 			{
 				pressedKey.action = PlayerNetworkAction.MOVE;
 
-				Vector3 dire = transform.position;
-				dire.x += Time.deltaTime * settings.moveSpeed * actions.Move.X;
-				dire.z += Time.deltaTime * settings.moveSpeed * actions.Move.Y;
+				// prev
+//				Vector3 dire = transform.position;
+//				dire.x += Time.deltaTime * settings.moveSpeed * actions.Move.X;
+//				dire.z += Time.deltaTime * settings.moveSpeed * actions.Move.Y;
+//
+//				transform.position = dire;
 
-				transform.position = dire;
+				// fk the input, use the cam's forward to not screw up movement
+ 				transform.Translate (myCam.transform.forward * settings.moveSpeed * Time.deltaTime);
+				Vector3 dire = transform.position;
+
+
 				pressedKey.moveX = dire.x;
 				pressedKey.moveY = dire.z;
 				pressedKey.moveZ = dire.y;
 
 				lastLookDirection = new Vector3( actions.Move.X, 0, actions.Move.Y );
 				transform.rotation = Quaternion.LookRotation( lastLookDirection );
+				lastLookDirection = Vector3.forward;
 				pressedKey.rotateX = lastLookDirection.x;
 				pressedKey.rotateZ = lastLookDirection.z;
 			}

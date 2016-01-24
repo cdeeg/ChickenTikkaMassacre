@@ -7,6 +7,9 @@ public class CameraControl : MonoBehaviour
 	public CameraControlSettings settings;
 
 	PlayerActions actions;
+	GameObject trg;
+
+	public bool FreeMove { get; set; } // set to true if you don't want autofollow
 
 	void Start()
 	{
@@ -16,6 +19,13 @@ public class CameraControl : MonoBehaviour
 
 		// invert Y axis if necessary
 		actions.CamMove.InvertYAxis = settings.invertYAxis;
+
+		FreeMove = false;
+	}
+
+	public void SetFollowTarget( GameObject obj )
+	{
+		trg = obj;
 	}
 
 	void Update()
@@ -32,6 +42,12 @@ public class CameraControl : MonoBehaviour
 			Vector3 move = transform.position;
 			move.y += Time.deltaTime * settings.cameraMovementSpeed * y;
 			transform.position = move;
+		}
+		else if( settings.autofollowWhenNecessary && !FreeMove )
+		{
+			if( trg == null ) return;
+
+			transform.LookAt( trg.transform );
 		}
 	}
 }

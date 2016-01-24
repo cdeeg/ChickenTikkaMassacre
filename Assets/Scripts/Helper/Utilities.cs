@@ -42,25 +42,18 @@ public class PlayerCharacterSettings
 public class CameraControlSettings
 {
 	[Header("General")]
-	public float minHeight;
-	public float maxHeight;
 	public float cameraMovementSpeed;
 	public bool autofollowWhenNecessary;
 	[Header("Controls")]
-	public float coneDiameterLower;
-	public float coneDiameterUpper;
 	public bool invertYAxis;
 	public bool invertXAxis;
 
 	public CameraControlSettings()
 	{
-		minHeight = 0f;
-		maxHeight = 10f;
-		coneDiameterLower = 5f;
-		coneDiameterUpper = 10f;
 		invertYAxis = false;
 		invertXAxis = false;
 		autofollowWhenNecessary = true;
+		cameraMovementSpeed = 10f;
 	}
 }
 
