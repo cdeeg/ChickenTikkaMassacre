@@ -1,0 +1,211 @@
+fileFormatVersion: 2
+guid: 99968ff58950daa4a883b0661ab8c499
+timeCreated: 1454194420
+licenseType: Free
+ModelImporter:
+  serializedVersion: 19
+  fileIDToRecycleName:
+    100000: Base
+    100002: Base_MeshPart0
+    100004: Base_MeshPart1
+    100006: Base_MeshPart2
+    100008: Island_top1
+    100010: Island_top10
+    100012: Island_top11
+    100014: Island_top12
+    100016: Island_top13
+    100018: Island_top14
+    100020: Island_top15
+    100022: Island_top16
+    100024: Island_top17
+    100026: Island_top18
+    100028: Island_top19
+    100030: Island_top2
+    100032: Island_top20
+    100034: Island_top21
+    100036: Island_top22
+    100038: Island_top3
+    100040: Island_top4
+    100042: Island_top5
+    100044: Island_top6
+    100046: Island_top7
+    100048: Island_top8
+    100050: Island_top9
+    100052: //RootNode
+    100054: Water_1
+    100056: Water_2
+    400000: Base
+    400002: Base_MeshPart0
+    400004: Base_MeshPart1
+    400006: Base_MeshPart2
+    400008: Island_top1
+    400010: Island_top10
+    400012: Island_top11
+    400014: Island_top12
+    400016: Island_top13
+    400018: Island_top14
+    400020: Island_top15
+    400022: Island_top16
+    400024: Island_top17
+    400026: Island_top18
+    400028: Island_top19
+    400030: Island_top2
+    400032: Island_top20
+    400034: Island_top21
+    400036: Island_top22
+    400038: Island_top3
+    400040: Island_top4
+    400042: Island_top5
+    400044: Island_top6
+    400046: Island_top7
+    400048: Island_top8
+    400050: Island_top9
+    400052: //RootNode
+    400054: Water_1
+    400056: Water_2
+    2300000: Base_MeshPart0
+    2300002: Base_MeshPart1
+    2300004: Base_MeshPart2
+    2300006: Island_top1
+    2300008: Island_top10
+    2300010: Island_top11
+    2300012: Island_top12
+    2300014: Island_top13
+    2300016: Island_top14
+    2300018: Island_top15
+    2300020: Island_top16
+    2300022: Island_top17
+    2300024: Island_top18
+    2300026: Island_top19
+    2300028: Island_top2
+    2300030: Island_top20
+    2300032: Island_top21
+    2300034: Island_top22
+    2300036: Island_top3
+    2300038: Island_top4
+    2300040: Island_top5
+    2300042: Island_top6
+    2300044: Island_top7
+    2300046: Island_top8
+    2300048: Island_top9
+    2300050: Water_1
+    2300052: Water_2
+    3300000: Base_MeshPart0
+    3300002: Base_MeshPart1
+    3300004: Base_MeshPart2
+    3300006: Island_top1
+    3300008: Island_top10
+    3300010: Island_top11
+    3300012: Island_top12
+    3300014: Island_top13
+    3300016: Island_top14
+    3300018: Island_top15
+    3300020: Island_top16
+    3300022: Island_top17
+    3300024: Island_top18
+    3300026: Island_top19
+    3300028: Island_top2
+    3300030: Island_top20
+    3300032: Island_top21
+    3300034: Island_top22
+    3300036: Island_top3
+    3300038: Island_top4
+    3300040: Island_top5
+    3300042: Island_top6
+    3300044: Island_top7
+    3300046: Island_top8
+    3300048: Island_top9
+    3300050: Water_1
+    3300052: Water_2
+    4300000: Island_top22
+    4300002: Island_top21
+    4300004: Island_top20
+    4300006: Island_top19
+    4300008: Island_top18
+    4300010: Island_top17
+    4300012: Island_top16
+    4300014: Island_top15
+    4300016: Island_top13
+    4300018: Island_top14
+    4300020: Island_top12
+    4300022: Island_top11
+    4300024: Island_top10
+    4300026: Island_top9
+    4300028: Island_top8
+    4300030: Island_top7
+    4300032: Island_top6
+    4300034: Island_top5
+    4300036: Island_top4
+    4300038: Island_top3
+    4300040: Island_top2
+    4300042: Island_top1
+    4300044: Water_1
+    4300046: Base_MeshPart0
+    4300048: Base_MeshPart1
+    4300050: Base_MeshPart2
+    4300052: Water_2
+    9500000: //RootNode
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleRotations: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importBlendShapes: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    hasTranslationDoF: 0
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

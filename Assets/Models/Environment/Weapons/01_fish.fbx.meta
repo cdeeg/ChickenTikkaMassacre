@@ -1,0 +1,535 @@
+fileFormatVersion: 2
+guid: 3a1baa95d4274064eb992e92923c7619
+timeCreated: 1454175769
+licenseType: Free
+ModelImporter:
+  serializedVersion: 19
+  fileIDToRecycleName:
+    100000: //RootNode
+    100002: aminCtrl
+    100004: animCtrl_fin_l_01
+    100006: animCtrl_fin_r_01
+    100008: animCtrl_lower_fin_01
+    100010: animCtrl_lower_fin_01 1
+    100012: animCtrl_lower_jaw_01
+    100014: animCtrl_main_01
+    100016: animCtrl_tail_01
+    100018: animCtrl_upper_fin_01
+    100020: animCtrl_upper_fin_01 1
+    100022: animCtrl_upper_jaw_01
+    100024: bn_fin_l_01
+    100026: bn_fin_r_01
+    100028: bn_lower_fin_01
+    100030: bn_lower_fin_2_01
+    100032: bn_lower_jaw_01
+    100034: bn_root_01
+    100036: bn_tail
+    100038: bn_teeth_01
+    100040: bn_upper_fin_01
+    100042: bn_upper_fin_2_01
+    100044: bn_upper_jaw_01
+    100046: eyes_01
+    100048: fin_l_01
+    100050: fin_r_01
+    100052: fish_body_01
+    100054: GEO
+    100056: grp_animCtrl_fin_l_01
+    100058: grp_animCtrl_fin_r_01
+    100060: grp_animCtrl_lower_fin_01
+    100062: grp_animCtrl_lower_fin_02
+    100064: grp_animCtrl_lower_jaw_01
+    100066: grp_animCtrl_tail_01
+    100068: grp_animCtrl_upper_fin_01
+    100070: grp_animCtrl_upper_fin_02
+    100072: grp_animCtrl_upper_jaw_01
+    100074: polySurface1
+    100076: polySurface2
+    100078: polySurface3
+    100080: polySurface4
+    100082: rest_01
+    100084: Skeleton
+    100086: teeth_01
+    400000: //RootNode
+    400002: aminCtrl
+    400004: animCtrl_fin_l_01
+    400006: animCtrl_fin_r_01
+    400008: animCtrl_lower_fin_01
+    400010: animCtrl_lower_fin_01 1
+    400012: animCtrl_lower_jaw_01
+    400014: animCtrl_main_01
+    400016: animCtrl_tail_01
+    400018: animCtrl_upper_fin_01
+    400020: animCtrl_upper_fin_01 1
+    400022: animCtrl_upper_jaw_01
+    400024: bn_fin_l_01
+    400026: bn_fin_r_01
+    400028: bn_lower_fin_01
+    400030: bn_lower_fin_2_01
+    400032: bn_lower_jaw_01
+    400034: bn_root_01
+    400036: bn_tail
+    400038: bn_teeth_01
+    400040: bn_upper_fin_01
+    400042: bn_upper_fin_2_01
+    400044: bn_upper_jaw_01
+    400046: eyes_01
+    400048: fin_l_01
+    400050: fin_r_01
+    400052: fish_body_01
+    400054: GEO
+    400056: grp_animCtrl_fin_l_01
+    400058: grp_animCtrl_fin_r_01
+    400060: grp_animCtrl_lower_fin_01
+    400062: grp_animCtrl_lower_fin_02
+    400064: grp_animCtrl_lower_jaw_01
+    400066: grp_animCtrl_tail_01
+    400068: grp_animCtrl_upper_fin_01
+    400070: grp_animCtrl_upper_fin_02
+    400072: grp_animCtrl_upper_jaw_01
+    400074: polySurface1
+    400076: polySurface2
+    400078: polySurface3
+    400080: polySurface4
+    400082: rest_01
+    400084: Skeleton
+    400086: teeth_01
+    4300000: fish_body_01
+    4300002: polySurface1
+    4300004: polySurface2
+    4300006: polySurface3
+    4300008: polySurface4
+    4300010: fin_l_01
+    4300012: fin_r_01
+    4300014: teeth_01
+    4300016: eyes_01
+    7400000: Up
+    7400002: Turn
+    7400004: Down
+    9500000: //RootNode
+    13700000: eyes_01
+    13700002: fin_l_01
+    13700004: fin_r_01
+    13700006: fish_body_01
+    13700008: polySurface1
+    13700010: polySurface2
+    13700012: polySurface3
+    13700014: polySurface4
+    13700016: teeth_01
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleRotations: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    clipAnimations:
+    - serializedVersion: 16
+      name: Up
+      takeName: Take 001
+      firstFrame: 1
+      lastFrame: 7
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 1
+      loopBlend: 1
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: aminCtrl
+        weight: 1
+      - path: aminCtrl/animCtrl_main_01
+        weight: 1
+      - path: aminCtrl/animCtrl_main_01/grp_animCtrl_fin_l_01
+        weight: 1
+      - path: aminCtrl/animCtrl_main_01/grp_animCtrl_fin_l_01/animCtrl_fin_l_01
+        weight: 1
+      - path: aminCtrl/animCtrl_main_01/grp_animCtrl_fin_r_01
+        weight: 1
+      - path: aminCtrl/animCtrl_main_01/grp_animCtrl_fin_r_01/animCtrl_fin_r_01
+        weight: 1
+      - path: aminCtrl/animCtrl_main_01/grp_animCtrl_lower_fin_01
+        weight: 1
+      - path: aminCtrl/animCtrl_main_01/grp_animCtrl_lower_fin_01/animCtrl_lower_fin_01
+        weight: 1
+      - path: aminCtrl/animCtrl_main_01/grp_animCtrl_lower_fin_02
+        weight: 1
+      - path: aminCtrl/animCtrl_main_01/grp_animCtrl_lower_fin_02/animCtrl_lower_fin_01
+          1
+        weight: 1
+      - path: aminCtrl/animCtrl_main_01/grp_animCtrl_lower_jaw_01
+        weight: 1
+      - path: aminCtrl/animCtrl_main_01/grp_animCtrl_lower_jaw_01/animCtrl_lower_jaw_01
+        weight: 1
+      - path: aminCtrl/animCtrl_main_01/grp_animCtrl_tail_01
+        weight: 1
+      - path: aminCtrl/animCtrl_main_01/grp_animCtrl_tail_01/animCtrl_tail_01
+        weight: 1
+      - path: aminCtrl/animCtrl_main_01/grp_animCtrl_upper_fin_01
+        weight: 1
+      - path: aminCtrl/animCtrl_main_01/grp_animCtrl_upper_fin_01/animCtrl_upper_fin_01
+        weight: 1
+      - path: aminCtrl/animCtrl_main_01/grp_animCtrl_upper_fin_02
+        weight: 1
+      - path: aminCtrl/animCtrl_main_01/grp_animCtrl_upper_fin_02/animCtrl_upper_fin_01
+          1
+        weight: 1
+      - path: aminCtrl/animCtrl_main_01/grp_animCtrl_upper_jaw_01
+        weight: 1
+      - path: aminCtrl/animCtrl_main_01/grp_animCtrl_upper_jaw_01/animCtrl_upper_jaw_01
+        weight: 1
+      - path: GEO
+        weight: 1
+      - path: GEO/eyes_01
+        weight: 1
+      - path: GEO/fin_l_01
+        weight: 1
+      - path: GEO/fin_r_01
+        weight: 1
+      - path: GEO/fish_body_01
+        weight: 1
+      - path: GEO/rest_01
+        weight: 1
+      - path: GEO/rest_01/polySurface1
+        weight: 1
+      - path: GEO/rest_01/polySurface2
+        weight: 1
+      - path: GEO/rest_01/polySurface3
+        weight: 1
+      - path: GEO/rest_01/polySurface4
+        weight: 1
+      - path: GEO/teeth_01
+        weight: 1
+      - path: Skeleton
+        weight: 1
+      - path: Skeleton/bn_root_01
+        weight: 1
+      - path: Skeleton/bn_root_01/bn_fin_l_01
+        weight: 1
+      - path: Skeleton/bn_root_01/bn_fin_r_01
+        weight: 1
+      - path: Skeleton/bn_root_01/bn_lower_fin_01
+        weight: 1
+      - path: Skeleton/bn_root_01/bn_lower_fin_2_01
+        weight: 1
+      - path: Skeleton/bn_root_01/bn_lower_jaw_01
+        weight: 1
+      - path: Skeleton/bn_root_01/bn_lower_jaw_01/bn_teeth_01
+        weight: 1
+      - path: Skeleton/bn_root_01/bn_tail
+        weight: 1
+      - path: Skeleton/bn_root_01/bn_upper_fin_01
+        weight: 1
+      - path: Skeleton/bn_root_01/bn_upper_fin_2_01
+        weight: 1
+      - path: Skeleton/bn_root_01/bn_upper_jaw_01
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: Turn
+      takeName: Take 001
+      firstFrame: 7
+      lastFrame: 21
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: aminCtrl
+        weight: 1
+      - path: aminCtrl/animCtrl_main_01
+        weight: 1
+      - path: aminCtrl/animCtrl_main_01/grp_animCtrl_fin_l_01
+        weight: 1
+      - path: aminCtrl/animCtrl_main_01/grp_animCtrl_fin_l_01/animCtrl_fin_l_01
+        weight: 1
+      - path: aminCtrl/animCtrl_main_01/grp_animCtrl_fin_r_01
+        weight: 1
+      - path: aminCtrl/animCtrl_main_01/grp_animCtrl_fin_r_01/animCtrl_fin_r_01
+        weight: 1
+      - path: aminCtrl/animCtrl_main_01/grp_animCtrl_lower_fin_01
+        weight: 1
+      - path: aminCtrl/animCtrl_main_01/grp_animCtrl_lower_fin_01/animCtrl_lower_fin_01
+        weight: 1
+      - path: aminCtrl/animCtrl_main_01/grp_animCtrl_lower_fin_02
+        weight: 1
+      - path: aminCtrl/animCtrl_main_01/grp_animCtrl_lower_fin_02/animCtrl_lower_fin_01
+          1
+        weight: 1
+      - path: aminCtrl/animCtrl_main_01/grp_animCtrl_lower_jaw_01
+        weight: 1
+      - path: aminCtrl/animCtrl_main_01/grp_animCtrl_lower_jaw_01/animCtrl_lower_jaw_01
+        weight: 1
+      - path: aminCtrl/animCtrl_main_01/grp_animCtrl_tail_01
+        weight: 1
+      - path: aminCtrl/animCtrl_main_01/grp_animCtrl_tail_01/animCtrl_tail_01
+        weight: 1
+      - path: aminCtrl/animCtrl_main_01/grp_animCtrl_upper_fin_01
+        weight: 1
+      - path: aminCtrl/animCtrl_main_01/grp_animCtrl_upper_fin_01/animCtrl_upper_fin_01
+        weight: 1
+      - path: aminCtrl/animCtrl_main_01/grp_animCtrl_upper_fin_02
+        weight: 1
+      - path: aminCtrl/animCtrl_main_01/grp_animCtrl_upper_fin_02/animCtrl_upper_fin_01
+          1
+        weight: 1
+      - path: aminCtrl/animCtrl_main_01/grp_animCtrl_upper_jaw_01
+        weight: 1
+      - path: aminCtrl/animCtrl_main_01/grp_animCtrl_upper_jaw_01/animCtrl_upper_jaw_01
+        weight: 1
+      - path: GEO
+        weight: 1
+      - path: GEO/eyes_01
+        weight: 1
+      - path: GEO/fin_l_01
+        weight: 1
+      - path: GEO/fin_r_01
+        weight: 1
+      - path: GEO/fish_body_01
+        weight: 1
+      - path: GEO/rest_01
+        weight: 1
+      - path: GEO/rest_01/polySurface1
+        weight: 1
+      - path: GEO/rest_01/polySurface2
+        weight: 1
+      - path: GEO/rest_01/polySurface3
+        weight: 1
+      - path: GEO/rest_01/polySurface4
+        weight: 1
+      - path: GEO/teeth_01
+        weight: 1
+      - path: Skeleton
+        weight: 1
+      - path: Skeleton/bn_root_01
+        weight: 1
+      - path: Skeleton/bn_root_01/bn_fin_l_01
+        weight: 1
+      - path: Skeleton/bn_root_01/bn_fin_r_01
+        weight: 1
+      - path: Skeleton/bn_root_01/bn_lower_fin_01
+        weight: 1
+      - path: Skeleton/bn_root_01/bn_lower_fin_2_01
+        weight: 1
+      - path: Skeleton/bn_root_01/bn_lower_jaw_01
+        weight: 1
+      - path: Skeleton/bn_root_01/bn_lower_jaw_01/bn_teeth_01
+        weight: 1
+      - path: Skeleton/bn_root_01/bn_tail
+        weight: 1
+      - path: Skeleton/bn_root_01/bn_upper_fin_01
+        weight: 1
+      - path: Skeleton/bn_root_01/bn_upper_fin_2_01
+        weight: 1
+      - path: Skeleton/bn_root_01/bn_upper_jaw_01
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: Down
+      takeName: Take 001
+      firstFrame: 21
+      lastFrame: 25
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 1
+      loopBlend: 1
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: aminCtrl
+        weight: 1
+      - path: aminCtrl/animCtrl_main_01
+        weight: 1
+      - path: aminCtrl/animCtrl_main_01/grp_animCtrl_fin_l_01
+        weight: 1
+      - path: aminCtrl/animCtrl_main_01/grp_animCtrl_fin_l_01/animCtrl_fin_l_01
+        weight: 1
+      - path: aminCtrl/animCtrl_main_01/grp_animCtrl_fin_r_01
+        weight: 1
+      - path: aminCtrl/animCtrl_main_01/grp_animCtrl_fin_r_01/animCtrl_fin_r_01
+        weight: 1
+      - path: aminCtrl/animCtrl_main_01/grp_animCtrl_lower_fin_01
+        weight: 1
+      - path: aminCtrl/animCtrl_main_01/grp_animCtrl_lower_fin_01/animCtrl_lower_fin_01
+        weight: 1
+      - path: aminCtrl/animCtrl_main_01/grp_animCtrl_lower_fin_02
+        weight: 1
+      - path: aminCtrl/animCtrl_main_01/grp_animCtrl_lower_fin_02/animCtrl_lower_fin_01
+          1
+        weight: 1
+      - path: aminCtrl/animCtrl_main_01/grp_animCtrl_lower_jaw_01
+        weight: 1
+      - path: aminCtrl/animCtrl_main_01/grp_animCtrl_lower_jaw_01/animCtrl_lower_jaw_01
+        weight: 1
+      - path: aminCtrl/animCtrl_main_01/grp_animCtrl_tail_01
+        weight: 1
+      - path: aminCtrl/animCtrl_main_01/grp_animCtrl_tail_01/animCtrl_tail_01
+        weight: 1
+      - path: aminCtrl/animCtrl_main_01/grp_animCtrl_upper_fin_01
+        weight: 1
+      - path: aminCtrl/animCtrl_main_01/grp_animCtrl_upper_fin_01/animCtrl_upper_fin_01
+        weight: 1
+      - path: aminCtrl/animCtrl_main_01/grp_animCtrl_upper_fin_02
+        weight: 1
+      - path: aminCtrl/animCtrl_main_01/grp_animCtrl_upper_fin_02/animCtrl_upper_fin_01
+          1
+        weight: 1
+      - path: aminCtrl/animCtrl_main_01/grp_animCtrl_upper_jaw_01
+        weight: 1
+      - path: aminCtrl/animCtrl_main_01/grp_animCtrl_upper_jaw_01/animCtrl_upper_jaw_01
+        weight: 1
+      - path: GEO
+        weight: 1
+      - path: GEO/eyes_01
+        weight: 1
+      - path: GEO/fin_l_01
+        weight: 1
+      - path: GEO/fin_r_01
+        weight: 1
+      - path: GEO/fish_body_01
+        weight: 1
+      - path: GEO/rest_01
+        weight: 1
+      - path: GEO/rest_01/polySurface1
+        weight: 1
+      - path: GEO/rest_01/polySurface2
+        weight: 1
+      - path: GEO/rest_01/polySurface3
+        weight: 1
+      - path: GEO/rest_01/polySurface4
+        weight: 1
+      - path: GEO/teeth_01
+        weight: 1
+      - path: Skeleton
+        weight: 1
+      - path: Skeleton/bn_root_01
+        weight: 1
+      - path: Skeleton/bn_root_01/bn_fin_l_01
+        weight: 1
+      - path: Skeleton/bn_root_01/bn_fin_r_01
+        weight: 1
+      - path: Skeleton/bn_root_01/bn_lower_fin_01
+        weight: 1
+      - path: Skeleton/bn_root_01/bn_lower_fin_2_01
+        weight: 1
+      - path: Skeleton/bn_root_01/bn_lower_jaw_01
+        weight: 1
+      - path: Skeleton/bn_root_01/bn_lower_jaw_01/bn_teeth_01
+        weight: 1
+      - path: Skeleton/bn_root_01/bn_tail
+        weight: 1
+      - path: Skeleton/bn_root_01/bn_upper_fin_01
+        weight: 1
+      - path: Skeleton/bn_root_01/bn_upper_fin_2_01
+        weight: 1
+      - path: Skeleton/bn_root_01/bn_upper_jaw_01
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importBlendShapes: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    hasTranslationDoF: 0
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

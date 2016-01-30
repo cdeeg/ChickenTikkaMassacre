@@ -1,0 +1,369 @@
+fileFormatVersion: 2
+guid: 25cac65cc4c231644865106e8be3736e
+timeCreated: 1453571929
+licenseType: Free
+ModelImporter:
+  serializedVersion: 19
+  fileIDToRecycleName:
+    100000: Base
+    100002: Bridges
+    100004: group10
+    100006: group10 1
+    100008: group11
+    100010: group12
+    100012: group13
+    100014: group13 1
+    100016: group14
+    100018: group14 1
+    100020: group15
+    100022: group15 1
+    100024: group16
+    100026: group16 1
+    100028: group17
+    100030: group17 1
+    100032: group18
+    100034: group19
+    100036: group19 1
+    100038: group2
+    100040: group2 1
+    100042: group20
+    100044: group20 1
+    100046: group21
+    100048: group21 1
+    100050: group22
+    100052: group22 1
+    100054: group23
+    100056: group3
+    100058: group3 1
+    100060: group4
+    100062: group4 1
+    100064: group5
+    100066: group5 1
+    100068: group6
+    100070: group6 1
+    100072: group7
+    100074: group7 1
+    100076: group8
+    100078: group8 1
+    100080: group9
+    100082: group9 1
+    100084: Islands
+    100086: //RootNode
+    100088: pasted__polySurface1247
+    100090: pasted__polySurface1640
+    100092: pasted__polySurface1640 1
+    100094: pasted__polySurface803
+    100096: pasted__polySurface804
+    100098: pasted__polySurface804 1
+    100100: pasted__polySurface806
+    100102: pasted__polySurface806 1
+    100104: pasted__polySurface807
+    100106: pasted__polySurface808
+    100108: pasted__polySurface808 1
+    100110: pasted__polySurface809
+    100112: pasted__polySurface809 1
+    100114: pasted__polySurface810
+    100116: pasted__polySurface810 1
+    100118: pasted__polySurface811
+    100120: pasted__polySurface816
+    100122: pasted__polySurface820
+    100124: pasted__polySurface824
+    100126: pasted__polySurface839
+    100128: polySurface23
+    100130: polySurface24
+    100132: polySurface42
+    100134: polySurface42 1
+    100136: polySurface43
+    100138: polySurface43 1
+    100140: polySurface44
+    100142: polySurface44 1
+    100144: polySurface45
+    100146: polySurface45 1
+    100148: polySurface46
+    100150: polySurface46 1
+    100152: polySurface47
+    100154: polySurface47 1
+    100156: polySurface48
+    100158: polySurface48 1
+    100160: polySurface49
+    100162: polySurface49 1
+    100164: polySurface50
+    100166: polySurface50 1
+    100168: Rocks
+    100170: Vines
+    100172: Water
+    400000: Base
+    400002: Bridges
+    400004: group10
+    400006: group10 1
+    400008: group11
+    400010: group12
+    400012: group13
+    400014: group13 1
+    400016: group14
+    400018: group14 1
+    400020: group15
+    400022: group15 1
+    400024: group16
+    400026: group16 1
+    400028: group17
+    400030: group17 1
+    400032: group18
+    400034: group19
+    400036: group19 1
+    400038: group2
+    400040: group2 1
+    400042: group20
+    400044: group20 1
+    400046: group21
+    400048: group21 1
+    400050: group22
+    400052: group22 1
+    400054: group23
+    400056: group3
+    400058: group3 1
+    400060: group4
+    400062: group4 1
+    400064: group5
+    400066: group5 1
+    400068: group6
+    400070: group6 1
+    400072: group7
+    400074: group7 1
+    400076: group8
+    400078: group8 1
+    400080: group9
+    400082: group9 1
+    400084: Islands
+    400086: //RootNode
+    400088: pasted__polySurface1247
+    400090: pasted__polySurface1640
+    400092: pasted__polySurface1640 1
+    400094: pasted__polySurface803
+    400096: pasted__polySurface804
+    400098: pasted__polySurface804 1
+    400100: pasted__polySurface806
+    400102: pasted__polySurface806 1
+    400104: pasted__polySurface807
+    400106: pasted__polySurface808
+    400108: pasted__polySurface808 1
+    400110: pasted__polySurface809
+    400112: pasted__polySurface809 1
+    400114: pasted__polySurface810
+    400116: pasted__polySurface810 1
+    400118: pasted__polySurface811
+    400120: pasted__polySurface816
+    400122: pasted__polySurface820
+    400124: pasted__polySurface824
+    400126: pasted__polySurface839
+    400128: polySurface23
+    400130: polySurface24
+    400132: polySurface42
+    400134: polySurface42 1
+    400136: polySurface43
+    400138: polySurface43 1
+    400140: polySurface44
+    400142: polySurface44 1
+    400144: polySurface45
+    400146: polySurface45 1
+    400148: polySurface46
+    400150: polySurface46 1
+    400152: polySurface47
+    400154: polySurface47 1
+    400156: polySurface48
+    400158: polySurface48 1
+    400160: polySurface49
+    400162: polySurface49 1
+    400164: polySurface50
+    400166: polySurface50 1
+    400168: Rocks
+    400170: Vines
+    400172: Water
+    2300000: Base
+    2300002: pasted__polySurface1247
+    2300004: pasted__polySurface1640
+    2300006: pasted__polySurface1640 1
+    2300008: pasted__polySurface804
+    2300010: pasted__polySurface804 1
+    2300012: pasted__polySurface806
+    2300014: pasted__polySurface806 1
+    2300016: pasted__polySurface807
+    2300018: pasted__polySurface808
+    2300020: pasted__polySurface808 1
+    2300022: pasted__polySurface809
+    2300024: pasted__polySurface809 1
+    2300026: pasted__polySurface810
+    2300028: pasted__polySurface810 1
+    2300030: pasted__polySurface811
+    2300032: pasted__polySurface816
+    2300034: pasted__polySurface820
+    2300036: pasted__polySurface839
+    2300038: polySurface23
+    2300040: polySurface24
+    2300042: polySurface42
+    2300044: polySurface42 1
+    2300046: polySurface43
+    2300048: polySurface43 1
+    2300050: polySurface44
+    2300052: polySurface44 1
+    2300054: polySurface45
+    2300056: polySurface45 1
+    2300058: polySurface46
+    2300060: polySurface46 1
+    2300062: polySurface47
+    2300064: polySurface47 1
+    2300066: polySurface48
+    2300068: polySurface48 1
+    2300070: polySurface49
+    2300072: polySurface49 1
+    2300074: polySurface50
+    2300076: polySurface50 1
+    2300078: Rocks
+    2300080: Water
+    3300000: Base
+    3300002: pasted__polySurface1247
+    3300004: pasted__polySurface1640
+    3300006: pasted__polySurface1640 1
+    3300008: pasted__polySurface804
+    3300010: pasted__polySurface804 1
+    3300012: pasted__polySurface806
+    3300014: pasted__polySurface806 1
+    3300016: pasted__polySurface807
+    3300018: pasted__polySurface808
+    3300020: pasted__polySurface808 1
+    3300022: pasted__polySurface809
+    3300024: pasted__polySurface809 1
+    3300026: pasted__polySurface810
+    3300028: pasted__polySurface810 1
+    3300030: pasted__polySurface811
+    3300032: pasted__polySurface816
+    3300034: pasted__polySurface820
+    3300036: pasted__polySurface839
+    3300038: polySurface23
+    3300040: polySurface24
+    3300042: polySurface42
+    3300044: polySurface42 1
+    3300046: polySurface43
+    3300048: polySurface43 1
+    3300050: polySurface44
+    3300052: polySurface44 1
+    3300054: polySurface45
+    3300056: polySurface45 1
+    3300058: polySurface46
+    3300060: polySurface46 1
+    3300062: polySurface47
+    3300064: polySurface47 1
+    3300066: polySurface48
+    3300068: polySurface48 1
+    3300070: polySurface49
+    3300072: polySurface49 1
+    3300074: polySurface50
+    3300076: polySurface50 1
+    3300078: Rocks
+    3300080: Water
+    4300000: polySurface23
+    4300002: polySurface24
+    4300004: polySurface42
+    4300006: polySurface43
+    4300008: polySurface44
+    4300010: polySurface45
+    4300012: polySurface46
+    4300014: polySurface47
+    4300016: polySurface48
+    4300018: polySurface49
+    4300020: polySurface50
+    4300022: polySurface42
+    4300024: polySurface43
+    4300026: polySurface44
+    4300028: polySurface45
+    4300030: polySurface46
+    4300032: polySurface47
+    4300034: polySurface48
+    4300036: polySurface49
+    4300038: polySurface50
+    4300040: Water
+    4300042: Base
+    4300044: Rocks
+    4300046: pasted__polySurface1640
+    4300048: pasted__polySurface810
+    4300050: pasted__polySurface808
+    4300052: pasted__polySurface809
+    4300054: pasted__polySurface804
+    4300056: pasted__polySurface806
+    4300058: pasted__polySurface1640
+    4300060: pasted__polySurface810
+    4300062: pasted__polySurface808
+    4300064: pasted__polySurface809
+    4300066: pasted__polySurface804
+    4300068: pasted__polySurface806
+    4300070: pasted__polySurface811
+    4300072: pasted__polySurface820
+    4300074: pasted__polySurface839
+    4300076: pasted__polySurface1247
+    4300078: pasted__polySurface816
+    4300080: pasted__polySurface807
+    9500000: //RootNode
+  materials:
+    importMaterials: 0
+    materialName: 0
+    materialSearch: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleRotations: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importBlendShapes: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 4
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    hasTranslationDoF: 0
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
