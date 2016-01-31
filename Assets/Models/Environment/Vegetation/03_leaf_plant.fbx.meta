@@ -1,35 +1,53 @@
 fileFormatVersion: 2
-guid: cb3c0476e212b434d9591833ac611fe6
-timeCreated: 1454159568
+guid: b7f63b7325e0d0b42a32bc6537ea0354
+timeCreated: 1454278343
 licenseType: Free
 ModelImporter:
   serializedVersion: 19
   fileIDToRecycleName:
     100000: //RootNode
-    100002: group25
-    100004: joint29
-    100006: joint30
-    100008: joint31
-    100010: Plants_05:polySurface72
-    100012: Plants_05:polySurface74
-    100014: Plants_05:polySurface77
+    100002: group22
+    100004: joint10
+    100006: joint11
+    100008: joint12
+    100010: joint14
+    100012: joint15
+    100014: joint16
+    100016: joint17
+    100018: joint19
+    100020: joint20
+    100022: joint21
+    100024: joint22
+    100026: joint9
+    100028: Plants_05:polySurface26
+    100030: Plants_05:polySurface28
+    100032: Plants_05:polySurface31
     400000: //RootNode
-    400002: group25
-    400004: joint29
-    400006: joint30
-    400008: joint31
-    400010: Plants_05:polySurface72
-    400012: Plants_05:polySurface74
-    400014: Plants_05:polySurface77
-    4300000: Plants_05:polySurface77
-    4300002: Plants_05:polySurface72
-    4300004: Plants_05:polySurface74
+    400002: group22
+    400004: joint10
+    400006: joint11
+    400008: joint12
+    400010: joint14
+    400012: joint15
+    400014: joint16
+    400016: joint17
+    400018: joint19
+    400020: joint20
+    400022: joint21
+    400024: joint22
+    400026: joint9
+    400028: Plants_05:polySurface26
+    400030: Plants_05:polySurface28
+    400032: Plants_05:polySurface31
+    4300000: Plants_05:polySurface28
+    4300002: Plants_05:polySurface26
+    4300004: Plants_05:polySurface31
     7400000: Take 001
     9500000: //RootNode
     11100000: //RootNode
-    13700000: Plants_05:polySurface72
-    13700002: Plants_05:polySurface74
-    13700004: Plants_05:polySurface77
+    13700000: Plants_05:polySurface26
+    13700002: Plants_05:polySurface28
+    13700004: Plants_05:polySurface31
   materials:
     importMaterials: 1
     materialName: 0
@@ -50,55 +68,11 @@ ModelImporter:
     animationScaleError: 0.5
     animationWrapMode: 0
     extraExposedTransformPaths: []
-    clipAnimations:
-    - serializedVersion: 16
-      name: Take 001
-      takeName: Take 001
-      firstFrame: 1
-      lastFrame: 30
-      wrapMode: 0
-      orientationOffsetY: 0
-      level: 0
-      cycleOffset: 0
-      loop: 0
-      hasAdditiveReferencePose: 0
-      loopTime: 0
-      loopBlend: 0
-      loopBlendOrientation: 0
-      loopBlendPositionY: 0
-      loopBlendPositionXZ: 0
-      keepOriginalOrientation: 0
-      keepOriginalPositionY: 1
-      keepOriginalPositionXZ: 0
-      heightFromFeet: 0
-      mirror: 0
-      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
-      curves: []
-      events: []
-      transformMask:
-      - path: 
-        weight: 1
-      - path: group25
-        weight: 1
-      - path: group25/joint29
-        weight: 1
-      - path: group25/joint30
-        weight: 1
-      - path: group25/joint31
-        weight: 1
-      - path: Plants_05:polySurface72
-        weight: 1
-      - path: Plants_05:polySurface74
-        weight: 1
-      - path: Plants_05:polySurface77
-        weight: 1
-      maskType: 0
-      maskSource: {instanceID: 0}
-      additiveReferencePoseFrame: 0
+    clipAnimations: []
     isReadable: 1
   meshes:
     lODScreenPercentages: []
-    globalScale: 100
+    globalScale: 175
     meshCompression: 0
     addColliders: 0
     importBlendShapes: 1

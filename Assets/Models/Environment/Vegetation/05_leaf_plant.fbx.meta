@@ -1,6 +1,6 @@
 fileFormatVersion: 2
-guid: db5e921e6eb741442949b9c8f6de9e31
-timeCreated: 1454159568
+guid: 50f1a95b5c3e2174fb99cf4158b29b57
+timeCreated: 1454277231
 licenseType: Free
 ModelImporter:
   serializedVersion: 19
@@ -10,98 +10,44 @@ ModelImporter:
     100004: bn_joint_b_01
     100006: bn_joint_c_01
     100008: bn_joint_d_01
-    100010: group11
-    100012: joint1
-    100014: joint2
-    100016: joint3
-    100018: joint4
-    100020: joint5
-    100022: joint6
-    100024: joint7
-    100026: joint8
-    100028: plant_01 1
-    100030: polySurface51
-    100032: polySurface52
-    100034: polySurface53
-    100036: polySurface54
-    100038: polySurface55
-    100040: polySurface56
-    100042: polySurface57
-    100044: polySurface58
-    100046: polySurface59
-    100048: polySurface60
-    100050: polySurface61
-    100052: polySurface62
-    100054: polySurface63
-    100056: polySurface64
-    100058: polySurface65
-    100060: polySurface66
+    100010: joint1
+    100012: joint2
+    100014: joint3
+    100016: joint4
+    100018: joint5
+    100020: joint6
+    100022: joint7
+    100024: joint8
+    100026: plant_01 1
+    100028: polySurface54
+    100030: polySurface62
+    100032: polySurface64
     400000: //RootNode
     400002: bn_joint_a_01
     400004: bn_joint_b_01
     400006: bn_joint_c_01
     400008: bn_joint_d_01
-    400010: group11
-    400012: joint1
-    400014: joint2
-    400016: joint3
-    400018: joint4
-    400020: joint5
-    400022: joint6
-    400024: joint7
-    400026: joint8
-    400028: plant_01 1
-    400030: polySurface51
-    400032: polySurface52
-    400034: polySurface53
-    400036: polySurface54
-    400038: polySurface55
-    400040: polySurface56
-    400042: polySurface57
-    400044: polySurface58
-    400046: polySurface59
-    400048: polySurface60
-    400050: polySurface61
-    400052: polySurface62
-    400054: polySurface63
-    400056: polySurface64
-    400058: polySurface65
-    400060: polySurface66
-    4300000: polySurface51
-    4300002: polySurface52
-    4300004: polySurface53
-    4300006: polySurface54
-    4300008: polySurface55
-    4300010: polySurface56
-    4300012: polySurface57
-    4300014: polySurface58
-    4300016: polySurface59
-    4300018: polySurface60
-    4300020: polySurface61
-    4300022: polySurface62
-    4300024: polySurface63
-    4300026: polySurface64
-    4300028: polySurface65
-    4300030: polySurface66
+    400010: joint1
+    400012: joint2
+    400014: joint3
+    400016: joint4
+    400018: joint5
+    400020: joint6
+    400022: joint7
+    400024: joint8
+    400026: plant_01 1
+    400028: polySurface54
+    400030: polySurface62
+    400032: polySurface64
+    4300000: polySurface62
+    4300002: polySurface64
+    4300004: polySurface54
     7400000: Take 001
     9500000: //RootNode
     11100000: //RootNode
-    13700000: polySurface51
-    13700002: polySurface52
-    13700004: polySurface53
-    13700006: polySurface54
-    13700008: polySurface55
-    13700010: polySurface56
-    13700012: polySurface57
-    13700014: polySurface58
-    13700016: polySurface59
-    13700018: polySurface60
-    13700020: polySurface61
-    13700022: polySurface62
-    13700024: polySurface63
-    13700026: polySurface64
-    13700028: polySurface65
-    13700030: polySurface66
+    13700000: polySurface54
+    13700002: polySurface62
+    13700004: polySurface64
   materials:
     importMaterials: 1
     materialName: 0
@@ -122,101 +68,11 @@ ModelImporter:
     animationScaleError: 0.5
     animationWrapMode: 0
     extraExposedTransformPaths: []
-    clipAnimations:
-    - serializedVersion: 16
-      name: Take 001
-      takeName: Take 001
-      firstFrame: 1
-      lastFrame: 30
-      wrapMode: 0
-      orientationOffsetY: 0
-      level: 0
-      cycleOffset: 0
-      loop: 0
-      hasAdditiveReferencePose: 0
-      loopTime: 0
-      loopBlend: 0
-      loopBlendOrientation: 0
-      loopBlendPositionY: 0
-      loopBlendPositionXZ: 0
-      keepOriginalOrientation: 0
-      keepOriginalPositionY: 1
-      keepOriginalPositionXZ: 0
-      heightFromFeet: 0
-      mirror: 0
-      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
-      curves: []
-      events: []
-      transformMask:
-      - path: 
-        weight: 1
-      - path: group11
-        weight: 1
-      - path: group11/polySurface51
-        weight: 1
-      - path: group11/polySurface52
-        weight: 1
-      - path: group11/polySurface53
-        weight: 1
-      - path: group11/polySurface54
-        weight: 1
-      - path: group11/polySurface55
-        weight: 1
-      - path: group11/polySurface56
-        weight: 1
-      - path: group11/polySurface57
-        weight: 1
-      - path: group11/polySurface58
-        weight: 1
-      - path: group11/polySurface59
-        weight: 1
-      - path: group11/polySurface60
-        weight: 1
-      - path: group11/polySurface61
-        weight: 1
-      - path: group11/polySurface62
-        weight: 1
-      - path: group11/polySurface63
-        weight: 1
-      - path: group11/polySurface64
-        weight: 1
-      - path: group11/polySurface65
-        weight: 1
-      - path: group11/polySurface66
-        weight: 1
-      - path: plant_01 1
-        weight: 1
-      - path: plant_01 1/bn_joint_a_01
-        weight: 1
-      - path: plant_01 1/bn_joint_a_01/bn_joint_b_01
-        weight: 1
-      - path: plant_01 1/bn_joint_a_01/bn_joint_b_01/bn_joint_c_01
-        weight: 1
-      - path: plant_01 1/bn_joint_a_01/bn_joint_b_01/bn_joint_c_01/bn_joint_d_01
-        weight: 1
-      - path: plant_01 1/joint1
-        weight: 1
-      - path: plant_01 1/joint1/joint2
-        weight: 1
-      - path: plant_01 1/joint1/joint2/joint3
-        weight: 1
-      - path: plant_01 1/joint1/joint2/joint3/joint4
-        weight: 1
-      - path: plant_01 1/joint5
-        weight: 1
-      - path: plant_01 1/joint5/joint6
-        weight: 1
-      - path: plant_01 1/joint5/joint6/joint7
-        weight: 1
-      - path: plant_01 1/joint5/joint6/joint7/joint8
-        weight: 1
-      maskType: 0
-      maskSource: {instanceID: 0}
-      additiveReferencePoseFrame: 0
+    clipAnimations: []
     isReadable: 1
   meshes:
     lODScreenPercentages: []
-    globalScale: 100
+    globalScale: 175
     meshCompression: 0
     addColliders: 0
     importBlendShapes: 1

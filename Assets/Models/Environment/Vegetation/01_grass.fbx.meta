@@ -1,0 +1,166 @@
+fileFormatVersion: 2
+guid: d9c769f4fda8e8b4493a6a78000fbca1
+timeCreated: 1454271749
+licenseType: Free
+ModelImporter:
+  serializedVersion: 19
+  fileIDToRecycleName:
+    100000: //RootNode
+    100002: joint65
+    100004: joint65 1
+    100006: joint67
+    100008: joint67 1
+    100010: joint68
+    100012: joint68 1
+    100014: joint69
+    100016: joint69 1
+    100018: joint70
+    100020: joint70 1
+    100022: polySurface55
+    100024: polySurface60
+    100026: transform6
+    100028: transform7
+    400000: //RootNode
+    400002: joint65
+    400004: joint65 1
+    400006: joint67
+    400008: joint67 1
+    400010: joint68
+    400012: joint68 1
+    400014: joint69
+    400016: joint69 1
+    400018: joint70
+    400020: joint70 1
+    400022: polySurface55
+    400024: polySurface60
+    400026: transform6
+    400028: transform7
+    4300000: polySurface55
+    4300002: polySurface60
+    7400000: Take 001
+    9500000: //RootNode
+    11100000: //RootNode
+    13700000: polySurface55
+    13700002: polySurface60
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleRotations: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    clipAnimations:
+    - serializedVersion: 16
+      name: Take 001
+      takeName: Take 001
+      firstFrame: 0
+      lastFrame: 80
+      wrapMode: 2
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 1
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: polySurface55
+        weight: 1
+      - path: polySurface60
+        weight: 1
+      - path: transform6
+        weight: 1
+      - path: transform6/joint70
+        weight: 1
+      - path: transform6/joint70/joint67
+        weight: 1
+      - path: transform6/joint70/joint67/joint68
+        weight: 1
+      - path: transform6/joint70/joint67/joint68/joint65
+        weight: 1
+      - path: transform6/joint70/joint67/joint68/joint65/joint69
+        weight: 1
+      - path: transform7
+        weight: 1
+      - path: transform7/joint70 1
+        weight: 1
+      - path: transform7/joint70 1/joint67 1
+        weight: 1
+      - path: transform7/joint70 1/joint67 1/joint68 1
+        weight: 1
+      - path: transform7/joint70 1/joint67 1/joint68 1/joint65 1
+        weight: 1
+      - path: transform7/joint70 1/joint67 1/joint68 1/joint65 1/joint69 1
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 150
+    meshCompression: 0
+    addColliders: 0
+    importBlendShapes: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    hasTranslationDoF: 0
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 1
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
