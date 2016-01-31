@@ -70,6 +70,7 @@ ModelImporter:
     4300020: polySurface140
     7400000: Take 001
     9500000: //RootNode
+    11100000: //RootNode
     13700000: polySurface130
     13700002: polySurface131
     13700004: polySurface132
@@ -101,11 +102,91 @@ ModelImporter:
     animationScaleError: 0.5
     animationWrapMode: 0
     extraExposedTransformPaths: []
-    clipAnimations: []
+    clipAnimations:
+    - serializedVersion: 16
+      name: Take 001
+      takeName: Take 001
+      firstFrame: 1
+      lastFrame: 30
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: group9
+        weight: 1
+      - path: group9/polySurface130
+        weight: 1
+      - path: group9/polySurface131
+        weight: 1
+      - path: group9/polySurface132
+        weight: 1
+      - path: group9/polySurface133
+        weight: 1
+      - path: group9/polySurface134
+        weight: 1
+      - path: group9/polySurface135
+        weight: 1
+      - path: group9/polySurface136
+        weight: 1
+      - path: group9/polySurface137
+        weight: 1
+      - path: group9/polySurface138
+        weight: 1
+      - path: group9/polySurface139
+        weight: 1
+      - path: group9/polySurface140
+        weight: 1
+      - path: plant_04
+        weight: 1
+      - path: plant_04/joint37
+        weight: 1
+      - path: plant_04/joint37/joint38
+        weight: 1
+      - path: plant_04/joint37/joint38/joint39
+        weight: 1
+      - path: plant_04/joint37/joint38/joint39/joint40
+        weight: 1
+      - path: plant_04/joint41
+        weight: 1
+      - path: plant_04/joint41/joint42
+        weight: 1
+      - path: plant_04/joint41/joint42/joint43
+        weight: 1
+      - path: plant_04/joint41/joint42/joint43/joint44
+        weight: 1
+      - path: plant_04/joint45
+        weight: 1
+      - path: plant_04/joint45/joint46
+        weight: 1
+      - path: plant_04/joint45/joint46/joint47
+        weight: 1
+      - path: plant_04/joint45/joint46/joint47/joint48
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 1
     isReadable: 1
   meshes:
     lODScreenPercentages: []
-    globalScale: 150
+    globalScale: 100
     meshCompression: 0
     addColliders: 0
     importBlendShapes: 1
@@ -139,7 +220,7 @@ ModelImporter:
     rootMotionBoneName: 
     hasTranslationDoF: 0
   lastHumanDescriptionAvatarSource: {instanceID: 0}
-  animationType: 2
+  animationType: 1
   humanoidOversampling: 1
   additionalBone: 0
   userData: 

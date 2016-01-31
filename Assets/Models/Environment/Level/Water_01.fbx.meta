@@ -1,0 +1,233 @@
+fileFormatVersion: 2
+guid: 2500a9ee971afcf42ade6fa7d3b1b57a
+timeCreated: 1454260002
+licenseType: Free
+ModelImporter:
+  serializedVersion: 19
+  fileIDToRecycleName:
+    100000: group20
+    100002: joint1
+    100004: joint10
+    100006: joint11
+    100008: joint12
+    100010: joint13
+    100012: joint14
+    100014: joint15
+    100016: joint16
+    100018: joint17
+    100020: joint18
+    100022: joint19
+    100024: joint2
+    100026: joint20
+    100028: joint21
+    100030: joint3
+    100032: joint4
+    100034: joint5
+    100036: joint6
+    100038: joint7
+    100040: joint8
+    100042: joint9
+    100044: Joints
+    100046: polySurface257
+    100048: polySurface260
+    100050: polySurface261
+    100052: polySurface262
+    100054: Water_01
+    100056: //RootNode
+    100058: Water_02
+    400000: group20
+    400002: joint1
+    400004: joint10
+    400006: joint11
+    400008: joint12
+    400010: joint13
+    400012: joint14
+    400014: joint15
+    400016: joint16
+    400018: joint17
+    400020: joint18
+    400022: joint19
+    400024: joint2
+    400026: joint20
+    400028: joint21
+    400030: joint3
+    400032: joint4
+    400034: joint5
+    400036: joint6
+    400038: joint7
+    400040: joint8
+    400042: joint9
+    400044: Joints
+    400046: polySurface257
+    400048: polySurface260
+    400050: polySurface261
+    400052: polySurface262
+    400054: Water_01
+    400056: //RootNode
+    400058: Water_02
+    2300000: polySurface257
+    2300002: polySurface261
+    2300004: polySurface262
+    3300000: polySurface257
+    3300002: polySurface261
+    3300004: polySurface262
+    4300000: polySurface257
+    4300002: polySurface260
+    4300004: polySurface262
+    4300006: polySurface261
+    7400000: Take 001
+    9500000: //RootNode
+    11100000: //RootNode
+    13700000: polySurface260
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleRotations: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    clipAnimations:
+    - serializedVersion: 16
+      name: Take 001
+      takeName: Take 001
+      firstFrame: 0
+      lastFrame: 120
+      wrapMode: 4
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 1
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: Water_01
+        weight: 1
+      - path: Water_01/Joints
+        weight: 1
+      - path: Water_01/Joints/group20
+        weight: 1
+      - path: Water_01/Joints/group20/joint1
+        weight: 1
+      - path: Water_01/Joints/group20/joint3
+        weight: 1
+      - path: Water_01/Joints/group20/joint4
+        weight: 1
+      - path: Water_01/Joints/group20/joint6
+        weight: 1
+      - path: Water_01/Joints/group20/joint7
+        weight: 1
+      - path: Water_01/Joints/group20/joint9
+        weight: 1
+      - path: Water_01/Joints/group20/joint10
+        weight: 1
+      - path: Water_01/Joints/group20/joint12
+        weight: 1
+      - path: Water_01/Joints/group20/joint13
+        weight: 1
+      - path: Water_01/Joints/group20/joint15
+        weight: 1
+      - path: Water_01/Joints/group20/joint16
+        weight: 1
+      - path: Water_01/Joints/group20/joint18
+        weight: 1
+      - path: Water_01/Joints/group20/joint19
+        weight: 1
+      - path: Water_01/Joints/group20/joint21
+        weight: 1
+      - path: Water_01/Joints/joint2
+        weight: 1
+      - path: Water_01/Joints/joint5
+        weight: 1
+      - path: Water_01/Joints/joint8
+        weight: 1
+      - path: Water_01/Joints/joint11
+        weight: 1
+      - path: Water_01/Joints/joint14
+        weight: 1
+      - path: Water_01/Joints/joint17
+        weight: 1
+      - path: Water_01/Joints/joint20
+        weight: 1
+      - path: Water_01/polySurface257
+        weight: 1
+      - path: Water_01/polySurface260
+        weight: 1
+      - path: Water_02
+        weight: 1
+      - path: Water_02/polySurface261
+        weight: 1
+      - path: Water_02/polySurface262
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importBlendShapes: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    hasTranslationDoF: 0
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 1
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

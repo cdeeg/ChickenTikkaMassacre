@@ -33,6 +33,7 @@ ModelImporter:
     4300002: Plants_05:pPlane239
     7400000: Take 001
     9500000: //RootNode
+    11100000: //RootNode
     13700000: Plants_05:pPlane235
     13700002: Plants_05:pPlane239
   materials:
@@ -55,11 +56,63 @@ ModelImporter:
     animationScaleError: 0.5
     animationWrapMode: 0
     extraExposedTransformPaths: []
-    clipAnimations: []
+    clipAnimations:
+    - serializedVersion: 16
+      name: Take 001
+      takeName: Take 001
+      firstFrame: 1
+      lastFrame: 30
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: group27
+        weight: 1
+      - path: group27/joint24
+        weight: 1
+      - path: group27/joint24/joint18
+        weight: 1
+      - path: group27/joint24/joint18/joint19
+        weight: 1
+      - path: group27/joint24/joint18/joint19/joint20
+        weight: 1
+      - path: group27/joint25
+        weight: 1
+      - path: group27/joint25/joint14
+        weight: 1
+      - path: group27/joint25/joint14/joint15
+        weight: 1
+      - path: group27/joint25/joint14/joint15/joint16
+        weight: 1
+      - path: Plants_05:pPlane235
+        weight: 1
+      - path: Plants_05:pPlane239
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
     isReadable: 1
   meshes:
     lODScreenPercentages: []
-    globalScale: 150
+    globalScale: 100
     meshCompression: 0
     addColliders: 0
     importBlendShapes: 1
@@ -93,7 +146,7 @@ ModelImporter:
     rootMotionBoneName: 
     hasTranslationDoF: 0
   lastHumanDescriptionAvatarSource: {instanceID: 0}
-  animationType: 2
+  animationType: 1
   humanoidOversampling: 1
   additionalBone: 0
   userData: 

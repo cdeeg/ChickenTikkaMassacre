@@ -7,8 +7,8 @@ public class UV_Scrolling : MonoBehaviour {
 
 	//scroll main texture based on time
 	
-	float scrollSpeed = 0.5f;
-	float offset;
+	public float scrollSpeed = 0.5f;
+	public float offset;
 	//float rotate;
 
 	//Renderer mRenderer;

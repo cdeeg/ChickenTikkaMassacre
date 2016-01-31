@@ -44,6 +44,7 @@ ModelImporter:
     4300008: Plants_05:polySurface115
     7400000: Take 001
     9500000: //RootNode
+    11100000: //RootNode
     13700000: Plants_05:polySurface111
     13700002: Plants_05:polySurface112
     13700004: Plants_05:polySurface113
@@ -69,11 +70,71 @@ ModelImporter:
     animationScaleError: 0.5
     animationWrapMode: 0
     extraExposedTransformPaths: []
-    clipAnimations: []
+    clipAnimations:
+    - serializedVersion: 16
+      name: Take 001
+      takeName: Take 001
+      firstFrame: 1
+      lastFrame: 30
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: group13
+        weight: 1
+      - path: group13/Plants_05:polySurface111
+        weight: 1
+      - path: group13/Plants_05:polySurface112
+        weight: 1
+      - path: group13/Plants_05:polySurface113
+        weight: 1
+      - path: group13/Plants_05:polySurface114
+        weight: 1
+      - path: group13/Plants_05:polySurface115
+        weight: 1
+      - path: group17
+        weight: 1
+      - path: group17/joint36
+        weight: 1
+      - path: group17/joint36/joint37
+        weight: 1
+      - path: group17/joint36/joint37/joint38
+        weight: 1
+      - path: group17/joint36/joint37/joint38/joint39
+        weight: 1
+      - path: group17/joint40
+        weight: 1
+      - path: group17/joint40/joint41
+        weight: 1
+      - path: group17/joint40/joint41/joint42
+        weight: 1
+      - path: group17/joint40/joint41/joint42/joint43
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 1
     isReadable: 1
   meshes:
     lODScreenPercentages: []
-    globalScale: 150
+    globalScale: 100
     meshCompression: 0
     addColliders: 0
     importBlendShapes: 1
@@ -107,7 +168,7 @@ ModelImporter:
     rootMotionBoneName: 
     hasTranslationDoF: 0
   lastHumanDescriptionAvatarSource: {instanceID: 0}
-  animationType: 2
+  animationType: 1
   humanoidOversampling: 1
   additionalBone: 0
   userData: 
