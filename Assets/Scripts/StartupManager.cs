@@ -2,11 +2,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine.Networking;
-#if UNITY_5_2
 
-#elif
-using UnityEngine.SceneManagement;
-#endif
 
 public class StartupManager : MonoBehaviour
 {
@@ -37,14 +33,10 @@ public class StartupManager : MonoBehaviour
 
 		pool = GetComponent<WeaponObjectPool>();
 
-		// keep this game object, regardless of which scene is loading
+		// keep his game object, regardless of which scene is loading
 		DontDestroyOnLoad(transform.gameObject);
 
 		// load real level/menu
-		#if UNITY_5_2
 		Application.LoadLevel( nextScene );
-		#elif
-		SceneManager.LoadScene( nextScene );
-		#endif
 	}
 }
