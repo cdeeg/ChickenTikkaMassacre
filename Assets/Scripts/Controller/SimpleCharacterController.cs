@@ -125,18 +125,12 @@ struct PlayerNetworkActionContainer
 	{
 		// remove this player from their team (team gets unassigned if player count is 0)
 		if( home != null ) home.RemoveTeamMember();
-<<<<<<< HEAD
-//<<<<<<< HEAD
 		// load start scene
 		#if UNITY_5_2
 		Application.LoadLevel("StartGame");
 		#elif
 		SceneManager.LoadScene("StartGame");
 		#endif
-//=======
-//>>>>>>> 8366b062d686676ca8dc8593cd53dfab10b64836
-=======
->>>>>>> 8043b1c1d7761bec3315bf9e43472db13a380c8e
 	}
 
 	void FindFreeSpawnPoint()
