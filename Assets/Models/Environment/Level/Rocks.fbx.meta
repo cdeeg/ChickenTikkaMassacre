@@ -1,15 +1,17 @@
 fileFormatVersion: 2
-guid: dd2989305c0bc894b877cd798a2b58ed
-timeCreated: 1454284802
+guid: 3ee08f55ffbbd4d4fad85dd943ebf9d6
+timeCreated: 1454343857
 licenseType: Free
 ModelImporter:
   serializedVersion: 19
   fileIDToRecycleName:
-    100000: //RootNode
-    400000: //RootNode
-    2300000: //RootNode
-    3300000: //RootNode
-    4300000: Mesh3
+    100000: Rocks
+    100002: //RootNode
+    400000: Rocks
+    400002: //RootNode
+    2300000: Rocks
+    3300000: Rocks
+    4300000: Rocks
     9500000: //RootNode
   materials:
     importMaterials: 1
