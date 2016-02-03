@@ -7,7 +7,7 @@ namespace jChikken
 {
 
 	[RequireComponent(typeof(PlayerController))]
-	public class Player : MonoBehaviour 
+	public class Player : MonoBehaviour, IKillable 
 	{
 		#region fields
 
@@ -21,14 +21,31 @@ namespace jChikken
 		[Range(0, 1), Tooltip("Chance to play an extra idle animation")]
 		public float idleAniChance = 0.1f;
 
+		public float RespawnTime = 2f;
+
 		public PlayerController  mController { get; private set; }
 		public Animator 		 mAnimatorController { get; private set; }
+
+		bool hasSpawned = true;
+		bool isDead = false;
 
 		#endregion
 
 		//-----------------------------------------------------------------------------------------------------------------
 
 		#region interface
+
+		public string name { get { return name; } }
+
+		public void Kill()
+		{
+			if(hasSpawned)
+			{
+				isDead = true;
+				hasSpawned = false;
+				StartCoroutine("waitForRespawn");
+			}
+		}
 
 		public void ScorePoint()
 		{
@@ -75,6 +92,21 @@ namespace jChikken
 		{
 			mAnimatorController = GetComponent<Animator>();
 		}
+
+		#endregion
+
+		#region behaviour
+
+		IEnumerator waitForRespawn()
+		{
+			yield return new WaitForSeconds(RespawnTime);
+			
+			if(GameManager.GameIsRunning())
+			{
+		//		mSpawner.Respawn();
+			}
+		}
+
 
 		#endregion
 

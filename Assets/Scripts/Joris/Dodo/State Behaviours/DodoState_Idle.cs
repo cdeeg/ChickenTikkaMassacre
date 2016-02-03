@@ -26,6 +26,7 @@ public class DodoState_Idle : DodoStateBase
 	override public void OnStateEnter(Animator animator, AnimatorStateInfo stateInfo, int layerIndex) 
 	{
 		base.OnStateEnter(animator, stateInfo, layerIndex);
+		substate = idleStates.standing;
 		lastRelocateTry = Time.time;
 		lastIdleMoveTry = Time.time;
 	}
@@ -38,13 +39,19 @@ public class DodoState_Idle : DodoStateBase
 		switch(substate)
 		{
 		case idleStates.standing:
-			
+
+			behaviour.ApplyGravity();
+
 			//	think about relocating
 			if(Time.time >= lastRelocateTry + 1f)
 			{
 				if(Random.value <= behaviour.relocateChance)
 				{
-					behaviour.GenerateRandomPathHome();
+					if(Random.value > 0.33f)
+						behaviour.GenerateRandomPathExplore();
+					else
+						behaviour.GenerateRandomPathHome();
+
 					substate = idleStates.waitForExit;
 				}
 				lastRelocateTry = Time.time;
@@ -55,15 +62,17 @@ public class DodoState_Idle : DodoStateBase
 			{
 				if(Random.value <= idleMoveChance)
 				{
-					idleMoveTarget = behaviour.GetNewRandomPositionAroundMe();
-					substate = idleStates.move;
+					behaviour.GenerateSmallIdlePath();
+//					idleMoveTarget = behaviour.GetNewRandomPositionAroundMe();
+//					Debug.Log("new idle move target: " + behaviour.transform.position + " -> " + idleMoveTarget);
+//					substate = idleStates.move;
 				}
 				lastIdleMoveTry = Time.time;
 			}
 			break;
 			
 		case idleStates.move:
-			
+
 			if( behaviour.MoveTowards(idleMoveTarget) )
 			{
 				substate = idleStates.standing;
