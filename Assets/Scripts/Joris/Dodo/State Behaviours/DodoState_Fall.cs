@@ -11,6 +11,7 @@ public class DodoState_Fall : DodoStateBase
 		base.OnStateEnter(animator, stateInfo, layerIndex);
 		behaviour.mRigidBody.isKinematic = false;
 		behaviour.mRigidBody.velocity = behaviour.currVelocity;
+		Debug.Log("ENTER falling state");
 	}
 	
 	override public void OnStateUpdate(Animator animator, AnimatorStateInfo stateInfo, int layerIndex) 

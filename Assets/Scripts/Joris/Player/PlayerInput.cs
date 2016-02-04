@@ -9,6 +9,14 @@ namespace jChikken
 	[RequireComponent(typeof (PlayerController))]
 	public class PlayerInput : MonoBehaviour
 	{
+		public string HorizontalAxis;
+		public string VerticalAxis;
+		public KeyCode Attack;
+		public KeyCode Jump;
+
+		public HitTester mHitTester;
+
+		private Player m_Player;
 		private PlayerController m_Character;	// A reference to the ThirdPersonCharacter on the object
 		private Transform m_Cam;                // A reference to the main camera in the scenes transform
 		private Vector3 m_CamForward;           // The current forward direction of the camera
@@ -17,8 +25,15 @@ namespace jChikken
 		private bool m_MeleeAttack;
 		private bool m_SpecialAttack;
 
+		private bool inMelee;
 
 		public Weapon currWeapon { get; private set; }
+
+		void Awake()
+		{
+			m_Character = GetComponent<PlayerController>();
+			m_Player = GetComponent<Player>();
+		}
 
 		private void Start()
 		{
@@ -41,18 +56,20 @@ namespace jChikken
 		
 		private void Update()
 		{
-
 			if (!m_Jump)
 			{
-				m_Jump = CrossPlatformInputManager.GetButtonDown("Jump");
+				m_Jump = Input.GetKeyDown(Jump);
+		//		m_Jump = CrossPlatformInputManager.GetButtonDown("Jump");
 			}
 			if(!m_MeleeAttack)
 			{
-				m_MeleeAttack = CrossPlatformInputManager.GetButtonDown("MeleeAttack");
+				m_MeleeAttack = Input.GetKeyDown(Attack);
+		//		m_MeleeAttack = CrossPlatformInputManager.GetButtonDown("MeleeAttack");
 			}
 			if(!m_SpecialAttack && currWeapon != null)
 			{
-				m_SpecialAttack = CrossPlatformInputManager.GetButtonDown("SpecialAttack");
+				m_SpecialAttack = Input.GetKeyDown(Jump);
+		//		m_SpecialAttack = CrossPlatformInputManager.GetButtonDown("SpecialAttack");
 			}
 		}
 		
@@ -60,11 +77,17 @@ namespace jChikken
 		// Fixed update is called in sync with physics
 		private void FixedUpdate()
 		{
+			if(!enabled)
+				return;
+
 			// read inputs
-			float h = CrossPlatformInputManager.GetAxis("Horizontal");
-			float v = CrossPlatformInputManager.GetAxis("Vertical");
+			float h = Input.GetAxis(HorizontalAxis);
+			float v = Input.GetAxis(VerticalAxis);
+//			float h = CrossPlatformInputManager.GetAxis("Horizontal");
+//			float v = CrossPlatformInputManager.GetAxis("Vertical");
+
 			bool crouch = Input.GetKey(KeyCode.C);
-			
+
 			// calculate move direction to pass to character
 			if (m_Cam != null)
 			{
@@ -85,22 +108,51 @@ namespace jChikken
 //			}
 
 			// pass all parameters to the character control script
-			m_Character.Move(m_Move, crouch, m_Jump);
+			m_Character.Move(m_Move, crouch, m_Jump, m_Player.hasDodo ? 0.75f : 1f);
 
 			if(m_SpecialAttack)
 			{
 				m_Character.SpecialAttack(currWeapon);
 			}
-			else if(m_MeleeAttack)
+			else if(m_MeleeAttack && !inMelee)
 			{
-				m_Character.MeleeAttack();
+				m_Player.mAnimatorController.SetTrigger("PerformMelee");
+				StartCoroutine("attackTiming");
 			}
-
 
 			m_Jump = false;
 			m_MeleeAttack = false;
 			m_SpecialAttack = false;
 		}
+
+		bool testForEnemy()
+		{
+			HitBox b = mHitTester.GetTarget<HitBox>();
+			return b != null && b.mPlayer == GameManager.GetOpponent(m_Player);
+		}
+
+		bool testForDodo()
+		{
+			DodoBehaviour dodo = mHitTester.GetTarget<DodoBehaviour>();
+			return dodo != null && !dodo.isCaptured;
+		}
+
+		IEnumerator attackTiming()
+		{
+			inMelee = true;
+			yield return new WaitForSeconds(0.4f);
+			if(testForDodo())
+			{
+				DodoBehaviour dodo = mHitTester.GetTarget<DodoBehaviour>();
+				m_Player.FetchDodo();
+			}
+			else if(testForEnemy())
+			{
+				m_Player.MeleeAttack(mHitTester.GetTarget<HitBox>().mPlayer);
+			}
+			inMelee = false;
+		}
+
 	}
 
 }

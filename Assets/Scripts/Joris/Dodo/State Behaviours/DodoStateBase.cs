@@ -26,7 +26,7 @@ public abstract class DodoStateBase : StateMachineBehaviour
 
 	override public void OnStateEnter(Animator animator, AnimatorStateInfo stateInfo, int layerIndex) 
 	{
-		behaviour = animator.GetComponent<DodoBehaviour>();
+		behaviour = animator.transform.parent.GetComponent<DodoBehaviour>();
 		currentState = GetMyState();
 	}
 	

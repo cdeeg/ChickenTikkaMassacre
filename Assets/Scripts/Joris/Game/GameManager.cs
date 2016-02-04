@@ -31,7 +31,7 @@ namespace jChikken
 
 		private Player playerA;
 		private Player playerB;
-		private bool   gameIsRunning;
+		private bool   gameIsRunning = true;
 
 		#endregion
 
@@ -75,10 +75,10 @@ namespace jChikken
 					playerB = players[1];
 					isInitialized = true;
 				}
-				else
-				{
-					throw new System.Exception("there must be exactly two players in the scene!");
-				}
+//				else
+//				{
+//					throw new System.Exception("there must be exactly two players in the scene!");
+//				}
 			}
 		}
 

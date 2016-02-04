@@ -53,15 +53,14 @@ using System.Collections.Generic;
 namespace jChikken
 {
 
-	[RequireComponent(typeof(CapsuleCollider), typeof(Animator), typeof(Rigidbody))]
-	public class DodoBehaviour : MonoBehaviour 
+	public class DodoBehaviour : MonoBehaviour, IKillable
 	{
 		#region constants
 
 		/// <summary>
 		/// minimum height difference between two platform levels in the environment
 		/// </summary>
-		public const float _minHeightStep = 0.5f;
+		public const float _minHeightStep = 2f;
 
 		const float rotationSpeed = 0.3f;
 
@@ -132,9 +131,14 @@ namespace jChikken
 		
 		//-----------------------------------------------------------------------------------------------------------------
 
-		public Rigidbody	mRigidBody 	{ get; private set; }
+		public Rigidbody	mRigidBody;
 		public Animator 	mController	{ get; private set; }
 		private DodoSpawner	mSpawner;
+		private SphereCollider mCollider;
+
+		private float localRot;
+
+		private Vector3 position { 	get { return transform.position; } }
 
 		//-----------------------------------------------------------------------------------------------------------------
 
@@ -161,7 +165,7 @@ namespace jChikken
 		/// <summary>
 		/// true if the dodo has spawned on the field.
 		/// </summary>
-		bool hasSpawned;
+		public bool hasSpawned { get; private set; }
 		/// <summary>
 		/// true if dodo was cooked or otherwise
 		/// </summary>
@@ -169,7 +173,7 @@ namespace jChikken
 		/// <summary>
 		/// true if dodo was fetched by a player
 		/// </summary>
-		bool isCaptured { get { return captor != null; } }
+		public bool isCaptured { get { return captor != null; } }
 		/// <summary>
 		/// player that is currently holding this dodo
 		/// </summary>
@@ -188,15 +192,54 @@ namespace jChikken
 
 		//=================================================================================================================
 		
+		#region init
+		
+		void Awake() 
+		{
+			hasSpawned = true;
+			mController = transform.GetComponentInChildren<Animator>();
+			mSpawner 	= GameObject.FindObjectOfType<DodoSpawner>();
+			mCollider 	= GetComponent<SphereCollider>();
+			
+			if(mRigidBody == null)
+				mRigidBody = GetComponent<Rigidbody>();
+			mRigidBody.isKinematic = true;
+			mRigidBody.useGravity = true;
+			
+			ownHeight = mCollider.radius * 2;
+			maxDistToGround = (ownHeight / 2) + 0.1f;
+		}
+		
+		#endregion
+
+		//=================================================================================================================
+		
 		#region interface
+
+		public string name { get { return name; } }
 
 		/// <summary>
 		/// call this to spawn the dodo
 		/// </summary>
-		public void Spawn()
+		public void Kill()
 		{
-			if(!hasSpawned)
+			if(hasSpawned)
 			{
+				Debug.Log("on kill dodo");
+				isDead = true;
+				mController.SetTrigger("die");
+				hasSpawned = false;
+				StartCoroutine("waitForRespawn");
+			}
+		}
+
+		public void OnSpawn(Vector3 p)
+		{
+			if(isDead)
+			{
+				Debug.Log("dodo onSpawn");
+				transform.position = p;
+				isDead = false;
 				hasSpawned = true;
 			}
 		}
@@ -209,12 +252,13 @@ namespace jChikken
 		public void GetCaptured(Player player)
 		{
 			captor = player;
+			mCollider.enabled = false;
 			UpdateStateValues();
 		}
 
 		public void FreeDodo()
 		{
-			transform.SetParent(null);
+			mCollider.enabled = true;
 			captor = null;
 			UpdateStateValues();
 		}
@@ -227,25 +271,28 @@ namespace jChikken
 		/// </summary>
 		public bool MoveTowards(Vector3 target)
 		{
-			Vector3 v = target - transform.position;
+			Vector3 v = target - position;
 
-			currVelocity += v.normalized * acceleration;
-			if(currVelocity.magnitude > speed)
-				currVelocity = currVelocity.normalized * speed;
+			currVelocity += (v.normalized * acceleration) * Time.deltaTime;
+
+			Vector3 velLeveled = new Vector3(currVelocity.x, 0, currVelocity.z);
+			if(velLeveled.magnitude > speed)
+			{
+				currVelocity = velLeveled.normalized * speed + Vector3.down * currVelocity.y;
+			}
 
 			if(isGrounded)
 				currVelocity *= 0.8f;	//	friction
+
 
 			//	translation
 			ApplyGravity();
 			Vector3 translation = currVelocity * Time.deltaTime;
 			Vector3 nextPos = transform.position + translation;
 
-			//	rotation
-			Quaternion rotationTarget = Quaternion.LookRotation(v.normalized, Vector3.up);
-			transform.rotation = Quaternion.Slerp(transform.rotation, rotationTarget, rotationSpeed); 
 
-			if(Vector3.Distance(transform.position, target) < Vector3.Distance(transform.position, nextPos))
+
+			if(Vector3.Distance(position, target) < Vector3.Distance(position, nextPos))
 			{
 				//	reached target
 				transform.position = target;
@@ -272,7 +319,7 @@ namespace jChikken
 		/// </summary>
 		public void ApplyGravity()
 		{
-			float g = Mathf.Clamp(currVelocity.y - Time.deltaTime, -8f, 100f);
+			float g = Mathf.Clamp(currVelocity.y - (4f * Time.deltaTime), (isGrounded ? -1.5f : -16f), 100f);
 
 			//	prevent falling through collider
 			if(g * Time.deltaTime > distToGround)
@@ -299,40 +346,63 @@ namespace jChikken
 
 		//=================================================================================================================
 
-		#region init
-
-		void Awake() 
-		{
-			mController = GetComponent<Animator>();
-			mSpawner = GameObject.FindObjectOfType<DodoSpawner>();
-
-			mRigidBody = GetComponent<Rigidbody>();
-			mRigidBody.isKinematic = true;
-			mRigidBody.useGravity = true;
-
-			ownHeight = GetComponent<CapsuleCollider>().height;
-			maxDistToGround = 0.01f; //(ownHeight / 2) + 0.01f;
-		}
-
-		#endregion
-
-		//=================================================================================================================
-
 		#region behaviour
 		
 		void Update()
 		{
-			Vector3 groundP;
-			distToGround = GetDistanceToGround(out groundP);
-			isGrounded = distToGround <= maxDistToGround;
+			if(isDead)
+			{
+				ApplyGravity();
+				ApplyVelocity();
+			}
+			else if(!isGrounded)
+			{
+				GroundStuff();
+				UpdateStateValues();
+			}
+		}
 
+		void FixedUpdate()
+		{
+			GroundStuff();
+			
 			//	copy velocity from player if dodo is captured
 			if(isCaptured)
 			{
 				currVelocity = captor.mController.currVelocity;
 			}
 
+			Vector3 velLeveled = new Vector3(currVelocity.x, 0, currVelocity.z);
+			if(!isDead && !isCaptured && velLeveled.magnitude > 0.01f)
+			{
+				if(currentState == state.idle)
+				{
+					currVelocity *= 0.95f;
+				}
+
+				localRot += velLeveled.magnitude * 5;
+				Quaternion forward = Quaternion.LookRotation(velLeveled.normalized, Vector3.up);
+				Quaternion rot = Quaternion.AngleAxis(localRot, Vector3.right);
+
+				transform.rotation = forward * rot;
+			}
+			
 			UpdateStateValues();
+		}
+
+		void GroundStuff()
+		{
+			Vector3 groundP;
+			isGrounded = Groundtest(position, out groundP);
+			if(isGrounded)
+			{
+				float d = position.y - groundP.y;
+				if(d > 0)
+					transform.position = new Vector3(transform.position.x, groundP.y + maxDistToGround-0.15f, transform.position.z);
+			}
+			
+			//			distToGround = GetDistanceToGround(out groundP);
+			//			isGrounded = distToGround <= maxDistToGround;
 		}
 
 		//-----------------------------------------------------------------------------------------------------------------
@@ -348,24 +418,20 @@ namespace jChikken
 			mController.SetBool("isDead", isDead);
 			mController.SetBool("isCaptured", isCaptured);
 			mController.SetFloat("momentum", currVelocity.magnitude);
+			mController.SetFloat("yVel", currVelocity.y);
 		}
 
 		//-----------------------------------------------------------------------------------------------------------------
 
-		void onDying()
-		{
-			//	respawn after dying
-			hasSpawned = false;
-			StartCoroutine("waitForRespawn");
-		}
-
 		IEnumerator waitForRespawn()
 		{
+			Debug.Log("dodo start waitforrespawn:: " + RespawnTime);
 			yield return new WaitForSeconds(RespawnTime);
 
+			Debug.Log("dodo waitforrespawn:: " + GameManager.GameIsRunning());
 			if(GameManager.GameIsRunning())
 			{
-				Spawn();
+				mSpawner.Respawn();
 			}
 		}
 
@@ -375,12 +441,14 @@ namespace jChikken
 
 		#region util
 
+		static Vector3 NULLPOS = Vector3.one * -100;
+
 		/// <summary>
 		/// returns true if dodo is on ground
 		/// </summary>
 		public float GetDistanceToGround(out Vector3 point)
 		{
-			return GetDistanceToGround(transform.position, out point);
+			return GetDistanceToGround(position, out point);
 		}
 
 		private float GetDistanceToGround(Vector3 p, out Vector3 point)
@@ -393,6 +461,19 @@ namespace jChikken
 			}
 			point = Vector3.one * -100;
 			return 1000f;
+		}
+
+		private bool Groundtest(Vector3 p, out Vector3 point)
+		{
+			point = NULLPOS;
+			RaycastHit hit;
+			Debug.DrawLine(p + Vector3.up * 0.1f, p + Vector3.down * (maxDistToGround+0.1f) );
+			if(Physics.Raycast(p + Vector3.up*0.1f, Vector3.down, out hit, maxDistToGround + 0.1f, LayerMask.GetMask("Ground")))
+			{
+				point = hit.point;
+				return true;
+			}
+			return false;
 		}
 
 		//-----------------------------------------------------------------------------------------------------------------
@@ -417,8 +498,10 @@ namespace jChikken
 
 				if(isValidP)
 					newP = groundP;
+
+				att--;
 			}
-			return newP;
+			return att > 0 ? newP : transform.position;
 		}
 
 		/// <summary>
@@ -429,7 +512,35 @@ namespace jChikken
 			Node n = mSpawner.GetRandomNodeInSpawnArea();
 			if(n != null)
 			{
-				Path p = PathFinder.GetPath(transform.position, n.pos);
+				Path p = PathFinder.GetPath(position, n.pos);
+				if(p.isValid())
+				{
+					currentPath = p;
+					currentPath.StartPathMove();
+				}
+			}
+		}
+
+		public void GenerateRandomPathExplore()
+		{
+			Node n = mSpawner.GetRandomNodeInExploreArea();
+			if(n != null)
+			{
+				Path p = PathFinder.GetPath(position, n.pos);
+				if(p.isValid())
+				{
+					currentPath = p;
+					currentPath.StartPathMove();
+				}
+			}
+		}
+
+		public void GenerateSmallIdlePath()
+		{
+			Node n = PathFinder.GetNextNodeRandom(position);
+			if(n != null)
+			{
+				Path p = PathFinder.GetPath(position, n.pos);
 				if(p.isValid())
 				{
 					currentPath = p;
@@ -484,6 +595,26 @@ namespace jChikken
 			case alertMode.byDistance:				return d < AlertDistance;
 			case alertMode.byDistanceAndSight:		return d < AlertDistance && vDot >= fovMin;
 			default:								return false;
+			}
+		}
+
+		#endregion
+
+		//=================================================================================================================
+
+		#region debug
+
+		void OnDrawGizmos()
+		{
+			if(hasPath)
+			{
+				Vector3 off = Vector3.up * ownHeight / 2;
+				Gizmos.color = Color.Lerp(Color.red, Color.yellow, 0.4f);
+				Gizmos.DrawLine(position, currentPath.currNode + off);
+				for(int i = currentPath.currIndex; i < currentPath.nodeCount-1; i++)
+				{
+					Gizmos.DrawLine(currentPath.GetNode(i) + off, currentPath.GetNode(i+1) + off);
+				}
 			}
 		}
 

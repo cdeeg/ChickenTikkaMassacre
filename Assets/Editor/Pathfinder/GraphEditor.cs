@@ -426,18 +426,18 @@ public class GraphEditor :  Editor
 		if(nodeOnHover != null)
 		{
 			Handles.color = Color.yellow;
-			Handles.DrawWireDisc(nodeOnHover.position, -sceneCam.transform.forward, 0.15f);
+			Handles.DrawWireDisc(nodeOnHover.position, -sceneCam.transform.forward, 0.55f);
 			if(Event.current.shift)
 			{
 				Handles.color = new Color(1,0,0,0.5f);
-				Handles.DrawSolidDisc(nodeOnHover.position, -sceneCam.transform.forward, 0.12f);
+				Handles.DrawSolidDisc(nodeOnHover.position, -sceneCam.transform.forward, 0.52f);
 			}
 			Handles.color = Color.white;
 		}
 		if(nodeOnHandle != null)
 		{
 			Handles.color = new Color(0,0.5f,1f, 0.6f);
-			Handles.DrawSolidDisc(nodeOnHandle.position, -sceneCam.transform.forward, 0.08f);
+			Handles.DrawSolidDisc(nodeOnHandle.position, -sceneCam.transform.forward, 0.48f);
 
 			if(Event.current.control && currGroundP != NULLPOS)
 			{

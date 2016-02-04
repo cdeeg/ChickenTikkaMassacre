@@ -24,11 +24,16 @@ public class DodoState_PathMove : DodoStateBase
 	{
 		if(behaviour.hasPath)
 		{
+			Debug.DrawLine(behaviour.transform.position, nextTargetPos, Color.cyan);
 			if(behaviour.currentPath.TryGetNextNode(behaviour.transform.position, out nextTargetPos))
 			{
+				Debug.Log("reached path target!");
 				behaviour.ClearCurrentPath();
 			}
-			behaviour.MoveTowards(nextTargetPos);
+			else
+			{
+				behaviour.MoveTowards(nextTargetPos);
+			}
 		}
 	}
 	
