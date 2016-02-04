@@ -173,7 +173,7 @@ namespace jChikken
 		/// <summary>
 		/// true if dodo was fetched by a player
 		/// </summary>
-		bool isCaptured { get { return captor != null; } }
+		public bool isCaptured { get { return captor != null; } }
 		/// <summary>
 		/// player that is currently holding this dodo
 		/// </summary>
@@ -252,12 +252,13 @@ namespace jChikken
 		public void GetCaptured(Player player)
 		{
 			captor = player;
+			mCollider.enabled = false;
 			UpdateStateValues();
 		}
 
 		public void FreeDodo()
 		{
-			transform.SetParent(null);
+			mCollider.enabled = true;
 			captor = null;
 			UpdateStateValues();
 		}
@@ -372,7 +373,7 @@ namespace jChikken
 			}
 
 			Vector3 velLeveled = new Vector3(currVelocity.x, 0, currVelocity.z);
-			if(velLeveled.magnitude > 0)
+			if(!isDead && !isCaptured && velLeveled.magnitude > 0.01f)
 			{
 				if(currentState == state.idle)
 				{

@@ -26,6 +26,7 @@ namespace jChikken
 
 		//	settings
 
+		[SerializeField] float MeleeAttDist = 0.8f;
 		[SerializeField] float m_MovingTurnSpeed = 360;
 		[SerializeField] float m_StationaryTurnSpeed = 180;
 		[SerializeField] float m_JumpPower = 16f;
@@ -87,12 +88,13 @@ namespace jChikken
 		#region interface
 
 
-		public void Move(Vector3 move, bool crouch, bool jump)
+		public void Move(Vector3 move, bool crouch, bool jump, float maxSpeed)
 		{
 			// convert the world relative moveInput vector into a local-relative
 			// turn amount and forward amount required to head in the desired
 			// direction.
-			if (move.magnitude > 1f) move.Normalize();
+
+			if (move.magnitude > maxSpeed) move = move.normalized * maxSpeed;
 			move = transform.InverseTransformDirection(move);
 			CheckGroundStatus();
 			move = Vector3.ProjectOnPlane(move, m_GroundNormal);
@@ -115,12 +117,6 @@ namespace jChikken
 			UpdateAnimatorStates(move);
 		}
 
-		public void MeleeAttack()
-		{
-			//	check if dodo is in front of character
-			m_Animator.SetTrigger("PerformMelee");
-			m_Rigidbody.AddForce(transform.forward * 200, ForceMode.Acceleration);
-		}
 
 		public void SpecialAttack(Weapon weapon)
 		{
@@ -191,13 +187,14 @@ namespace jChikken
 			float turnSpeed = Mathf.Lerp(m_StationaryTurnSpeed, m_MovingTurnSpeed, forwardAmount);
 			transform.Rotate(0, turnAmount * turnSpeed * Time.deltaTime, 0);
 		}
-		
+
+		public float lastFreezeTime;
 		
 		public void OnAnimatorMove()
 		{
 			// we implement this function to override the default root motion.
 			// this allows us to modify the positional speed before it's applied.
-			if (/*isGrounded &&*/ Time.deltaTime > 0)
+			if (/*isGrounded &&*/ Time.deltaTime > 0 && Time.time > lastFreezeTime + 0.8f)
 			{
 	//			Vector3 v = (m_Animator.deltaPosition * m_MoveSpeedMultiplier) / Time.deltaTime;
 
@@ -276,11 +273,11 @@ namespace jChikken
 			RaycastHit hitInfo;
 			#if UNITY_EDITOR
 			// helper to visualise the ground check ray in the scene view
-			Debug.DrawLine(p + (Vector3.up * 0.1f), p + (Vector3.up * 0.1f) + (Vector3.down * m_GroundCheckDistance));
+			Debug.DrawLine(p + (Vector3.up * 0.15f), p + (Vector3.up * 0.1f) + (Vector3.down * m_GroundCheckDistance));
 			#endif
 			// 0.1f is a small offset to start the ray from inside the character
 			// it is also good to note that the transform position in the sample assets is at the base of the character
-			if (Physics.Raycast(p + (Vector3.up * 0.1f), Vector3.down, out hitInfo, m_GroundCheckDistance))
+			if (Physics.Raycast(p + (Vector3.up * 0.15f), Vector3.down, out hitInfo, m_GroundCheckDistance))
 			{
 				m_GroundNormal = hitInfo.normal;
 				isGrounded = true;

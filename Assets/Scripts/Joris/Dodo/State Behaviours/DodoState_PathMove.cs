@@ -31,7 +31,9 @@ public class DodoState_PathMove : DodoStateBase
 				behaviour.ClearCurrentPath();
 			}
 			else
+			{
 				behaviour.MoveTowards(nextTargetPos);
+			}
 		}
 	}
 	

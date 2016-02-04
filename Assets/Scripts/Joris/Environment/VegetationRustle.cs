@@ -15,7 +15,7 @@ public class VegetationRustle : MonoBehaviour
 	{
 		Rigidbody r = other.GetComponent<Rigidbody>();
 
-		if(r.velocity.magnitude > 0.2f && !anim.isPlaying)
+		if(r != null && r.velocity.magnitude > 0.2f && !anim.isPlaying)
 		{
 			anim.Play();
 		}
